@@ -1,14 +1,3 @@
-<p align="center">
-    <a href="https://highsidelabs.co" target="_blank">
-        <img src="https://github.com/highsidelabs/.github/blob/main/images/logo.png?raw=true" width="125">
-    </a>
-</p>
-
-<p align="center">
-    <a href="https://packagist.org/packages/highsidelabs/walmart-api"><img alt="Total downloads" src="https://img.shields.io/packagist/dt/highsidelabs/walmart-api.svg?style=flat-square"></a>
-    <a href="https://packagist.org/packages/highsidelabs/walmart-api"><img alt="Latest stable version" src="https://img.shields.io/packagist/v/highsidelabs/walmart-api.svg?style=flat-square"></a>
-    <a href="https://packagist.org/packages/highsidelabs/walmart-api"><img alt="License" src="https://img.shields.io/packagist/l/highsidelabs/walmart-api.svg?style=flat-square"></a>
-</p>
 
 ## Walmart API for PHP
 A PHP library for connecting to Walmart's [Marketplace](https://developer.walmart.com/home/us-mp/), [1P Supplier](https://developer.walmart.com/home/us-supplier/), and [Content Provider](https://developer.walmart.com/home/us-cp/) APIs, for the US, Canada, and Mexico.
