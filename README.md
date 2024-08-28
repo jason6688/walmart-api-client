@@ -57,7 +57,7 @@ You need a couple things to get started:
 
 ### Setup
 
-The [`Configuration`](https://github.com/jason6688/walmartApi/blob/main/src/Configuration.php) constructor takes three arguments, which cover all the credentials you need to access the Walmart APIs:
+The [`Configuration`](https://github.com/jason6688/walmart-api-client/blob/main/src/Configuration.php) constructor takes three arguments, which cover all the credentials you need to access the Walmart APIs:
 * A client ID
 * A client secret
 * An optional array of additional configuration parameters
@@ -121,9 +121,9 @@ The API classes are divided into three categories: Marketplace, 1P Supplier, and
 
 To create an instance of an API class, start by using the `Walmart::marketplace()`, `Walmart::contentProvider()`, and `Walmart::supplier()` methods. All three methods take a single argument: an instance of `Walmart\Configuration`. Each of those methods returns a helper class that provides access to all the API classes in that category for the country you've specified in the `Configuration` object (US by default). See the [Supported API segments](#supported-api-segments) section below for a list of all the APIs supported by this library, organized by API category.
 
-Once you have an instance of an API class, you can call any of the endpoint methods defined in [the documentation](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis). The API class documentation is divided by API category and then country, because the same API may have different endpoints and/or parameters in different countries. Make sure you're looking at the correct documentation for the country you're actually selling in!
+Once you have an instance of an API class, you can call any of the endpoint methods defined in [the documentation](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis). The API class documentation is divided by API category and then country, because the same API may have different endpoints and/or parameters in different countries. Make sure you're looking at the correct documentation for the country you're actually selling in!
 
-Some endpoints have a LOT of parameters. If you're using PHP 8 or later, you can use named arguments to make your code more readable. For instance, the Marketplace Feeds API in the US has a [`getAllItems`](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/ItemsApi.md#getallitems) call that takes up to 7 parameters. If you only want to pass some of them, you can do this:
+Some endpoints have a LOT of parameters. If you're using PHP 8 or later, you can use named arguments to make your code more readable. For instance, the Marketplace Feeds API in the US has a [`getAllItems`](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/ItemsApi.md#getallitems) call that takes up to 7 parameters. If you only want to pass some of them, you can do this:
 
 ```php
 use Walmart\Configuration;
@@ -170,7 +170,7 @@ API methods often take model classes as parameters, and return them as API respo
 
 ### Using model classes
 
-In order to represent the various data structures that the APIs ingest and return, this library uses model classes. Each model class represents a single data structure, and has a constructor that takes an associative array of data. The model class documentation is divided by API category, country, and API class. Documentation for each model class is nested inside the `docs/Models` folder corresponding to the model class's location in the `src/Models` folder. For instance, the response model for the Marketplace Authorization API's `getTokenDetail` method in the US is [`Walmart\Models\MP\US\Authorization\TokenDetailResponse`](https://github.com/jason6688/walmartApi-php/blob/main/src/Models/MP/US/Authentication/TokenDetailResponse.php), and the docs are at [`docs/Models/MP/US/Authorization/TokenDetailResponse.md`](https://github.com/jason6688/walmartApi-php/blob/main/docs/Models/MP/US/Authentication/TokenDetailResponse.md).
+In order to represent the various data structures that the APIs ingest and return, this library uses model classes. Each model class represents a single data structure, and has a constructor that takes an associative array of data. The model class documentation is divided by API category, country, and API class. Documentation for each model class is nested inside the `docs/Models` folder corresponding to the model class's location in the `src/Models` folder. For instance, the response model for the Marketplace Authorization API's `getTokenDetail` method in the US is [`Walmart\Models\MP\US\Authorization\TokenDetailResponse`](https://github.com/jason6688/walmart-api-client-php/blob/main/src/Models/MP/US/Authentication/TokenDetailResponse.php), and the docs are at [`docs/Models/MP/US/Authorization/TokenDetailResponse.md`](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Models/MP/US/Authentication/TokenDetailResponse.md).
 
 
 ### Authorization
@@ -212,47 +212,47 @@ This is an exhaustive list of all the APIs supported by this library, organized 
 
 #### Marketplace
 
-* [Assortment Recommendations API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/AssortmentRecommendationsApi.md): `Walmart::marketplace($config)->assortmentRecommendations()` (US only)
-* [Authentication API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/AuthenticationApi.md): `Walmart::marketplace($config)->auth()` (MX, US)
-* [Events API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/CA/Api.md): `Walmart::marketplace($config)->events()` (CA only)
-* [Feeds API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/FeedsApi.md): `Walmart::marketplace($config)->feeds()` (CA, MX, US)
-* [Fulfillment API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/FulfillmentApi.md): `Walmart::marketplace($config)->fulfillment()` (US)
-* [Insights API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/InsightsApi.md): `Walmart::marketplace($config)->insights()` (US only)
-* [International Shipping API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/CA/InternationalShippingApi.md): `Walmart::marketplace($config)->internationalShipping()` (CA, MX)
-* [Inventory API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/InventoryApi.md): `Walmart::marketplace($config)->inventory()` (CA, MX, US)
-* [Items API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/ItemsApi.md): `Walmart::marketplace($config)->items()` (CA, MX, US)
-* [Lag Time API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/LagTimeApi.md): `Walmart::marketplace($config)->lagTime()` (US only)
-* [Listing Quality API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/ListingQualityApi.md): `Walmart::marketplace($config)->listingQuality()` (US only)
-* [Notifications API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/NotificationsApi.md): `Walmart::marketplace($config)->notifications()` (US only)
-* [On Request Reports API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/OnRequestReportsApi.md): `Walmart::marketplace($config)->onRequestReports()` (US only)
-* [Orders API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/OrdersApi.md): `Walmart::marketplace($config)->orders()` (CA, MX, US)
-* [Prices API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/PricesApi.md): `Walmart::marketplace($config)->prices()` (CA, MX, US)
-* [Promotions API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/PromotionsApi.md): `Walmart::marketplace($config)->promotions()` (CA, US)
-* [Reports API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/ReportsApi.md): `Walmart::marketplace($config)->reports()` (CA, MX, US)
-* [Returns API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/ReturnsApi.md): `Walmart::marketplace($config)->returns()` (MX, US)
-* [Reviews API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/ReviewsApi.md): `Walmart::marketplace($config)->reviews()` (US only)
-* [Rules API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/RulesApi.md): `Walmart::marketplace($config)->rules()` (US only)
-* [Settings API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/SettingsApi.md): `Walmart::marketplace($config)->settings()` (US only)
-* [Utilities API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/MP/US/UtilitiesApi.md): `Walmart::marketplace($config)->utilities()` (US only)
+* [Assortment Recommendations API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/AssortmentRecommendationsApi.md): `Walmart::marketplace($config)->assortmentRecommendations()` (US only)
+* [Authentication API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/AuthenticationApi.md): `Walmart::marketplace($config)->auth()` (MX, US)
+* [Events API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/CA/Api.md): `Walmart::marketplace($config)->events()` (CA only)
+* [Feeds API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/FeedsApi.md): `Walmart::marketplace($config)->feeds()` (CA, MX, US)
+* [Fulfillment API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/FulfillmentApi.md): `Walmart::marketplace($config)->fulfillment()` (US)
+* [Insights API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/InsightsApi.md): `Walmart::marketplace($config)->insights()` (US only)
+* [International Shipping API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/CA/InternationalShippingApi.md): `Walmart::marketplace($config)->internationalShipping()` (CA, MX)
+* [Inventory API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/InventoryApi.md): `Walmart::marketplace($config)->inventory()` (CA, MX, US)
+* [Items API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/ItemsApi.md): `Walmart::marketplace($config)->items()` (CA, MX, US)
+* [Lag Time API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/LagTimeApi.md): `Walmart::marketplace($config)->lagTime()` (US only)
+* [Listing Quality API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/ListingQualityApi.md): `Walmart::marketplace($config)->listingQuality()` (US only)
+* [Notifications API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/NotificationsApi.md): `Walmart::marketplace($config)->notifications()` (US only)
+* [On Request Reports API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/OnRequestReportsApi.md): `Walmart::marketplace($config)->onRequestReports()` (US only)
+* [Orders API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/OrdersApi.md): `Walmart::marketplace($config)->orders()` (CA, MX, US)
+* [Prices API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/PricesApi.md): `Walmart::marketplace($config)->prices()` (CA, MX, US)
+* [Promotions API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/PromotionsApi.md): `Walmart::marketplace($config)->promotions()` (CA, US)
+* [Reports API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/ReportsApi.md): `Walmart::marketplace($config)->reports()` (CA, MX, US)
+* [Returns API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/ReturnsApi.md): `Walmart::marketplace($config)->returns()` (MX, US)
+* [Reviews API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/ReviewsApi.md): `Walmart::marketplace($config)->reviews()` (US only)
+* [Rules API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/RulesApi.md): `Walmart::marketplace($config)->rules()` (US only)
+* [Settings API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/SettingsApi.md): `Walmart::marketplace($config)->settings()` (US only)
+* [Utilities API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/MP/US/UtilitiesApi.md): `Walmart::marketplace($config)->utilities()` (US only)
 
 
 #### 1P Supplier
 
 _Note_: The 1P Supplier APIs are currently only available in the US.
 
-* [Cost API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/Supplier/US/CostApi.md): `Walmart::supplier($config)->cost()`
-* [Feeds API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/Supplier/US/FeedsApi.md): `Walmart::supplier($config)->feeds()`
-* [Inventory API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/Supplier/US/InventoryApi.md): `Walmart::supplier($config)->inventory()`
-* [Items API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/Supplier/US/ItemsApi.md): `Walmart::supplier($config)->items()`
-* [Lag Time API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/Supplier/US/LagTimeApi.md): `Walmart::supplier($config)->lagTime()`
-* [Orders API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/Supplier/US/OrdersApi.md): `Walmart::supplier($config)->orders()`
-* [Reports API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/Supplier/US/ReportsApi.md): `Walmart::supplier($config)->reports()`
+* [Cost API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/Supplier/US/CostApi.md): `Walmart::supplier($config)->cost()`
+* [Feeds API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/Supplier/US/FeedsApi.md): `Walmart::supplier($config)->feeds()`
+* [Inventory API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/Supplier/US/InventoryApi.md): `Walmart::supplier($config)->inventory()`
+* [Items API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/Supplier/US/ItemsApi.md): `Walmart::supplier($config)->items()`
+* [Lag Time API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/Supplier/US/LagTimeApi.md): `Walmart::supplier($config)->lagTime()`
+* [Orders API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/Supplier/US/OrdersApi.md): `Walmart::supplier($config)->orders()`
+* [Reports API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/Supplier/US/ReportsApi.md): `Walmart::supplier($config)->reports()`
 
 #### Content Provider
 
 _Note_: The Content Provider APIs are currently only available in the US.
 
-* [Feeds API](https://github.com/jason6688/walmartApi-php/blob/main/docs/Apis/CP/US/FeedsApi.md): `Walmart::contentProvider($config)->feeds()`
+* [Feeds API](https://github.com/jason6688/walmart-api-client-php/blob/main/docs/Apis/CP/US/FeedsApi.md): `Walmart::contentProvider($config)->feeds()`
 
 
 ## Contributing
