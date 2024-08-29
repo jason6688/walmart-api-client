@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class OnRequestReportsApi extends BaseApi
 {
@@ -78,7 +78,7 @@ class OnRequestReportsApi extends BaseApi
      * @return \Walmart\Models\MP\US\OnRequestReports\DownloadReportResponse
      */
     protected function downloadReportWithHttpInfo(
-        string $requestId,
+        string $requestId
     ): \Walmart\Models\MP\US\OnRequestReports\DownloadReportResponse {
         $request = $this->downloadReportRequest($requestId);
         $this->writeDebug($request);
@@ -201,7 +201,7 @@ class OnRequestReportsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function downloadReportAsyncWithHttpInfo(
-        string $requestId,
+        string $requestId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\OnRequestReports\DownloadReportResponse';
         $request = $this->downloadReportRequest($requestId);
@@ -255,7 +255,7 @@ class OnRequestReportsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function downloadReportRequest(
-        string $requestId,
+        string $requestId
     ): Request {
         $contentType = self::contentTypes['downloadReport'];
 
@@ -385,7 +385,7 @@ class OnRequestReportsApi extends BaseApi
     protected function generateReportWithHttpInfo(
         string $reportType,
         string $reportVersion,
-        ?\Walmart\Models\MP\US\OnRequestReports\GenerateReportPayload $generateReportPayload = null,
+        ?\Walmart\Models\MP\US\OnRequestReports\GenerateReportPayload $generateReportPayload = null
     ): \Walmart\Models\MP\US\OnRequestReports\GenerateReportResponse {
         $request = $this->generateReportRequest($reportType, $reportVersion, $generateReportPayload);
         $this->writeDebug($request);
@@ -516,7 +516,7 @@ class OnRequestReportsApi extends BaseApi
     protected function generateReportAsyncWithHttpInfo(
         string $reportType,
         string $reportVersion,
-        ?\Walmart\Models\MP\US\OnRequestReports\GenerateReportPayload $generateReportPayload = null,
+        ?\Walmart\Models\MP\US\OnRequestReports\GenerateReportPayload $generateReportPayload = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\OnRequestReports\GenerateReportResponse';
         $request = $this->generateReportRequest($reportType, $reportVersion, $generateReportPayload);
@@ -574,7 +574,7 @@ class OnRequestReportsApi extends BaseApi
     protected function generateReportRequest(
         string $reportType,
         string $reportVersion,
-        ?\Walmart\Models\MP\US\OnRequestReports\GenerateReportPayload $generateReportPayload = null,
+        ?\Walmart\Models\MP\US\OnRequestReports\GenerateReportPayload $generateReportPayload = null
     ): Request {
         $contentType = self::contentTypes['generateReport'];
 
@@ -733,7 +733,7 @@ class OnRequestReportsApi extends BaseApi
         ?string $reportVersion = null,
         ?string $requestStatus = null,
         ?string $requestSubmissionStartDate = null,
-        ?string $requestSubmissionEndDate = null,
+        ?string $requestSubmissionEndDate = null
     ): \Walmart\Models\MP\US\OnRequestReports\RequestsStatusResponse {
         $request = $this->getRequestsStatusRequest($reportType, $reportVersion, $requestStatus, $requestSubmissionStartDate, $requestSubmissionEndDate);
         $this->writeDebug($request);
@@ -872,7 +872,7 @@ class OnRequestReportsApi extends BaseApi
         ?string $reportVersion = null,
         ?string $requestStatus = null,
         ?string $requestSubmissionStartDate = null,
-        ?string $requestSubmissionEndDate = null,
+        ?string $requestSubmissionEndDate = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\OnRequestReports\RequestsStatusResponse';
         $request = $this->getRequestsStatusRequest($reportType, $reportVersion, $requestStatus, $requestSubmissionStartDate, $requestSubmissionEndDate);
@@ -934,7 +934,7 @@ class OnRequestReportsApi extends BaseApi
         ?string $reportVersion = null,
         ?string $requestStatus = null,
         ?string $requestSubmissionStartDate = null,
-        ?string $requestSubmissionEndDate = null,
+        ?string $requestSubmissionEndDate = null
     ): Request {
         $contentType = self::contentTypes['getRequestsStatus'];
 
@@ -1088,7 +1088,7 @@ class OnRequestReportsApi extends BaseApi
      * @return \Walmart\Models\MP\US\OnRequestReports\RequestStatusResponse
      */
     protected function getSingleRequestStatusWithHttpInfo(
-        string $requestId,
+        string $requestId
     ): \Walmart\Models\MP\US\OnRequestReports\RequestStatusResponse {
         $request = $this->getSingleRequestStatusRequest($requestId);
         $this->writeDebug($request);
@@ -1211,7 +1211,7 @@ class OnRequestReportsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getSingleRequestStatusAsyncWithHttpInfo(
-        string $requestId,
+        string $requestId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\OnRequestReports\RequestStatusResponse';
         $request = $this->getSingleRequestStatusRequest($requestId);
@@ -1265,7 +1265,7 @@ class OnRequestReportsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getSingleRequestStatusRequest(
-        string $requestId,
+        string $requestId
     ): Request {
         $contentType = self::contentTypes['getSingleRequestStatus'];
 

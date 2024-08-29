@@ -7,9 +7,9 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 
 /**
@@ -31,9 +31,9 @@ use Walmart\Models\BaseModel;
  * @description Different type of filters can be passed in this object.
 
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class RecommendationRequestFilter extends BaseModel
 {

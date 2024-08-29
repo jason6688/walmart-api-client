@@ -7,9 +7,9 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 
 /**
@@ -31,9 +31,9 @@ use Walmart\Models\BaseModel;
  * @description These groups are created per label or type of carrier service required. (e.g., If order has some lines that can be clubbed and mailed together as a smart post then they belong to one return group. If a line is bulky and needs a different type of carrier service, then that line will be part of different group. Customer gets multiple labels depending on how many groups are created for the entire order.)
 
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class ReturnLineGroup extends BaseModel
 {

@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class FulfillmentApi extends BaseApi
 {
@@ -97,7 +97,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\CustomerOrderDetailsResponseWrapperDTO
      */
     protected function cancelFulfillmentWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\CancelCustomerOrderRequestWrapper $cancelCustomerOrderRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CancelCustomerOrderRequestWrapper $cancelCustomerOrderRequestWrapper
     ): \Walmart\Models\MP\US\Fulfillment\CustomerOrderDetailsResponseWrapperDTO {
         $request = $this->cancelFulfillmentRequest($cancelCustomerOrderRequestWrapper);
         $this->writeDebug($request);
@@ -220,7 +220,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function cancelFulfillmentAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\CancelCustomerOrderRequestWrapper $cancelCustomerOrderRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CancelCustomerOrderRequestWrapper $cancelCustomerOrderRequestWrapper
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\CustomerOrderDetailsResponseWrapperDTO';
         $request = $this->cancelFulfillmentRequest($cancelCustomerOrderRequestWrapper);
@@ -274,7 +274,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function cancelFulfillmentRequest(
-        \Walmart\Models\MP\US\Fulfillment\CancelCustomerOrderRequestWrapper $cancelCustomerOrderRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CancelCustomerOrderRequestWrapper $cancelCustomerOrderRequestWrapper
     ): Request {
         $contentType = self::contentTypes['cancelFulfillment'];
 
@@ -391,7 +391,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\ServiceResponse
      */
     protected function cancelShipmentWithHttpInfo(
-        string $inboundOrderId,
+        string $inboundOrderId
     ): \Walmart\Models\MP\US\Fulfillment\ServiceResponse {
         $request = $this->cancelShipmentRequest($inboundOrderId);
         $this->writeDebug($request);
@@ -514,7 +514,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function cancelShipmentAsyncWithHttpInfo(
-        string $inboundOrderId,
+        string $inboundOrderId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\ServiceResponse';
         $request = $this->cancelShipmentRequest($inboundOrderId);
@@ -568,7 +568,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function cancelShipmentRequest(
-        string $inboundOrderId,
+        string $inboundOrderId
     ): Request {
         $contentType = self::contentTypes['cancelShipment'];
 
@@ -687,7 +687,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\ServiceResponse
      */
     protected function confirmCarrierRateQuoteWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteConfirmRequestWrapper $carrierQuoteConfirmRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteConfirmRequestWrapper $carrierQuoteConfirmRequestWrapper
     ): \Walmart\Models\MP\US\Fulfillment\ServiceResponse {
         $request = $this->confirmCarrierRateQuoteRequest($carrierQuoteConfirmRequestWrapper);
         $this->writeDebug($request);
@@ -810,7 +810,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function confirmCarrierRateQuoteAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteConfirmRequestWrapper $carrierQuoteConfirmRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteConfirmRequestWrapper $carrierQuoteConfirmRequestWrapper
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\ServiceResponse';
         $request = $this->confirmCarrierRateQuoteRequest($carrierQuoteConfirmRequestWrapper);
@@ -864,7 +864,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function confirmCarrierRateQuoteRequest(
-        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteConfirmRequestWrapper $carrierQuoteConfirmRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteConfirmRequestWrapper $carrierQuoteConfirmRequestWrapper
     ): Request {
         $contentType = self::contentTypes['confirmCarrierRateQuote'];
 
@@ -985,7 +985,7 @@ class FulfillmentApi extends BaseApi
      */
     protected function convertItemForWfsWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\MP\US\Fulfillment\FeedId {
         $request = $this->convertItemForWfsRequest($feedType, $file);
         $this->writeDebug($request);
@@ -1112,7 +1112,7 @@ class FulfillmentApi extends BaseApi
      */
     protected function convertItemForWfsAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\FeedId';
         $request = $this->convertItemForWfsRequest($feedType, $file);
@@ -1168,7 +1168,7 @@ class FulfillmentApi extends BaseApi
      */
     protected function convertItemForWfsRequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['convertItemForWfs'];
 
@@ -1309,7 +1309,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\QuoteResponseV2Wrapper
      */
     protected function createCarrierRateQuotesWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteRequestV2Wrapper $carrierQuoteRequestV2Wrapper,
+        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteRequestV2Wrapper $carrierQuoteRequestV2Wrapper
     ): \Walmart\Models\MP\US\Fulfillment\QuoteResponseV2Wrapper {
         $request = $this->createCarrierRateQuotesRequest($carrierQuoteRequestV2Wrapper);
         $this->writeDebug($request);
@@ -1432,7 +1432,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createCarrierRateQuotesAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteRequestV2Wrapper $carrierQuoteRequestV2Wrapper,
+        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteRequestV2Wrapper $carrierQuoteRequestV2Wrapper
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\QuoteResponseV2Wrapper';
         $request = $this->createCarrierRateQuotesRequest($carrierQuoteRequestV2Wrapper);
@@ -1486,7 +1486,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createCarrierRateQuotesRequest(
-        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteRequestV2Wrapper $carrierQuoteRequestV2Wrapper,
+        \Walmart\Models\MP\US\Fulfillment\CarrierQuoteRequestV2Wrapper $carrierQuoteRequestV2Wrapper
     ): Request {
         $contentType = self::contentTypes['createCarrierRateQuotes'];
 
@@ -1603,7 +1603,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\CustomerOrderDetailsResponseWrapperDTO
      */
     protected function createFulfillmentWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper
     ): \Walmart\Models\MP\US\Fulfillment\CustomerOrderDetailsResponseWrapperDTO {
         $request = $this->createFulfillmentRequest($createCustomerOrderRequestWrapper);
         $this->writeDebug($request);
@@ -1726,7 +1726,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createFulfillmentAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\CustomerOrderDetailsResponseWrapperDTO';
         $request = $this->createFulfillmentRequest($createCustomerOrderRequestWrapper);
@@ -1780,7 +1780,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createFulfillmentRequest(
-        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper
     ): Request {
         $contentType = self::contentTypes['createFulfillment'];
 
@@ -1897,7 +1897,7 @@ class FulfillmentApi extends BaseApi
      * @return string
      */
     protected function createInboundShipmentLabelWithHttpInfo(
-        string $shipmentId,
+        string $shipmentId
     ): string {
         $request = $this->createInboundShipmentLabelRequest($shipmentId);
         $this->writeDebug($request);
@@ -2020,7 +2020,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createInboundShipmentLabelAsyncWithHttpInfo(
-        string $shipmentId,
+        string $shipmentId
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->createInboundShipmentLabelRequest($shipmentId);
@@ -2074,7 +2074,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createInboundShipmentLabelRequest(
-        string $shipmentId,
+        string $shipmentId
     ): Request {
         $contentType = self::contentTypes['createInboundShipmentLabel'];
 
@@ -2193,7 +2193,7 @@ class FulfillmentApi extends BaseApi
      * @return string
      */
     protected function createInboundShipmentLabelV2WithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\LabelV2RequestWrapper $labelV2RequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\LabelV2RequestWrapper $labelV2RequestWrapper
     ): string {
         $request = $this->createInboundShipmentLabelV2Request($labelV2RequestWrapper);
         $this->writeDebug($request);
@@ -2316,7 +2316,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createInboundShipmentLabelV2AsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\LabelV2RequestWrapper $labelV2RequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\LabelV2RequestWrapper $labelV2RequestWrapper
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->createInboundShipmentLabelV2Request($labelV2RequestWrapper);
@@ -2370,7 +2370,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createInboundShipmentLabelV2Request(
-        \Walmart\Models\MP\US\Fulfillment\LabelV2RequestWrapper $labelV2RequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\LabelV2RequestWrapper $labelV2RequestWrapper
     ): Request {
         $contentType = self::contentTypes['createInboundShipmentLabelV2'];
 
@@ -2487,7 +2487,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\InboundShipmentCreateResponseWrapperDTO
      */
     protected function createShipmentWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\InboundShipmentRequestWrapper $inboundShipmentRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\InboundShipmentRequestWrapper $inboundShipmentRequestWrapper
     ): \Walmart\Models\MP\US\Fulfillment\InboundShipmentCreateResponseWrapperDTO {
         $request = $this->createShipmentRequest($inboundShipmentRequestWrapper);
         $this->writeDebug($request);
@@ -2610,7 +2610,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createShipmentAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\InboundShipmentRequestWrapper $inboundShipmentRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\InboundShipmentRequestWrapper $inboundShipmentRequestWrapper
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\InboundShipmentCreateResponseWrapperDTO';
         $request = $this->createShipmentRequest($inboundShipmentRequestWrapper);
@@ -2664,7 +2664,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createShipmentRequest(
-        \Walmart\Models\MP\US\Fulfillment\InboundShipmentRequestWrapper $inboundShipmentRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\InboundShipmentRequestWrapper $inboundShipmentRequestWrapper
     ): Request {
         $contentType = self::contentTypes['createShipment'];
 
@@ -2785,7 +2785,7 @@ class FulfillmentApi extends BaseApi
      */
     protected function getCarrierRateQuoteWithHttpInfo(
         string $shipmentId,
-        string $mode,
+        string $mode
     ): \Walmart\Models\MP\US\Fulfillment\GetRateQuoteInfoResponseWrapper {
         $request = $this->getCarrierRateQuoteRequest($shipmentId, $mode);
         $this->writeDebug($request);
@@ -2912,7 +2912,7 @@ class FulfillmentApi extends BaseApi
      */
     protected function getCarrierRateQuoteAsyncWithHttpInfo(
         string $shipmentId,
-        string $mode,
+        string $mode
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\GetRateQuoteInfoResponseWrapper';
         $request = $this->getCarrierRateQuoteRequest($shipmentId, $mode);
@@ -2968,7 +2968,7 @@ class FulfillmentApi extends BaseApi
      */
     protected function getCarrierRateQuoteRequest(
         string $shipmentId,
-        string $mode,
+        string $mode
     ): Request {
         $contentType = self::contentTypes['getCarrierRateQuote'];
 
@@ -3136,7 +3136,7 @@ class FulfillmentApi extends BaseApi
         ?string $fromOrderDate = null,
         ?string $toOrderDate = null,
         ?string $sortOrder = 'desc',
-        ?string $sortBy = null,
+        ?string $sortBy = null
     ): \Walmart\Models\MP\US\Fulfillment\CustomerOrderResponseWrapperDTO {
         $request = $this->getFulfillmentOrdersStatusRequest($orgId, $limit, $offset, $orderNumber, $trackingNumber, $shipmentNumber, $fromOrderDate, $toOrderDate, $sortOrder, $sortBy);
         $this->writeDebug($request);
@@ -3295,7 +3295,7 @@ class FulfillmentApi extends BaseApi
         ?string $fromOrderDate = null,
         ?string $toOrderDate = null,
         ?string $sortOrder = 'desc',
-        ?string $sortBy = null,
+        ?string $sortBy = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\CustomerOrderResponseWrapperDTO';
         $request = $this->getFulfillmentOrdersStatusRequest($orgId, $limit, $offset, $orderNumber, $trackingNumber, $shipmentNumber, $fromOrderDate, $toOrderDate, $sortOrder, $sortBy);
@@ -3367,7 +3367,7 @@ class FulfillmentApi extends BaseApi
         ?string $fromOrderDate = null,
         ?string $toOrderDate = null,
         ?string $sortOrder = 'desc',
-        ?string $sortBy = null,
+        ?string $sortBy = null
     ): Request {
         $contentType = self::contentTypes['getFulfillmentOrdersStatus'];
 
@@ -3581,7 +3581,7 @@ class FulfillmentApi extends BaseApi
     protected function getInboundOrderErrorsWithHttpInfo(
         ?string $offset = '0',
         ?string $limit = '10',
-        ?string $shipmentId = null,
+        ?string $shipmentId = null
     ): \Walmart\Models\MP\US\Fulfillment\InboundShipmentErrorResponseWrapperDTO {
         $request = $this->getInboundOrderErrorsRequest($offset, $limit, $shipmentId);
         $this->writeDebug($request);
@@ -3712,7 +3712,7 @@ class FulfillmentApi extends BaseApi
     protected function getInboundOrderErrorsAsyncWithHttpInfo(
         ?string $offset = '0',
         ?string $limit = '10',
-        ?string $shipmentId = null,
+        ?string $shipmentId = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\InboundShipmentErrorResponseWrapperDTO';
         $request = $this->getInboundOrderErrorsRequest($offset, $limit, $shipmentId);
@@ -3770,7 +3770,7 @@ class FulfillmentApi extends BaseApi
     protected function getInboundOrderErrorsRequest(
         ?string $offset = '0',
         ?string $limit = '10',
-        ?string $shipmentId = null,
+        ?string $shipmentId = null
     ): Request {
         $contentType = self::contentTypes['getInboundOrderErrors'];
 
@@ -3910,7 +3910,7 @@ class FulfillmentApi extends BaseApi
     protected function getInboundShipmentItemsWithHttpInfo(
         ?string $offset = '0',
         ?string $limit = '10',
-        ?string $shipmentId = null,
+        ?string $shipmentId = null
     ): \Walmart\Models\MP\US\Fulfillment\InboundShipmentErrorResponseWrapperDTO {
         $request = $this->getInboundShipmentItemsRequest($offset, $limit, $shipmentId);
         $this->writeDebug($request);
@@ -4041,7 +4041,7 @@ class FulfillmentApi extends BaseApi
     protected function getInboundShipmentItemsAsyncWithHttpInfo(
         ?string $offset = '0',
         ?string $limit = '10',
-        ?string $shipmentId = null,
+        ?string $shipmentId = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\InboundShipmentErrorResponseWrapperDTO';
         $request = $this->getInboundShipmentItemsRequest($offset, $limit, $shipmentId);
@@ -4099,7 +4099,7 @@ class FulfillmentApi extends BaseApi
     protected function getInboundShipmentItemsRequest(
         ?string $offset = '0',
         ?string $limit = '10',
-        ?string $shipmentId = null,
+        ?string $shipmentId = null
     ): Request {
         $contentType = self::contentTypes['getInboundShipmentItems'];
 
@@ -4255,7 +4255,7 @@ class FulfillmentApi extends BaseApi
         ?string $shipmentId = null,
         ?string $status = null,
         ?string $fromCreateDate = null,
-        ?string $toCreateDate = null,
+        ?string $toCreateDate = null
     ): \Walmart\Models\MP\US\Fulfillment\InboundShipmentErrorResponseWrapperDTO {
         $request = $this->getInboundShipmentsRequest($offset, $limit, $inboundOrderId, $shipmentId, $status, $fromCreateDate, $toCreateDate);
         $this->writeDebug($request);
@@ -4402,7 +4402,7 @@ class FulfillmentApi extends BaseApi
         ?string $shipmentId = null,
         ?string $status = null,
         ?string $fromCreateDate = null,
-        ?string $toCreateDate = null,
+        ?string $toCreateDate = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\InboundShipmentErrorResponseWrapperDTO';
         $request = $this->getInboundShipmentsRequest($offset, $limit, $inboundOrderId, $shipmentId, $status, $fromCreateDate, $toCreateDate);
@@ -4468,7 +4468,7 @@ class FulfillmentApi extends BaseApi
         ?string $shipmentId = null,
         ?string $status = null,
         ?string $fromCreateDate = null,
-        ?string $toCreateDate = null,
+        ?string $toCreateDate = null
     ): Request {
         $contentType = self::contentTypes['getInboundShipments'];
 
@@ -4934,7 +4934,7 @@ class FulfillmentApi extends BaseApi
         ?string $sortBy = null,
         ?string $sortOrder = null,
         ?string $offset = '0',
-        ?string $limit = '50',
+        ?string $limit = '50'
     ): \Walmart\Models\MP\US\Fulfillment\InventoryLogResponseWrapper {
         $request = $this->getWFSInventoryLogRequest($gtin, $shipmentId, $transactionType, $transactionLocation, $startDate, $endDate, $sortBy, $sortOrder, $offset, $limit);
         $this->writeDebug($request);
@@ -5093,7 +5093,7 @@ class FulfillmentApi extends BaseApi
         ?string $sortBy = null,
         ?string $sortOrder = null,
         ?string $offset = '0',
-        ?string $limit = '50',
+        ?string $limit = '50'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\InventoryLogResponseWrapper';
         $request = $this->getWFSInventoryLogRequest($gtin, $shipmentId, $transactionType, $transactionLocation, $startDate, $endDate, $sortBy, $sortOrder, $offset, $limit);
@@ -5165,7 +5165,7 @@ class FulfillmentApi extends BaseApi
         ?string $sortBy = null,
         ?string $sortOrder = null,
         ?string $offset = '0',
-        ?string $limit = '50',
+        ?string $limit = '50'
     ): Request {
         $contentType = self::contentTypes['getWFSInventoryLog'];
 
@@ -5359,7 +5359,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\InboundPreviewResponseWrapper
      */
     protected function inboundPreviewWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\InboundPreviewWrapper $inboundPreviewWrapper,
+        \Walmart\Models\MP\US\Fulfillment\InboundPreviewWrapper $inboundPreviewWrapper
     ): \Walmart\Models\MP\US\Fulfillment\InboundPreviewResponseWrapper {
         $request = $this->inboundPreviewRequest($inboundPreviewWrapper);
         $this->writeDebug($request);
@@ -5482,7 +5482,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function inboundPreviewAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\InboundPreviewWrapper $inboundPreviewWrapper,
+        \Walmart\Models\MP\US\Fulfillment\InboundPreviewWrapper $inboundPreviewWrapper
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\InboundPreviewResponseWrapper';
         $request = $this->inboundPreviewRequest($inboundPreviewWrapper);
@@ -5536,7 +5536,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function inboundPreviewRequest(
-        \Walmart\Models\MP\US\Fulfillment\InboundPreviewWrapper $inboundPreviewWrapper,
+        \Walmart\Models\MP\US\Fulfillment\InboundPreviewWrapper $inboundPreviewWrapper
     ): Request {
         $contentType = self::contentTypes['inboundPreview'];
 
@@ -5657,7 +5657,7 @@ class FulfillmentApi extends BaseApi
      */
     protected function printCarrierLabelWithHttpInfo(
         string $shipmentId,
-        \Walmart\Models\MP\US\Fulfillment\CarrierLabelRequestWrapper $carrierLabelRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CarrierLabelRequestWrapper $carrierLabelRequestWrapper
     ): \Walmart\Models\MP\US\Fulfillment\ServiceResponse {
         $request = $this->printCarrierLabelRequest($shipmentId, $carrierLabelRequestWrapper);
         $this->writeDebug($request);
@@ -5784,7 +5784,7 @@ class FulfillmentApi extends BaseApi
      */
     protected function printCarrierLabelAsyncWithHttpInfo(
         string $shipmentId,
-        \Walmart\Models\MP\US\Fulfillment\CarrierLabelRequestWrapper $carrierLabelRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CarrierLabelRequestWrapper $carrierLabelRequestWrapper
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\ServiceResponse';
         $request = $this->printCarrierLabelRequest($shipmentId, $carrierLabelRequestWrapper);
@@ -5840,7 +5840,7 @@ class FulfillmentApi extends BaseApi
      */
     protected function printCarrierLabelRequest(
         string $shipmentId,
-        \Walmart\Models\MP\US\Fulfillment\CarrierLabelRequestWrapper $carrierLabelRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CarrierLabelRequestWrapper $carrierLabelRequestWrapper
     ): Request {
         $contentType = self::contentTypes['printCarrierLabel'];
 
@@ -5972,7 +5972,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\PromiseOrderResponseWrapper
      */
     protected function promiseFulfillmentsWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper
     ): \Walmart\Models\MP\US\Fulfillment\PromiseOrderResponseWrapper {
         $request = $this->promiseFulfillmentsRequest($createCustomerOrderRequestWrapper);
         $this->writeDebug($request);
@@ -6095,7 +6095,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function promiseFulfillmentsAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\PromiseOrderResponseWrapper';
         $request = $this->promiseFulfillmentsRequest($createCustomerOrderRequestWrapper);
@@ -6149,7 +6149,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function promiseFulfillmentsRequest(
-        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper,
+        \Walmart\Models\MP\US\Fulfillment\CreateCustomerOrderRequestWrapper $createCustomerOrderRequestWrapper
     ): Request {
         $contentType = self::contentTypes['promiseFulfillments'];
 
@@ -6266,7 +6266,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\ServiceResponse
      */
     protected function updateShipmentQuantityWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\InboundShipmentUpdateQtyWrapper $inboundShipmentUpdateQtyWrapper,
+        \Walmart\Models\MP\US\Fulfillment\InboundShipmentUpdateQtyWrapper $inboundShipmentUpdateQtyWrapper
     ): \Walmart\Models\MP\US\Fulfillment\ServiceResponse {
         $request = $this->updateShipmentQuantityRequest($inboundShipmentUpdateQtyWrapper);
         $this->writeDebug($request);
@@ -6389,7 +6389,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function updateShipmentQuantityAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\InboundShipmentUpdateQtyWrapper $inboundShipmentUpdateQtyWrapper,
+        \Walmart\Models\MP\US\Fulfillment\InboundShipmentUpdateQtyWrapper $inboundShipmentUpdateQtyWrapper
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\ServiceResponse';
         $request = $this->updateShipmentQuantityRequest($inboundShipmentUpdateQtyWrapper);
@@ -6443,7 +6443,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function updateShipmentQuantityRequest(
-        \Walmart\Models\MP\US\Fulfillment\InboundShipmentUpdateQtyWrapper $inboundShipmentUpdateQtyWrapper,
+        \Walmart\Models\MP\US\Fulfillment\InboundShipmentUpdateQtyWrapper $inboundShipmentUpdateQtyWrapper
     ): Request {
         $contentType = self::contentTypes['updateShipmentQuantity'];
 
@@ -6560,7 +6560,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\ServiceResponse
      */
     protected function updateShipmentTrackingDetailsWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\TrackingInfoWrapper $trackingInfoWrapper,
+        \Walmart\Models\MP\US\Fulfillment\TrackingInfoWrapper $trackingInfoWrapper
     ): \Walmart\Models\MP\US\Fulfillment\ServiceResponse {
         $request = $this->updateShipmentTrackingDetailsRequest($trackingInfoWrapper);
         $this->writeDebug($request);
@@ -6683,7 +6683,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function updateShipmentTrackingDetailsAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\TrackingInfoWrapper $trackingInfoWrapper,
+        \Walmart\Models\MP\US\Fulfillment\TrackingInfoWrapper $trackingInfoWrapper
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\ServiceResponse';
         $request = $this->updateShipmentTrackingDetailsRequest($trackingInfoWrapper);
@@ -6737,7 +6737,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function updateShipmentTrackingDetailsRequest(
-        \Walmart\Models\MP\US\Fulfillment\TrackingInfoWrapper $trackingInfoWrapper,
+        \Walmart\Models\MP\US\Fulfillment\TrackingInfoWrapper $trackingInfoWrapper
     ): Request {
         $contentType = self::contentTypes['updateShipmentTrackingDetails'];
 
@@ -6854,7 +6854,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\ServiceResponse
      */
     protected function voidCarrierRateQuoteWithHttpInfo(
-        string $shipmentId,
+        string $shipmentId
     ): \Walmart\Models\MP\US\Fulfillment\ServiceResponse {
         $request = $this->voidCarrierRateQuoteRequest($shipmentId);
         $this->writeDebug($request);
@@ -6977,7 +6977,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function voidCarrierRateQuoteAsyncWithHttpInfo(
-        string $shipmentId,
+        string $shipmentId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\ServiceResponse';
         $request = $this->voidCarrierRateQuoteRequest($shipmentId);
@@ -7031,7 +7031,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function voidCarrierRateQuoteRequest(
-        string $shipmentId,
+        string $shipmentId
     ): Request {
         $contentType = self::contentTypes['voidCarrierRateQuote'];
 
@@ -7150,7 +7150,7 @@ class FulfillmentApi extends BaseApi
      * @return \Walmart\Models\MP\US\Fulfillment\ServiceResponse
      */
     protected function wercsFeedbackWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\WercsFeedbackRequest $wercsFeedbackRequest,
+        \Walmart\Models\MP\US\Fulfillment\WercsFeedbackRequest $wercsFeedbackRequest
     ): \Walmart\Models\MP\US\Fulfillment\ServiceResponse {
         $request = $this->wercsFeedbackRequest($wercsFeedbackRequest);
         $this->writeDebug($request);
@@ -7273,7 +7273,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function wercsFeedbackAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Fulfillment\WercsFeedbackRequest $wercsFeedbackRequest,
+        \Walmart\Models\MP\US\Fulfillment\WercsFeedbackRequest $wercsFeedbackRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Fulfillment\ServiceResponse';
         $request = $this->wercsFeedbackRequest($wercsFeedbackRequest);
@@ -7327,7 +7327,7 @@ class FulfillmentApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function wercsFeedbackRequest(
-        \Walmart\Models\MP\US\Fulfillment\WercsFeedbackRequest $wercsFeedbackRequest,
+        \Walmart\Models\MP\US\Fulfillment\WercsFeedbackRequest $wercsFeedbackRequest
     ): Request {
         $contentType = self::contentTypes['wercsFeedback'];
 

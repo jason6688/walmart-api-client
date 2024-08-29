@@ -7,9 +7,9 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 
 /**
@@ -31,9 +31,9 @@ use Walmart\Models\BaseModel;
  * @description Walmart's item information
 
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class WalmartItemInfo extends BaseModel
 {

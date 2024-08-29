@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class LagTimeApi extends BaseApi
 {
@@ -76,7 +76,7 @@ class LagTimeApi extends BaseApi
      * @return \Walmart\Models\MP\US\LagTime\LagTimeResponse
      */
     protected function getLagTimeWithHttpInfo(
-        string $sku,
+        string $sku
     ): \Walmart\Models\MP\US\LagTime\LagTimeResponse {
         $request = $this->getLagTimeRequest($sku);
         $this->writeDebug($request);
@@ -199,7 +199,7 @@ class LagTimeApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getLagTimeAsyncWithHttpInfo(
-        string $sku,
+        string $sku
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\LagTime\LagTimeResponse';
         $request = $this->getLagTimeRequest($sku);
@@ -253,7 +253,7 @@ class LagTimeApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getLagTimeRequest(
-        string $sku,
+        string $sku
     ): Request {
         $contentType = self::contentTypes['getLagTime'];
 
@@ -379,7 +379,7 @@ class LagTimeApi extends BaseApi
      */
     protected function updateLagTimeBulkWithHttpInfo(
         string $feedType,
-        \Walmart\Models\MP\US\LagTime\LagTimeFeed $lagTimeFeed,
+        \Walmart\Models\MP\US\LagTime\LagTimeFeed $lagTimeFeed
     ): \Walmart\Models\MP\US\LagTime\FeedId {
         $request = $this->updateLagTimeBulkRequest($feedType, $lagTimeFeed);
         $this->writeDebug($request);
@@ -506,7 +506,7 @@ class LagTimeApi extends BaseApi
      */
     protected function updateLagTimeBulkAsyncWithHttpInfo(
         string $feedType,
-        \Walmart\Models\MP\US\LagTime\LagTimeFeed $lagTimeFeed,
+        \Walmart\Models\MP\US\LagTime\LagTimeFeed $lagTimeFeed
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\LagTime\FeedId';
         $request = $this->updateLagTimeBulkRequest($feedType, $lagTimeFeed);
@@ -562,7 +562,7 @@ class LagTimeApi extends BaseApi
      */
     protected function updateLagTimeBulkRequest(
         string $feedType,
-        \Walmart\Models\MP\US\LagTime\LagTimeFeed $lagTimeFeed,
+        \Walmart\Models\MP\US\LagTime\LagTimeFeed $lagTimeFeed
     ): Request {
         $contentType = self::contentTypes['updateLagTimeBulk'];
 

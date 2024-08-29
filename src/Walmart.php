@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -54,12 +54,12 @@ abstract class Walmart
      * @param bool $clone If false, the configuration object will be used as-is. If true, the
      *                    configuration object will be cloned before use. Default is true.
      */
-    public function __construct(Configuration $config, protected bool $clone = true)
+    public function __construct(Configuration $config, bool $clone = true)
     {
         // We clone $config so that if the same Configuration object is used for multiple API
         // instances, the host changes made in the ::contentProvider(), ::marketplace(), and
         // ::supplier() methods don't affect the other API instances.
-        if ($this->clone) {
+        if ($clone) {
             $this->config = clone $config;
         } else {
             $this->config = $config;

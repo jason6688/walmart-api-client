@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class InventoryApi extends BaseApi
 {
@@ -85,7 +85,7 @@ class InventoryApi extends BaseApi
      */
     protected function getInventoryWithHttpInfo(
         string $sku,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): \Walmart\Models\MP\US\Inventory\Inventory {
         $request = $this->getInventoryRequest($sku, $shipNode);
         $this->writeDebug($request);
@@ -212,7 +212,7 @@ class InventoryApi extends BaseApi
      */
     protected function getInventoryAsyncWithHttpInfo(
         string $sku,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Inventory\Inventory';
         $request = $this->getInventoryRequest($sku, $shipNode);
@@ -268,7 +268,7 @@ class InventoryApi extends BaseApi
      */
     protected function getInventoryRequest(
         string $sku,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): Request {
         $contentType = self::contentTypes['getInventory'];
 
@@ -402,7 +402,7 @@ class InventoryApi extends BaseApi
      */
     protected function getMultiNodeInventoryForAllSkuAndAllShipNodesWithHttpInfo(
         ?string $limit = '10',
-        ?string $nextCursor = null,
+        ?string $nextCursor = null
     ): \Walmart\Models\MP\US\Inventory\MultiNodeInventoryFetchResponseDTO {
         $request = $this->getMultiNodeInventoryForAllSkuAndAllShipNodesRequest($limit, $nextCursor);
         $this->writeDebug($request);
@@ -529,7 +529,7 @@ class InventoryApi extends BaseApi
      */
     protected function getMultiNodeInventoryForAllSkuAndAllShipNodesAsyncWithHttpInfo(
         ?string $limit = '10',
-        ?string $nextCursor = null,
+        ?string $nextCursor = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Inventory\MultiNodeInventoryFetchResponseDTO';
         $request = $this->getMultiNodeInventoryForAllSkuAndAllShipNodesRequest($limit, $nextCursor);
@@ -585,7 +585,7 @@ class InventoryApi extends BaseApi
      */
     protected function getMultiNodeInventoryForAllSkuAndAllShipNodesRequest(
         ?string $limit = '10',
-        ?string $nextCursor = null,
+        ?string $nextCursor = null
     ): Request {
         $contentType = self::contentTypes['getMultiNodeInventoryForAllSkuAndAllShipNodes'];
 
@@ -713,7 +713,7 @@ class InventoryApi extends BaseApi
      */
     protected function getMultiNodeInventoryForSkuAndAllShipnodesWithHttpInfo(
         string $sku,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): \Walmart\Models\MP\US\Inventory\MultiNodeInventoryUpdateResponseDTO {
         $request = $this->getMultiNodeInventoryForSkuAndAllShipnodesRequest($sku, $shipNode);
         $this->writeDebug($request);
@@ -840,7 +840,7 @@ class InventoryApi extends BaseApi
      */
     protected function getMultiNodeInventoryForSkuAndAllShipnodesAsyncWithHttpInfo(
         string $sku,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Inventory\MultiNodeInventoryUpdateResponseDTO';
         $request = $this->getMultiNodeInventoryForSkuAndAllShipnodesRequest($sku, $shipNode);
@@ -896,7 +896,7 @@ class InventoryApi extends BaseApi
      */
     protected function getMultiNodeInventoryForSkuAndAllShipnodesRequest(
         string $sku,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): Request {
         $contentType = self::contentTypes['getMultiNodeInventoryForSkuAndAllShipnodes'];
 
@@ -1043,7 +1043,7 @@ class InventoryApi extends BaseApi
         ?string $fromModifiedDate = null,
         ?string $toModifiedDate = null,
         ?string $limit = '10',
-        ?string $offset = '0',
+        ?string $offset = '0'
     ): \Walmart\Models\MP\US\Inventory\WfsInventoryDTO {
         $request = $this->getWFSInventoryRequest($sku, $fromModifiedDate, $toModifiedDate, $limit, $offset);
         $this->writeDebug($request);
@@ -1182,7 +1182,7 @@ class InventoryApi extends BaseApi
         ?string $fromModifiedDate = null,
         ?string $toModifiedDate = null,
         ?string $limit = '10',
-        ?string $offset = '0',
+        ?string $offset = '0'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Inventory\WfsInventoryDTO';
         $request = $this->getWFSInventoryRequest($sku, $fromModifiedDate, $toModifiedDate, $limit, $offset);
@@ -1244,7 +1244,7 @@ class InventoryApi extends BaseApi
         ?string $fromModifiedDate = null,
         ?string $toModifiedDate = null,
         ?string $limit = '10',
-        ?string $offset = '0',
+        ?string $offset = '0'
     ): Request {
         $contentType = self::contentTypes['getWFSInventory'];
 
@@ -1400,7 +1400,7 @@ class InventoryApi extends BaseApi
     protected function updateBulkInventoryWithHttpInfo(
         string $feedType,
         \SplFileObject $file,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): \Walmart\Models\MP\US\Inventory\FeedId {
         $request = $this->updateBulkInventoryRequest($feedType, $file, $shipNode);
         $this->writeDebug($request);
@@ -1531,7 +1531,7 @@ class InventoryApi extends BaseApi
     protected function updateBulkInventoryAsyncWithHttpInfo(
         string $feedType,
         \SplFileObject $file,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Inventory\FeedId';
         $request = $this->updateBulkInventoryRequest($feedType, $file, $shipNode);
@@ -1589,7 +1589,7 @@ class InventoryApi extends BaseApi
     protected function updateBulkInventoryRequest(
         string $feedType,
         \SplFileObject $file,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): Request {
         $contentType = self::contentTypes['updateBulkInventory'];
 
@@ -1746,7 +1746,7 @@ class InventoryApi extends BaseApi
     protected function updateInventoryForAnItemWithHttpInfo(
         string $sku,
         \Walmart\Models\MP\US\Inventory\Inventory $inventory,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): \Walmart\Models\MP\US\Inventory\Inventory {
         $request = $this->updateInventoryForAnItemRequest($sku, $inventory, $shipNode);
         $this->writeDebug($request);
@@ -1877,7 +1877,7 @@ class InventoryApi extends BaseApi
     protected function updateInventoryForAnItemAsyncWithHttpInfo(
         string $sku,
         \Walmart\Models\MP\US\Inventory\Inventory $inventory,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Inventory\Inventory';
         $request = $this->updateInventoryForAnItemRequest($sku, $inventory, $shipNode);
@@ -1935,7 +1935,7 @@ class InventoryApi extends BaseApi
     protected function updateInventoryForAnItemRequest(
         string $sku,
         \Walmart\Models\MP\US\Inventory\Inventory $inventory,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): Request {
         $contentType = self::contentTypes['updateInventoryForAnItem'];
 
@@ -2082,7 +2082,7 @@ class InventoryApi extends BaseApi
      */
     protected function updateMultiNodeInventoryWithHttpInfo(
         string $sku,
-        \Walmart\Models\MP\US\Inventory\MultiNodeInventoryUpdateRequestDTO $multiNodeInventoryUpdateRequestDTO,
+        \Walmart\Models\MP\US\Inventory\MultiNodeInventoryUpdateRequestDTO $multiNodeInventoryUpdateRequestDTO
     ): \Walmart\Models\MP\US\Inventory\MultiNodeInventoryUpdateResponseDTO {
         $request = $this->updateMultiNodeInventoryRequest($sku, $multiNodeInventoryUpdateRequestDTO);
         $this->writeDebug($request);
@@ -2209,7 +2209,7 @@ class InventoryApi extends BaseApi
      */
     protected function updateMultiNodeInventoryAsyncWithHttpInfo(
         string $sku,
-        \Walmart\Models\MP\US\Inventory\MultiNodeInventoryUpdateRequestDTO $multiNodeInventoryUpdateRequestDTO,
+        \Walmart\Models\MP\US\Inventory\MultiNodeInventoryUpdateRequestDTO $multiNodeInventoryUpdateRequestDTO
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Inventory\MultiNodeInventoryUpdateResponseDTO';
         $request = $this->updateMultiNodeInventoryRequest($sku, $multiNodeInventoryUpdateRequestDTO);
@@ -2265,7 +2265,7 @@ class InventoryApi extends BaseApi
      */
     protected function updateMultiNodeInventoryRequest(
         string $sku,
-        \Walmart\Models\MP\US\Inventory\MultiNodeInventoryUpdateRequestDTO $multiNodeInventoryUpdateRequestDTO,
+        \Walmart\Models\MP\US\Inventory\MultiNodeInventoryUpdateRequestDTO $multiNodeInventoryUpdateRequestDTO
     ): Request {
         $contentType = self::contentTypes['updateMultiNodeInventory'];
 

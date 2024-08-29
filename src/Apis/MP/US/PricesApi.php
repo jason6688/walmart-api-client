@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class PricesApi extends BaseApi
 {
@@ -84,7 +84,7 @@ class PricesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Prices\RepricerEntityResponse
      */
     protected function createStrategyWithHttpInfo(
-        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest,
+        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest
     ): \Walmart\Models\MP\US\Prices\RepricerEntityResponse {
         $request = $this->createStrategyRequest($repricerEntityRequest);
         $this->writeDebug($request);
@@ -207,7 +207,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createStrategyAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest,
+        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Prices\RepricerEntityResponse';
         $request = $this->createStrategyRequest($repricerEntityRequest);
@@ -261,7 +261,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createStrategyRequest(
-        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest,
+        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest
     ): Request {
         $contentType = self::contentTypes['createStrategy'];
 
@@ -378,7 +378,7 @@ class PricesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Prices\RepricerEntityDeleteResponse
      */
     protected function deleteStrategyWithHttpInfo(
-        string $strategyCollectionId,
+        string $strategyCollectionId
     ): \Walmart\Models\MP\US\Prices\RepricerEntityDeleteResponse {
         $request = $this->deleteStrategyRequest($strategyCollectionId);
         $this->writeDebug($request);
@@ -501,7 +501,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function deleteStrategyAsyncWithHttpInfo(
-        string $strategyCollectionId,
+        string $strategyCollectionId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Prices\RepricerEntityDeleteResponse';
         $request = $this->deleteStrategyRequest($strategyCollectionId);
@@ -555,7 +555,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function deleteStrategyRequest(
-        string $strategyCollectionId,
+        string $strategyCollectionId
     ): Request {
         $contentType = self::contentTypes['deleteStrategy'];
 
@@ -674,7 +674,7 @@ class PricesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Prices\FeedUploadResponseDTO
      */
     protected function getRepricerFeedWithHttpInfo(
-        \Walmart\Models\MP\US\Prices\FeedUploadRequestDTO $feedUploadRequestDTO,
+        \Walmart\Models\MP\US\Prices\FeedUploadRequestDTO $feedUploadRequestDTO
     ): \Walmart\Models\MP\US\Prices\FeedUploadResponseDTO {
         $request = $this->getRepricerFeedRequest($feedUploadRequestDTO);
         $this->writeDebug($request);
@@ -797,7 +797,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getRepricerFeedAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Prices\FeedUploadRequestDTO $feedUploadRequestDTO,
+        \Walmart\Models\MP\US\Prices\FeedUploadRequestDTO $feedUploadRequestDTO
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Prices\FeedUploadResponseDTO';
         $request = $this->getRepricerFeedRequest($feedUploadRequestDTO);
@@ -851,7 +851,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getRepricerFeedRequest(
-        \Walmart\Models\MP\US\Prices\FeedUploadRequestDTO $feedUploadRequestDTO,
+        \Walmart\Models\MP\US\Prices\FeedUploadRequestDTO $feedUploadRequestDTO
     ): Request {
         $contentType = self::contentTypes['getRepricerFeed'];
 
@@ -980,7 +980,7 @@ class PricesApi extends BaseApi
         ?int $limit = 25,
         ?int $offset = 0,
         ?string $sortBy = 'INCENTIVE_LIMIT',
-        ?string $sortOrder = 'DESC',
+        ?string $sortOrder = 'DESC'
     ): \Walmart\Models\MP\US\Prices\RepricerIncentiveCollectionResponse {
         $request = $this->getRepricerIncentiveRequest($limit, $offset, $sortBy, $sortOrder);
         $this->writeDebug($request);
@@ -1115,7 +1115,7 @@ class PricesApi extends BaseApi
         ?int $limit = 25,
         ?int $offset = 0,
         ?string $sortBy = 'INCENTIVE_LIMIT',
-        ?string $sortOrder = 'DESC',
+        ?string $sortOrder = 'DESC'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Prices\RepricerIncentiveCollectionResponse';
         $request = $this->getRepricerIncentiveRequest($limit, $offset, $sortBy, $sortOrder);
@@ -1175,7 +1175,7 @@ class PricesApi extends BaseApi
         ?int $limit = 25,
         ?int $offset = 0,
         ?string $sortBy = 'INCENTIVE_LIMIT',
-        ?string $sortOrder = 'DESC',
+        ?string $sortOrder = 'DESC'
     ): Request {
         $contentType = self::contentTypes['getRepricerIncentive'];
 
@@ -1581,7 +1581,7 @@ class PricesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Prices\CapProgramResponse
      */
     protected function optCapProgramInPriceWithHttpInfo(
-        \Walmart\Models\MP\US\Prices\StatusInfo $statusInfo,
+        \Walmart\Models\MP\US\Prices\StatusInfo $statusInfo
     ): \Walmart\Models\MP\US\Prices\CapProgramResponse {
         $request = $this->optCapProgramInPriceRequest($statusInfo);
         $this->writeDebug($request);
@@ -1704,7 +1704,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function optCapProgramInPriceAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Prices\StatusInfo $statusInfo,
+        \Walmart\Models\MP\US\Prices\StatusInfo $statusInfo
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Prices\CapProgramResponse';
         $request = $this->optCapProgramInPriceRequest($statusInfo);
@@ -1758,7 +1758,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function optCapProgramInPriceRequest(
-        \Walmart\Models\MP\US\Prices\StatusInfo $statusInfo,
+        \Walmart\Models\MP\US\Prices\StatusInfo $statusInfo
     ): Request {
         $contentType = self::contentTypes['optCapProgramInPrice'];
 
@@ -1879,7 +1879,7 @@ class PricesApi extends BaseApi
      */
     protected function priceBulkUploadsWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\MP\US\Prices\FeedId {
         $request = $this->priceBulkUploadsRequest($feedType, $file);
         $this->writeDebug($request);
@@ -2006,7 +2006,7 @@ class PricesApi extends BaseApi
      */
     protected function priceBulkUploadsAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Prices\FeedId';
         $request = $this->priceBulkUploadsRequest($feedType, $file);
@@ -2062,7 +2062,7 @@ class PricesApi extends BaseApi
      */
     protected function priceBulkUploadsRequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['priceBulkUploads'];
 
@@ -2203,7 +2203,7 @@ class PricesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Prices\ItemPriceResponse
      */
     protected function updatePriceWithHttpInfo(
-        \Walmart\Models\MP\US\Prices\Price $price,
+        \Walmart\Models\MP\US\Prices\Price $price
     ): \Walmart\Models\MP\US\Prices\ItemPriceResponse {
         $request = $this->updatePriceRequest($price);
         $this->writeDebug($request);
@@ -2326,7 +2326,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function updatePriceAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Prices\Price $price,
+        \Walmart\Models\MP\US\Prices\Price $price
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Prices\ItemPriceResponse';
         $request = $this->updatePriceRequest($price);
@@ -2380,7 +2380,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function updatePriceRequest(
-        \Walmart\Models\MP\US\Prices\Price $price,
+        \Walmart\Models\MP\US\Prices\Price $price
     ): Request {
         $contentType = self::contentTypes['updatePrice'];
 
@@ -2497,7 +2497,7 @@ class PricesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Prices\UpdateRepricerIncentiveResponse
      */
     protected function updateRepricerIncentiveWithHttpInfo(
-        \Walmart\Models\MP\US\Prices\UpdateRepricerIncentiveRequest $updateRepricerIncentiveRequest,
+        \Walmart\Models\MP\US\Prices\UpdateRepricerIncentiveRequest $updateRepricerIncentiveRequest
     ): \Walmart\Models\MP\US\Prices\UpdateRepricerIncentiveResponse {
         $request = $this->updateRepricerIncentiveRequest($updateRepricerIncentiveRequest);
         $this->writeDebug($request);
@@ -2620,7 +2620,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function updateRepricerIncentiveAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Prices\UpdateRepricerIncentiveRequest $updateRepricerIncentiveRequest,
+        \Walmart\Models\MP\US\Prices\UpdateRepricerIncentiveRequest $updateRepricerIncentiveRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Prices\UpdateRepricerIncentiveResponse';
         $request = $this->updateRepricerIncentiveRequest($updateRepricerIncentiveRequest);
@@ -2674,7 +2674,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function updateRepricerIncentiveRequest(
-        \Walmart\Models\MP\US\Prices\UpdateRepricerIncentiveRequest $updateRepricerIncentiveRequest,
+        \Walmart\Models\MP\US\Prices\UpdateRepricerIncentiveRequest $updateRepricerIncentiveRequest
     ): Request {
         $contentType = self::contentTypes['updateRepricerIncentive'];
 
@@ -2795,7 +2795,7 @@ class PricesApi extends BaseApi
      */
     protected function updateStrategyWithHttpInfo(
         string $strategyCollectionId,
-        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest,
+        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest
     ): \Walmart\Models\MP\US\Prices\RepricerEntityResponse {
         $request = $this->updateStrategyRequest($strategyCollectionId, $repricerEntityRequest);
         $this->writeDebug($request);
@@ -2922,7 +2922,7 @@ class PricesApi extends BaseApi
      */
     protected function updateStrategyAsyncWithHttpInfo(
         string $strategyCollectionId,
-        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest,
+        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Prices\RepricerEntityResponse';
         $request = $this->updateStrategyRequest($strategyCollectionId, $repricerEntityRequest);
@@ -2978,7 +2978,7 @@ class PricesApi extends BaseApi
      */
     protected function updateStrategyRequest(
         string $strategyCollectionId,
-        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest,
+        \Walmart\Models\MP\US\Prices\RepricerEntityRequest $repricerEntityRequest
     ): Request {
         $contentType = self::contentTypes['updateStrategy'];
 

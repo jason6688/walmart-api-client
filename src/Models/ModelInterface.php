@@ -6,9 +6,9 @@
  *
  * @category Class
  * @package  Walmart\Models
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 
 /**
@@ -24,7 +24,7 @@ namespace Walmart\Models;
  * Interface abstracting model access.
  *
  * @package Walmart\Models
- * @author  Jesse Evers
+ * @author  Jason
  */
 interface ModelInterface
 {

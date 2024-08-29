@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class ReviewsApi extends BaseApi
 {
@@ -77,7 +77,7 @@ class ReviewsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Reviews\BulkItemUpdateResponse
      */
     protected function bulkUpdateItemStatusWithHttpInfo(
-        \Walmart\Models\MP\US\Reviews\BulkItemStatusUpdateRequest $bulkItemStatusUpdateRequest,
+        \Walmart\Models\MP\US\Reviews\BulkItemStatusUpdateRequest $bulkItemStatusUpdateRequest
     ): \Walmart\Models\MP\US\Reviews\BulkItemUpdateResponse {
         $request = $this->bulkUpdateItemStatusRequest($bulkItemStatusUpdateRequest);
         $this->writeDebug($request);
@@ -200,7 +200,7 @@ class ReviewsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function bulkUpdateItemStatusAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Reviews\BulkItemStatusUpdateRequest $bulkItemStatusUpdateRequest,
+        \Walmart\Models\MP\US\Reviews\BulkItemStatusUpdateRequest $bulkItemStatusUpdateRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Reviews\BulkItemUpdateResponse';
         $request = $this->bulkUpdateItemStatusRequest($bulkItemStatusUpdateRequest);
@@ -254,7 +254,7 @@ class ReviewsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function bulkUpdateItemStatusRequest(
-        \Walmart\Models\MP\US\Reviews\BulkItemStatusUpdateRequest $bulkItemStatusUpdateRequest,
+        \Walmart\Models\MP\US\Reviews\BulkItemStatusUpdateRequest $bulkItemStatusUpdateRequest
     ): Request {
         $contentType = self::contentTypes['bulkUpdateItemStatus'];
 
@@ -371,7 +371,7 @@ class ReviewsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Reviews\GetCategoriesResponse
      */
     protected function getIrpCategoriesWithHttpInfo(
-        \Walmart\Models\MP\US\Reviews\GetCategoriesRequest $getCategoriesRequest,
+        \Walmart\Models\MP\US\Reviews\GetCategoriesRequest $getCategoriesRequest
     ): \Walmart\Models\MP\US\Reviews\GetCategoriesResponse {
         $request = $this->getIrpCategoriesRequest($getCategoriesRequest);
         $this->writeDebug($request);
@@ -494,7 +494,7 @@ class ReviewsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getIrpCategoriesAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Reviews\GetCategoriesRequest $getCategoriesRequest,
+        \Walmart\Models\MP\US\Reviews\GetCategoriesRequest $getCategoriesRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Reviews\GetCategoriesResponse';
         $request = $this->getIrpCategoriesRequest($getCategoriesRequest);
@@ -548,7 +548,7 @@ class ReviewsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getIrpCategoriesRequest(
-        \Walmart\Models\MP\US\Reviews\GetCategoriesRequest $getCategoriesRequest,
+        \Walmart\Models\MP\US\Reviews\GetCategoriesRequest $getCategoriesRequest
     ): Request {
         $contentType = self::contentTypes['getIrpCategories'];
 
@@ -669,7 +669,7 @@ class ReviewsApi extends BaseApi
      */
     protected function getIrpItemsWithHttpInfo(
         string $scrollId,
-        \Walmart\Models\MP\US\Reviews\GetIrpItemsRequest $getIrpItemsRequest,
+        \Walmart\Models\MP\US\Reviews\GetIrpItemsRequest $getIrpItemsRequest
     ): \Walmart\Models\MP\US\Reviews\GetIrpItemsResponse {
         $request = $this->getIrpItemsRequest($scrollId, $getIrpItemsRequest);
         $this->writeDebug($request);
@@ -796,7 +796,7 @@ class ReviewsApi extends BaseApi
      */
     protected function getIrpItemsAsyncWithHttpInfo(
         string $scrollId,
-        \Walmart\Models\MP\US\Reviews\GetIrpItemsRequest $getIrpItemsRequest,
+        \Walmart\Models\MP\US\Reviews\GetIrpItemsRequest $getIrpItemsRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Reviews\GetIrpItemsResponse';
         $request = $this->getIrpItemsRequest($scrollId, $getIrpItemsRequest);
@@ -852,7 +852,7 @@ class ReviewsApi extends BaseApi
      */
     protected function getIrpItemsRequest(
         string $scrollId,
-        \Walmart\Models\MP\US\Reviews\GetIrpItemsRequest $getIrpItemsRequest,
+        \Walmart\Models\MP\US\Reviews\GetIrpItemsRequest $getIrpItemsRequest
     ): Request {
         $contentType = self::contentTypes['getIrpItems'];
 

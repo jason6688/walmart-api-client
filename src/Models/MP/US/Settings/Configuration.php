@@ -7,9 +7,9 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 
 /**
@@ -31,9 +31,9 @@ use Walmart\Models\BaseModel;
  * @description Contains an array of Regions, an array of Address Type, Transit Time and Per shipping charge or array of Tired Shipping Charge
 
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class Configuration extends BaseModel
 {

@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class AuthenticationApi extends BaseApi
 {
@@ -354,7 +354,7 @@ class AuthenticationApi extends BaseApi
         string $grantType,
         ?string $code = '65CA5DA313A549D49D15D3119D9AD85D',
         ?string $redirectUri = 'https://example-client-app.com',
-        ?string $refreshToken = 'APXcIoTpKMH9OQN.....',
+        ?string $refreshToken = 'APXcIoTpKMH9OQN.....'
     ): \Walmart\Models\MP\MX\Authentication\OAuthToken {
         $request = $this->tokenAPIRequest($grantType, $code, $redirectUri, $refreshToken);
         $this->writeDebug($request);
@@ -489,7 +489,7 @@ class AuthenticationApi extends BaseApi
         string $grantType,
         ?string $code = '65CA5DA313A549D49D15D3119D9AD85D',
         ?string $redirectUri = 'https://example-client-app.com',
-        ?string $refreshToken = 'APXcIoTpKMH9OQN.....',
+        ?string $refreshToken = 'APXcIoTpKMH9OQN.....'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\Authentication\OAuthToken';
         $request = $this->tokenAPIRequest($grantType, $code, $redirectUri, $refreshToken);
@@ -549,7 +549,7 @@ class AuthenticationApi extends BaseApi
         string $grantType,
         ?string $code = '65CA5DA313A549D49D15D3119D9AD85D',
         ?string $redirectUri = 'https://example-client-app.com',
-        ?string $refreshToken = 'APXcIoTpKMH9OQN.....',
+        ?string $refreshToken = 'APXcIoTpKMH9OQN.....'
     ): Request {
         $contentType = self::contentTypes['tokenAPI'];
 

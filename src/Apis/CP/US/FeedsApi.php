@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class FeedsApi extends BaseApi
 {
@@ -82,7 +82,7 @@ class FeedsApi extends BaseApi
      */
     protected function contentProductFeedWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\CP\US\Feeds\FeedId {
         $request = $this->contentProductFeedRequest($feedType, $file);
         $this->writeDebug($request);
@@ -209,7 +209,7 @@ class FeedsApi extends BaseApi
      */
     protected function contentProductFeedAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\CP\US\Feeds\FeedId';
         $request = $this->contentProductFeedRequest($feedType, $file);
@@ -265,7 +265,7 @@ class FeedsApi extends BaseApi
      */
     protected function contentProductFeedRequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['contentProductFeed'];
 
@@ -418,7 +418,7 @@ class FeedsApi extends BaseApi
     protected function getAllFeedStatusesWithHttpInfo(
         string $feedId,
         ?string $offset = '0',
-        ?string $limit = '20',
+        ?string $limit = '20'
     ): \Walmart\Models\CP\US\Feeds\FeedRecordResponse {
         $request = $this->getAllFeedStatusesRequest($feedId, $offset, $limit);
         $this->writeDebug($request);
@@ -549,7 +549,7 @@ class FeedsApi extends BaseApi
     protected function getAllFeedStatusesAsyncWithHttpInfo(
         string $feedId,
         ?string $offset = '0',
-        ?string $limit = '20',
+        ?string $limit = '20'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\CP\US\Feeds\FeedRecordResponse';
         $request = $this->getAllFeedStatusesRequest($feedId, $offset, $limit);
@@ -607,7 +607,7 @@ class FeedsApi extends BaseApi
     protected function getAllFeedStatusesRequest(
         string $feedId,
         ?string $offset = '0',
-        ?string $limit = '20',
+        ?string $limit = '20'
     ): Request {
         $contentType = self::contentTypes['getAllFeedStatuses'];
 
@@ -761,7 +761,7 @@ class FeedsApi extends BaseApi
         string $feedId,
         ?string $includeDetails = 'false',
         ?string $offset = '0',
-        ?string $limit = '20',
+        ?string $limit = '20'
     ): \Walmart\Models\CP\US\Feeds\PartnerFeedResponse {
         $request = $this->getFeedItemStatusRequest($feedId, $includeDetails, $offset, $limit);
         $this->writeDebug($request);
@@ -896,7 +896,7 @@ class FeedsApi extends BaseApi
         string $feedId,
         ?string $includeDetails = 'false',
         ?string $offset = '0',
-        ?string $limit = '20',
+        ?string $limit = '20'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\CP\US\Feeds\PartnerFeedResponse';
         $request = $this->getFeedItemStatusRequest($feedId, $includeDetails, $offset, $limit);
@@ -956,7 +956,7 @@ class FeedsApi extends BaseApi
         string $feedId,
         ?string $includeDetails = 'false',
         ?string $offset = '0',
-        ?string $limit = '20',
+        ?string $limit = '20'
     ): Request {
         $contentType = self::contentTypes['getFeedItemStatus'];
 
@@ -1111,7 +1111,7 @@ class FeedsApi extends BaseApi
      */
     protected function updateRichMediaWithHttpInfo(
         string $feedType,
-        string $body,
+        string $body
     ): \Walmart\Models\CP\US\Feeds\FeedId {
         $request = $this->updateRichMediaRequest($feedType, $body);
         $this->writeDebug($request);
@@ -1238,7 +1238,7 @@ class FeedsApi extends BaseApi
      */
     protected function updateRichMediaAsyncWithHttpInfo(
         string $feedType,
-        string $body,
+        string $body
     ): PromiseInterface {
         $returnType = '\Walmart\Models\CP\US\Feeds\FeedId';
         $request = $this->updateRichMediaRequest($feedType, $body);
@@ -1294,7 +1294,7 @@ class FeedsApi extends BaseApi
      */
     protected function updateRichMediaRequest(
         string $feedType,
-        string $body,
+        string $body
     ): Request {
         $contentType = self::contentTypes['updateRichMedia'];
 

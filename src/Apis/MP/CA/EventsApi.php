@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class EventsApi extends BaseApi
 {
@@ -82,7 +82,7 @@ class EventsApi extends BaseApi
      * @return \Walmart\Models\MP\CA\Events\UploadResponse
      */
     protected function autoUploadPromoSpecWithHttpInfo(
-        string $eventId,
+        string $eventId
     ): \Walmart\Models\MP\CA\Events\UploadResponse {
         $request = $this->autoUploadPromoSpecRequest($eventId);
         $this->writeDebug($request);
@@ -205,7 +205,7 @@ class EventsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function autoUploadPromoSpecAsyncWithHttpInfo(
-        string $eventId,
+        string $eventId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Events\UploadResponse';
         $request = $this->autoUploadPromoSpecRequest($eventId);
@@ -259,7 +259,7 @@ class EventsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function autoUploadPromoSpecRequest(
-        string $eventId,
+        string $eventId
     ): Request {
         $contentType = self::contentTypes['autoUploadPromoSpec'];
 
@@ -398,7 +398,7 @@ class EventsApi extends BaseApi
     protected function bulkAddItemWithHttpInfo(
         \SplFileObject $file,
         string $eventId,
-        string $eventName,
+        string $eventName
     ): \Walmart\Models\MP\CA\Events\UploadResponse {
         $request = $this->bulkAddItemRequest($file, $eventId, $eventName);
         $this->writeDebug($request);
@@ -529,7 +529,7 @@ class EventsApi extends BaseApi
     protected function bulkAddItemAsyncWithHttpInfo(
         \SplFileObject $file,
         string $eventId,
-        string $eventName,
+        string $eventName
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Events\UploadResponse';
         $request = $this->bulkAddItemRequest($file, $eventId, $eventName);
@@ -587,7 +587,7 @@ class EventsApi extends BaseApi
     protected function bulkAddItemRequest(
         \SplFileObject $file,
         string $eventId,
-        string $eventName,
+        string $eventName
     ): Request {
         $contentType = self::contentTypes['bulkAddItem'];
 
@@ -971,7 +971,7 @@ class EventsApi extends BaseApi
      * @return \Walmart\Models\MP\CA\Events\PromoItemResponse
      */
     protected function getAPromoItemWithHttpInfo(
-        string $eventID,
+        string $eventID
     ): \Walmart\Models\MP\CA\Events\PromoItemResponse {
         $request = $this->getAPromoItemRequest($eventID);
         $this->writeDebug($request);
@@ -1094,7 +1094,7 @@ class EventsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getAPromoItemAsyncWithHttpInfo(
-        string $eventID,
+        string $eventID
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Events\PromoItemResponse';
         $request = $this->getAPromoItemRequest($eventID);
@@ -1148,7 +1148,7 @@ class EventsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getAPromoItemRequest(
-        string $eventID,
+        string $eventID
     ): Request {
         $contentType = self::contentTypes['getAPromoItem'];
 
@@ -1283,7 +1283,7 @@ class EventsApi extends BaseApi
      */
     protected function getAllPromoItemsWithHttpInfo(
         string $eventID,
-        ?string $type = 'json',
+        ?string $type = 'json'
     ): \Walmart\Models\MP\CA\Events\PromoItemResponse {
         $request = $this->getAllPromoItemsRequest($eventID, $type);
         $this->writeDebug($request);
@@ -1410,7 +1410,7 @@ class EventsApi extends BaseApi
      */
     protected function getAllPromoItemsAsyncWithHttpInfo(
         string $eventID,
-        ?string $type = 'json',
+        ?string $type = 'json'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Events\PromoItemResponse';
         $request = $this->getAllPromoItemsRequest($eventID, $type);
@@ -1466,7 +1466,7 @@ class EventsApi extends BaseApi
      */
     protected function getAllPromoItemsRequest(
         string $eventID,
-        ?string $type = 'json',
+        ?string $type = 'json'
     ): Request {
         $contentType = self::contentTypes['getAllPromoItems'];
 
@@ -1884,7 +1884,7 @@ class EventsApi extends BaseApi
      */
     protected function getPromoSpecWithHttpInfo(
         string $eventId,
-        ?string $type = 'file',
+        ?string $type = 'file'
     ): void {
         $request = $this->getPromoSpecRequest($eventId, $type);
         $this->writeDebug($request);
@@ -1979,7 +1979,7 @@ class EventsApi extends BaseApi
      */
     protected function getPromoSpecAsyncWithHttpInfo(
         string $eventId,
-        ?string $type = 'file',
+        ?string $type = 'file'
     ): PromiseInterface {
         $returnType = '';
         $request = $this->getPromoSpecRequest($eventId, $type);
@@ -2026,7 +2026,7 @@ class EventsApi extends BaseApi
      */
     protected function getPromoSpecRequest(
         string $eventId,
-        ?string $type = 'file',
+        ?string $type = 'file'
     ): Request {
         $contentType = self::contentTypes['getPromoSpec'];
 
@@ -2165,7 +2165,7 @@ class EventsApi extends BaseApi
      * @return \Walmart\Models\MP\CA\Events\ItemCountResponse
      */
     protected function getTotalItemCountWithHttpInfo(
-        string $eventId,
+        string $eventId
     ): \Walmart\Models\MP\CA\Events\ItemCountResponse {
         $request = $this->getTotalItemCountRequest($eventId);
         $this->writeDebug($request);
@@ -2288,7 +2288,7 @@ class EventsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getTotalItemCountAsyncWithHttpInfo(
-        string $eventId,
+        string $eventId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Events\ItemCountResponse';
         $request = $this->getTotalItemCountRequest($eventId);
@@ -2342,7 +2342,7 @@ class EventsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getTotalItemCountRequest(
-        string $eventId,
+        string $eventId
     ): Request {
         $contentType = self::contentTypes['getTotalItemCount'];
 

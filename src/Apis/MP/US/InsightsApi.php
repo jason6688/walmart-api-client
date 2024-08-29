@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class InsightsApi extends BaseApi
 {
@@ -101,7 +101,7 @@ class InsightsApi extends BaseApi
         ?int $hasIssue = 0,
         ?string $type = null,
         ?int $limit = null,
-        ?int $offset = 0,
+        ?int $offset = 0
     ): \Walmart\Models\MP\US\Insights\GetListingQualityScore {
         $request = $this->getCategoriesListRequest($viewTrendingItems, $wfsFlag, $hasIssue, $type, $limit, $offset);
         $this->writeDebug($request);
@@ -244,7 +244,7 @@ class InsightsApi extends BaseApi
         ?int $hasIssue = 0,
         ?string $type = null,
         ?int $limit = null,
-        ?int $offset = 0,
+        ?int $offset = 0
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Insights\GetListingQualityScore';
         $request = $this->getCategoriesListRequest($viewTrendingItems, $wfsFlag, $hasIssue, $type, $limit, $offset);
@@ -308,7 +308,7 @@ class InsightsApi extends BaseApi
         ?int $hasIssue = 0,
         ?string $type = null,
         ?int $limit = null,
-        ?int $offset = 0,
+        ?int $offset = 0
     ): Request {
         $contentType = self::contentTypes['getCategoriesList'];
 
@@ -468,7 +468,7 @@ class InsightsApi extends BaseApi
      */
     protected function getListingQualityScoreWithHttpInfo(
         ?bool $viewTrendingItems = null,
-        ?string $wfsFlag = null,
+        ?string $wfsFlag = null
     ): \Walmart\Models\MP\US\Insights\GetListingQualityScore {
         $request = $this->getListingQualityScoreRequest($viewTrendingItems, $wfsFlag);
         $this->writeDebug($request);
@@ -595,7 +595,7 @@ class InsightsApi extends BaseApi
      */
     protected function getListingQualityScoreAsyncWithHttpInfo(
         ?bool $viewTrendingItems = null,
-        ?string $wfsFlag = null,
+        ?string $wfsFlag = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Insights\GetListingQualityScore';
         $request = $this->getListingQualityScoreRequest($viewTrendingItems, $wfsFlag);
@@ -651,7 +651,7 @@ class InsightsApi extends BaseApi
      */
     protected function getListingQualityScoreRequest(
         ?bool $viewTrendingItems = null,
-        ?string $wfsFlag = null,
+        ?string $wfsFlag = null
     ): Request {
         $contentType = self::contentTypes['getListingQualityScore'];
 
@@ -1057,7 +1057,7 @@ class InsightsApi extends BaseApi
         ?string $categoryId = 'null',
         ?string $limit = '20',
         ?string $offset = '0',
-        ?string $timeFrame = '7',
+        ?string $timeFrame = '7'
     ): \Walmart\Models\MP\US\Insights\GetTrendingResult {
         $request = $this->getTrendingResultRequest($departmentId, $categoryId, $limit, $offset, $timeFrame);
         $this->writeDebug($request);
@@ -1196,7 +1196,7 @@ class InsightsApi extends BaseApi
         ?string $categoryId = 'null',
         ?string $limit = '20',
         ?string $offset = '0',
-        ?string $timeFrame = '7',
+        ?string $timeFrame = '7'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Insights\GetTrendingResult';
         $request = $this->getTrendingResultRequest($departmentId, $categoryId, $limit, $offset, $timeFrame);
@@ -1258,7 +1258,7 @@ class InsightsApi extends BaseApi
         ?string $categoryId = 'null',
         ?string $limit = '20',
         ?string $offset = '0',
-        ?string $timeFrame = '7',
+        ?string $timeFrame = '7'
     ): Request {
         $contentType = self::contentTypes['getTrendingResult'];
 
@@ -1412,7 +1412,7 @@ class InsightsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Insights\GetUnpublishedItemsCount
      */
     protected function getUnpublishedItemCountWithHttpInfo(
-        string $fromDate,
+        string $fromDate
     ): \Walmart\Models\MP\US\Insights\GetUnpublishedItemsCount {
         $request = $this->getUnpublishedItemCountRequest($fromDate);
         $this->writeDebug($request);
@@ -1535,7 +1535,7 @@ class InsightsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getUnpublishedItemCountAsyncWithHttpInfo(
-        string $fromDate,
+        string $fromDate
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Insights\GetUnpublishedItemsCount';
         $request = $this->getUnpublishedItemCountRequest($fromDate);
@@ -1589,7 +1589,7 @@ class InsightsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getUnpublishedItemCountRequest(
-        string $fromDate,
+        string $fromDate
     ): Request {
         $contentType = self::contentTypes['getUnpublishedItemCount'];
 
@@ -1731,7 +1731,7 @@ class InsightsApi extends BaseApi
         ?string $limit = '20',
         ?string $offerLifecycleStatus = 'all',
         ?string $marketTrending = 'true',
-        ?string $itemsWithInventory = 'true',
+        ?string $itemsWithInventory = 'true'
     ): \Walmart\Models\MP\US\Insights\GetUnpublishedItem {
         $request = $this->getUnpublishedItemsRequest($fromDate, $unpublishedReasonCode, $limit, $offerLifecycleStatus, $marketTrending, $itemsWithInventory);
         $this->writeDebug($request);
@@ -1874,7 +1874,7 @@ class InsightsApi extends BaseApi
         ?string $limit = '20',
         ?string $offerLifecycleStatus = 'all',
         ?string $marketTrending = 'true',
-        ?string $itemsWithInventory = 'true',
+        ?string $itemsWithInventory = 'true'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Insights\GetUnpublishedItem';
         $request = $this->getUnpublishedItemsRequest($fromDate, $unpublishedReasonCode, $limit, $offerLifecycleStatus, $marketTrending, $itemsWithInventory);
@@ -1938,7 +1938,7 @@ class InsightsApi extends BaseApi
         ?string $limit = '20',
         ?string $offerLifecycleStatus = 'all',
         ?string $marketTrending = 'true',
-        ?string $itemsWithInventory = 'true',
+        ?string $itemsWithInventory = 'true'
     ): Request {
         $contentType = self::contentTypes['getUnpublishedItems'];
 
@@ -2108,7 +2108,7 @@ class InsightsApi extends BaseApi
     protected function itemsDetailsForListingWithHttpInfo(
         \Walmart\Models\MP\US\Insights\ItemDetailsLQRequestPayload $itemDetailsLQRequestPayload,
         ?string $limit = '200',
-        ?string $nextCursor = null,
+        ?string $nextCursor = null
     ): \Walmart\Models\MP\US\Insights\ItemDetailsLQResponsePayload {
         $request = $this->itemsDetailsForListingRequest($itemDetailsLQRequestPayload, $limit, $nextCursor);
         $this->writeDebug($request);
@@ -2239,7 +2239,7 @@ class InsightsApi extends BaseApi
     protected function itemsDetailsForListingAsyncWithHttpInfo(
         \Walmart\Models\MP\US\Insights\ItemDetailsLQRequestPayload $itemDetailsLQRequestPayload,
         ?string $limit = '200',
-        ?string $nextCursor = null,
+        ?string $nextCursor = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Insights\ItemDetailsLQResponsePayload';
         $request = $this->itemsDetailsForListingRequest($itemDetailsLQRequestPayload, $limit, $nextCursor);
@@ -2297,7 +2297,7 @@ class InsightsApi extends BaseApi
     protected function itemsDetailsForListingRequest(
         \Walmart\Models\MP\US\Insights\ItemDetailsLQRequestPayload $itemDetailsLQRequestPayload,
         ?string $limit = '200',
-        ?string $nextCursor = null,
+        ?string $nextCursor = null
     ): Request {
         $contentType = self::contentTypes['itemsDetailsForListing'];
 

@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class AssortmentRecommendationsApi extends BaseApi
 {
@@ -80,7 +80,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationsResponse
      */
     protected function createFileOnRequestWithHttpInfo(
-        \Walmart\Models\MP\US\AssortmentRecommendations\FileOnRequestPayload $fileOnRequestPayload,
+        \Walmart\Models\MP\US\AssortmentRecommendations\FileOnRequestPayload $fileOnRequestPayload
     ): \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationsResponse {
         $request = $this->createFileOnRequestRequest($fileOnRequestPayload);
         $this->writeDebug($request);
@@ -203,7 +203,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createFileOnRequestAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\AssortmentRecommendations\FileOnRequestPayload $fileOnRequestPayload,
+        \Walmart\Models\MP\US\AssortmentRecommendations\FileOnRequestPayload $fileOnRequestPayload
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationsResponse';
         $request = $this->createFileOnRequestRequest($fileOnRequestPayload);
@@ -257,7 +257,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createFileOnRequestRequest(
-        \Walmart\Models\MP\US\AssortmentRecommendations\FileOnRequestPayload $fileOnRequestPayload,
+        \Walmart\Models\MP\US\AssortmentRecommendations\FileOnRequestPayload $fileOnRequestPayload
     ): Request {
         $contentType = self::contentTypes['createFileOnRequest'];
 
@@ -374,7 +374,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \Walmart\Models\MP\US\AssortmentRecommendations\FileDownloadDetailResponsePayload
      */
     protected function downloadFileAsPerTheRequestIdWithHttpInfo(
-        string $requestId,
+        string $requestId
     ): \Walmart\Models\MP\US\AssortmentRecommendations\FileDownloadDetailResponsePayload {
         $request = $this->downloadFileAsPerTheRequestIdRequest($requestId);
         $this->writeDebug($request);
@@ -497,7 +497,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function downloadFileAsPerTheRequestIdAsyncWithHttpInfo(
-        string $requestId,
+        string $requestId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\AssortmentRecommendations\FileDownloadDetailResponsePayload';
         $request = $this->downloadFileAsPerTheRequestIdRequest($requestId);
@@ -551,7 +551,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function downloadFileAsPerTheRequestIdRequest(
-        string $requestId,
+        string $requestId
     ): Request {
         $contentType = self::contentTypes['downloadFileAsPerTheRequestId'];
 
@@ -670,7 +670,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationsResponse
      */
     protected function getAssortmentRecommendationsWithHttpInfo(
-        \Walmart\Models\MP\US\AssortmentRecommendations\RecommendationRequest $recommendationRequest,
+        \Walmart\Models\MP\US\AssortmentRecommendations\RecommendationRequest $recommendationRequest
     ): \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationsResponse {
         $request = $this->getAssortmentRecommendationsRequest($recommendationRequest);
         $this->writeDebug($request);
@@ -793,7 +793,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getAssortmentRecommendationsAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\AssortmentRecommendations\RecommendationRequest $recommendationRequest,
+        \Walmart\Models\MP\US\AssortmentRecommendations\RecommendationRequest $recommendationRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationsResponse';
         $request = $this->getAssortmentRecommendationsRequest($recommendationRequest);
@@ -847,7 +847,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getAssortmentRecommendationsRequest(
-        \Walmart\Models\MP\US\AssortmentRecommendations\RecommendationRequest $recommendationRequest,
+        \Walmart\Models\MP\US\AssortmentRecommendations\RecommendationRequest $recommendationRequest
     ): Request {
         $contentType = self::contentTypes['getAssortmentRecommendations'];
 
@@ -964,7 +964,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \Walmart\Models\MP\US\AssortmentRecommendations\CategorizationResponse
      */
     protected function getCategorizationDetailsOfAssortmentRecommendationsWithHttpInfo(
-        \Walmart\Models\MP\US\AssortmentRecommendations\CategorizationRequest $categorizationRequest,
+        \Walmart\Models\MP\US\AssortmentRecommendations\CategorizationRequest $categorizationRequest
     ): \Walmart\Models\MP\US\AssortmentRecommendations\CategorizationResponse {
         $request = $this->getCategorizationDetailsOfAssortmentRecommendationsRequest($categorizationRequest);
         $this->writeDebug($request);
@@ -1087,7 +1087,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getCategorizationDetailsOfAssortmentRecommendationsAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\AssortmentRecommendations\CategorizationRequest $categorizationRequest,
+        \Walmart\Models\MP\US\AssortmentRecommendations\CategorizationRequest $categorizationRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\AssortmentRecommendations\CategorizationResponse';
         $request = $this->getCategorizationDetailsOfAssortmentRecommendationsRequest($categorizationRequest);
@@ -1141,7 +1141,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getCategorizationDetailsOfAssortmentRecommendationsRequest(
-        \Walmart\Models\MP\US\AssortmentRecommendations\CategorizationRequest $categorizationRequest,
+        \Walmart\Models\MP\US\AssortmentRecommendations\CategorizationRequest $categorizationRequest
     ): Request {
         $contentType = self::contentTypes['getCategorizationDetailsOfAssortmentRecommendations'];
 
@@ -1258,7 +1258,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \Walmart\Models\MP\US\AssortmentRecommendations\RequestStatusResponseObj
      */
     protected function getFileOnRequestStatusWithHttpInfo(
-        string $requestId,
+        string $requestId
     ): \Walmart\Models\MP\US\AssortmentRecommendations\RequestStatusResponseObj {
         $request = $this->getFileOnRequestStatusRequest($requestId);
         $this->writeDebug($request);
@@ -1381,7 +1381,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getFileOnRequestStatusAsyncWithHttpInfo(
-        string $requestId,
+        string $requestId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\AssortmentRecommendations\RequestStatusResponseObj';
         $request = $this->getFileOnRequestStatusRequest($requestId);
@@ -1435,7 +1435,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getFileOnRequestStatusRequest(
-        string $requestId,
+        string $requestId
     ): Request {
         $contentType = self::contentTypes['getFileOnRequestStatus'];
 
@@ -1554,7 +1554,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationsResponse
      */
     protected function rejectAssortmentRecommendationsWithHttpInfo(
-        \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationRequest $rejectRecommendationRequest,
+        \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationRequest $rejectRecommendationRequest
     ): \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationsResponse {
         $request = $this->rejectAssortmentRecommendationsRequest($rejectRecommendationRequest);
         $this->writeDebug($request);
@@ -1677,7 +1677,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function rejectAssortmentRecommendationsAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationRequest $rejectRecommendationRequest,
+        \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationRequest $rejectRecommendationRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationsResponse';
         $request = $this->rejectAssortmentRecommendationsRequest($rejectRecommendationRequest);
@@ -1731,7 +1731,7 @@ class AssortmentRecommendationsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function rejectAssortmentRecommendationsRequest(
-        \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationRequest $rejectRecommendationRequest,
+        \Walmart\Models\MP\US\AssortmentRecommendations\RejectRecommendationRequest $rejectRecommendationRequest
     ): Request {
         $contentType = self::contentTypes['rejectAssortmentRecommendations'];
 

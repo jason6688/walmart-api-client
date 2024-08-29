@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class InventoryApi extends BaseApi
 {
@@ -77,7 +77,7 @@ class InventoryApi extends BaseApi
      * @return \Walmart\Models\MP\CA\Inventory\InventoryV2
      */
     protected function getInventoryWithHttpInfo(
-        string $sku,
+        string $sku
     ): \Walmart\Models\MP\CA\Inventory\InventoryV2 {
         $request = $this->getInventoryRequest($sku);
         $this->writeDebug($request);
@@ -200,7 +200,7 @@ class InventoryApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getInventoryAsyncWithHttpInfo(
-        string $sku,
+        string $sku
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Inventory\InventoryV2';
         $request = $this->getInventoryRequest($sku);
@@ -254,7 +254,7 @@ class InventoryApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getInventoryRequest(
-        string $sku,
+        string $sku
     ): Request {
         $contentType = self::contentTypes['getInventory'];
 
@@ -389,7 +389,7 @@ class InventoryApi extends BaseApi
      */
     protected function updateBulkInventoryWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\MP\CA\Inventory\FeedId {
         $request = $this->updateBulkInventoryRequest($feedType, $file);
         $this->writeDebug($request);
@@ -516,7 +516,7 @@ class InventoryApi extends BaseApi
      */
     protected function updateBulkInventoryAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Inventory\FeedId';
         $request = $this->updateBulkInventoryRequest($feedType, $file);
@@ -572,7 +572,7 @@ class InventoryApi extends BaseApi
      */
     protected function updateBulkInventoryRequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['updateBulkInventory'];
 
@@ -726,7 +726,7 @@ class InventoryApi extends BaseApi
      */
     protected function updateInventoryForAnItemCAWithHttpInfo(
         string $sku,
-        \Walmart\Models\MP\CA\Inventory\InventoryV2 $inventoryV2,
+        \Walmart\Models\MP\CA\Inventory\InventoryV2 $inventoryV2
     ): \Walmart\Models\MP\CA\Inventory\InventoryV2 {
         $request = $this->updateInventoryForAnItemCARequest($sku, $inventoryV2);
         $this->writeDebug($request);
@@ -853,7 +853,7 @@ class InventoryApi extends BaseApi
      */
     protected function updateInventoryForAnItemCAAsyncWithHttpInfo(
         string $sku,
-        \Walmart\Models\MP\CA\Inventory\InventoryV2 $inventoryV2,
+        \Walmart\Models\MP\CA\Inventory\InventoryV2 $inventoryV2
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Inventory\InventoryV2';
         $request = $this->updateInventoryForAnItemCARequest($sku, $inventoryV2);
@@ -909,7 +909,7 @@ class InventoryApi extends BaseApi
      */
     protected function updateInventoryForAnItemCARequest(
         string $sku,
-        \Walmart\Models\MP\CA\Inventory\InventoryV2 $inventoryV2,
+        \Walmart\Models\MP\CA\Inventory\InventoryV2 $inventoryV2
     ): Request {
         $contentType = self::contentTypes['updateInventoryForAnItemCA'];
 

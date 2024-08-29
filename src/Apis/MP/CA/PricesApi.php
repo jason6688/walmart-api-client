@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class PricesApi extends BaseApi
 {
@@ -80,7 +80,7 @@ class PricesApi extends BaseApi
      */
     protected function priceBulkUploadsWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\MP\CA\Prices\FeedId {
         $request = $this->priceBulkUploadsRequest($feedType, $file);
         $this->writeDebug($request);
@@ -207,7 +207,7 @@ class PricesApi extends BaseApi
      */
     protected function priceBulkUploadsAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Prices\FeedId';
         $request = $this->priceBulkUploadsRequest($feedType, $file);
@@ -263,7 +263,7 @@ class PricesApi extends BaseApi
      */
     protected function priceBulkUploadsRequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['priceBulkUploads'];
 
@@ -413,7 +413,7 @@ class PricesApi extends BaseApi
      * @return \Walmart\Models\MP\CA\Prices\MPItemPriceResponseV2
      */
     protected function updatePriceCAWithHttpInfo(
-        string $body,
+        string $body
     ): \Walmart\Models\MP\CA\Prices\MPItemPriceResponseV2 {
         $request = $this->updatePriceCARequest($body);
         $this->writeDebug($request);
@@ -536,7 +536,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function updatePriceCAAsyncWithHttpInfo(
-        string $body,
+        string $body
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Prices\MPItemPriceResponseV2';
         $request = $this->updatePriceCARequest($body);
@@ -590,7 +590,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function updatePriceCARequest(
-        string $body,
+        string $body
     ): Request {
         $contentType = self::contentTypes['updatePriceCA'];
 

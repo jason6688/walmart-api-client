@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class ReportsApi extends BaseApi
 {
@@ -75,7 +75,7 @@ class ReportsApi extends BaseApi
      * @return string
      */
     protected function getItemReportWithHttpInfo(
-        string $type,
+        string $type
     ): string {
         $request = $this->getItemReportRequest($type);
         $this->writeDebug($request);
@@ -198,7 +198,7 @@ class ReportsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getItemReportAsyncWithHttpInfo(
-        string $type,
+        string $type
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->getItemReportRequest($type);
@@ -252,7 +252,7 @@ class ReportsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getItemReportRequest(
-        string $type,
+        string $type
     ): Request {
         $contentType = self::contentTypes['getItemReport'];
 

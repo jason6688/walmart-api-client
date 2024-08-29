@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class OrdersApi extends BaseApi
 {
@@ -87,7 +87,7 @@ class OrdersApi extends BaseApi
      */
     protected function acknowledgeOrdersWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\OrderAckRequest $orderAckRequest,
+        \Walmart\Models\MP\MX\Orders\OrderAckRequest $orderAckRequest
     ): string {
         $request = $this->acknowledgeOrdersRequest($purchaseOrderId, $orderAckRequest);
         $this->writeDebug($request);
@@ -252,7 +252,7 @@ class OrdersApi extends BaseApi
      */
     protected function acknowledgeOrdersAsyncWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\OrderAckRequest $orderAckRequest,
+        \Walmart\Models\MP\MX\Orders\OrderAckRequest $orderAckRequest
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->acknowledgeOrdersRequest($purchaseOrderId, $orderAckRequest);
@@ -308,7 +308,7 @@ class OrdersApi extends BaseApi
      */
     protected function acknowledgeOrdersRequest(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\OrderAckRequest $orderAckRequest,
+        \Walmart\Models\MP\MX\Orders\OrderAckRequest $orderAckRequest
     ): Request {
         $contentType = self::contentTypes['acknowledgeOrders'];
 
@@ -449,7 +449,7 @@ class OrdersApi extends BaseApi
      */
     protected function cancelOrderLinesWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\OrderCancellationRequest $orderCancellationRequest,
+        \Walmart\Models\MP\MX\Orders\OrderCancellationRequest $orderCancellationRequest
     ): string {
         $request = $this->cancelOrderLinesRequest($purchaseOrderId, $orderCancellationRequest);
         $this->writeDebug($request);
@@ -614,7 +614,7 @@ class OrdersApi extends BaseApi
      */
     protected function cancelOrderLinesAsyncWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\OrderCancellationRequest $orderCancellationRequest,
+        \Walmart\Models\MP\MX\Orders\OrderCancellationRequest $orderCancellationRequest
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->cancelOrderLinesRequest($purchaseOrderId, $orderCancellationRequest);
@@ -670,7 +670,7 @@ class OrdersApi extends BaseApi
      */
     protected function cancelOrderLinesRequest(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\OrderCancellationRequest $orderCancellationRequest,
+        \Walmart\Models\MP\MX\Orders\OrderCancellationRequest $orderCancellationRequest
     ): Request {
         $contentType = self::contentTypes['cancelOrderLines'];
 
@@ -811,7 +811,7 @@ class OrdersApi extends BaseApi
      */
     protected function deliveryUpdatesWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\Deliver $deliver,
+        \Walmart\Models\MP\MX\Orders\Deliver $deliver
     ): string {
         $request = $this->deliveryUpdatesRequest($purchaseOrderId, $deliver);
         $this->writeDebug($request);
@@ -976,7 +976,7 @@ class OrdersApi extends BaseApi
      */
     protected function deliveryUpdatesAsyncWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\Deliver $deliver,
+        \Walmart\Models\MP\MX\Orders\Deliver $deliver
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->deliveryUpdatesRequest($purchaseOrderId, $deliver);
@@ -1032,7 +1032,7 @@ class OrdersApi extends BaseApi
      */
     protected function deliveryUpdatesRequest(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\Deliver $deliver,
+        \Walmart\Models\MP\MX\Orders\Deliver $deliver
     ): Request {
         $contentType = self::contentTypes['deliveryUpdates'];
 
@@ -1193,7 +1193,7 @@ class OrdersApi extends BaseApi
         ?string $offset = '0',
         ?string $customerOrderId = null,
         ?string $purchaseOrderId = null,
-        ?string $statusCodeFilter = null,
+        ?string $statusCodeFilter = null
     ): \Walmart\Models\MP\MX\Orders\WFSOrderResponse {
         $request = $this->getAllOrdersRequest($createdStartDate, $createdEndDate, $limit, $offset, $customerOrderId, $purchaseOrderId, $statusCodeFilter);
         $this->writeDebug($request);
@@ -1378,7 +1378,7 @@ class OrdersApi extends BaseApi
         ?string $offset = '0',
         ?string $customerOrderId = null,
         ?string $purchaseOrderId = null,
-        ?string $statusCodeFilter = null,
+        ?string $statusCodeFilter = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\Orders\WFSOrderResponse';
         $request = $this->getAllOrdersRequest($createdStartDate, $createdEndDate, $limit, $offset, $customerOrderId, $purchaseOrderId, $statusCodeFilter);
@@ -1444,7 +1444,7 @@ class OrdersApi extends BaseApi
         ?string $offset = '0',
         ?string $customerOrderId = null,
         ?string $purchaseOrderId = null,
-        ?string $statusCodeFilter = null,
+        ?string $statusCodeFilter = null
     ): Request {
         $contentType = self::contentTypes['getAllOrders'];
 
@@ -1637,7 +1637,7 @@ class OrdersApi extends BaseApi
         ?string $limit = '10',
         ?string $cursorMark = '*',
         ?string $customerOrderId = null,
-        ?string $purchaseOrderId = null,
+        ?string $purchaseOrderId = null
     ): \Walmart\Models\MP\MX\Orders\MxOrderWithCursor {
         $request = $this->getAllOrdersUsingCursorRequest($statusCodeFilter, $createdStartDate, $createdEndDate, $limit, $cursorMark, $customerOrderId, $purchaseOrderId);
         $this->writeDebug($request);
@@ -1822,7 +1822,7 @@ class OrdersApi extends BaseApi
         ?string $limit = '10',
         ?string $cursorMark = '*',
         ?string $customerOrderId = null,
-        ?string $purchaseOrderId = null,
+        ?string $purchaseOrderId = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\Orders\MxOrderWithCursor';
         $request = $this->getAllOrdersUsingCursorRequest($statusCodeFilter, $createdStartDate, $createdEndDate, $limit, $cursorMark, $customerOrderId, $purchaseOrderId);
@@ -1888,7 +1888,7 @@ class OrdersApi extends BaseApi
         ?string $limit = '10',
         ?string $cursorMark = '*',
         ?string $customerOrderId = null,
-        ?string $purchaseOrderId = null,
+        ?string $purchaseOrderId = null
     ): Request {
         $contentType = self::contentTypes['getAllOrdersUsingCursor'];
 
@@ -2083,7 +2083,7 @@ class OrdersApi extends BaseApi
         ?string $limit = '10',
         ?string $offset = '0',
         ?string $customerOrderId = '0',
-        ?string $statusCodeFilter = null,
+        ?string $statusCodeFilter = null
     ): \Walmart\Models\MP\MX\Orders\WFSOrderResponse {
         $request = $this->getAllWFSOrdersRequest($createdStartDate, $createdEndDate, $limit, $offset, $customerOrderId, $statusCodeFilter);
         $this->writeDebug($request);
@@ -2226,7 +2226,7 @@ class OrdersApi extends BaseApi
         ?string $limit = '10',
         ?string $offset = '0',
         ?string $customerOrderId = '0',
-        ?string $statusCodeFilter = null,
+        ?string $statusCodeFilter = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\Orders\WFSOrderResponse';
         $request = $this->getAllWFSOrdersRequest($createdStartDate, $createdEndDate, $limit, $offset, $customerOrderId, $statusCodeFilter);
@@ -2290,7 +2290,7 @@ class OrdersApi extends BaseApi
         ?string $limit = '10',
         ?string $offset = '0',
         ?string $customerOrderId = '0',
-        ?string $statusCodeFilter = null,
+        ?string $statusCodeFilter = null
     ): Request {
         $contentType = self::contentTypes['getAllWFSOrders'];
 
@@ -2451,7 +2451,7 @@ class OrdersApi extends BaseApi
      * @return string|\Walmart\Models\MP\MX\Orders\ErrorResponse|\Walmart\Models\MP\MX\Orders\ErrorResponse
      */
     protected function getShippingLabelWithHttpInfo(
-        string $trackingNumber,
+        string $trackingNumber
     ): string {
         $request = $this->getShippingLabelRequest($trackingNumber);
         $this->writeDebug($request);
@@ -2612,7 +2612,7 @@ class OrdersApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getShippingLabelAsyncWithHttpInfo(
-        string $trackingNumber,
+        string $trackingNumber
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->getShippingLabelRequest($trackingNumber);
@@ -2666,7 +2666,7 @@ class OrdersApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getShippingLabelRequest(
-        string $trackingNumber,
+        string $trackingNumber
     ): Request {
         $contentType = self::contentTypes['getShippingLabel'];
 
@@ -2794,7 +2794,7 @@ class OrdersApi extends BaseApi
      */
     protected function postBulkShippingLabelWithHttpInfo(
         \Walmart\Models\MP\MX\Orders\ShippingLabelRequest $shippingLabelRequest,
-        ?string $fORMAT = 'ZIP',
+        ?string $fORMAT = 'ZIP'
     ): string {
         $request = $this->postBulkShippingLabelRequest($shippingLabelRequest, $fORMAT);
         $this->writeDebug($request);
@@ -2959,7 +2959,7 @@ class OrdersApi extends BaseApi
      */
     protected function postBulkShippingLabelAsyncWithHttpInfo(
         \Walmart\Models\MP\MX\Orders\ShippingLabelRequest $shippingLabelRequest,
-        ?string $fORMAT = 'ZIP',
+        ?string $fORMAT = 'ZIP'
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->postBulkShippingLabelRequest($shippingLabelRequest, $fORMAT);
@@ -3015,7 +3015,7 @@ class OrdersApi extends BaseApi
      */
     protected function postBulkShippingLabelRequest(
         \Walmart\Models\MP\MX\Orders\ShippingLabelRequest $shippingLabelRequest,
-        ?string $fORMAT = 'ZIP',
+        ?string $fORMAT = 'ZIP'
     ): Request {
         $contentType = self::contentTypes['postBulkShippingLabel'];
 
@@ -3146,7 +3146,7 @@ class OrdersApi extends BaseApi
      */
     protected function shippingUpdatesWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\ShipmentMx $shipmentMx,
+        \Walmart\Models\MP\MX\Orders\ShipmentMx $shipmentMx
     ): string {
         $request = $this->shippingUpdatesRequest($purchaseOrderId, $shipmentMx);
         $this->writeDebug($request);
@@ -3311,7 +3311,7 @@ class OrdersApi extends BaseApi
      */
     protected function shippingUpdatesAsyncWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\ShipmentMx $shipmentMx,
+        \Walmart\Models\MP\MX\Orders\ShipmentMx $shipmentMx
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->shippingUpdatesRequest($purchaseOrderId, $shipmentMx);
@@ -3367,7 +3367,7 @@ class OrdersApi extends BaseApi
      */
     protected function shippingUpdatesRequest(
         string $purchaseOrderId,
-        \Walmart\Models\MP\MX\Orders\ShipmentMx $shipmentMx,
+        \Walmart\Models\MP\MX\Orders\ShipmentMx $shipmentMx
     ): Request {
         $contentType = self::contentTypes['shippingUpdates'];
 

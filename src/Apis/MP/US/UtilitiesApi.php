@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class UtilitiesApi extends BaseApi
 {
@@ -344,7 +344,7 @@ class UtilitiesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Utilities\GetCategories
      */
     protected function getCategoriesWithHttpInfo(
-        string $departmentId,
+        string $departmentId
     ): \Walmart\Models\MP\US\Utilities\GetCategories {
         $request = $this->getCategoriesRequest($departmentId);
         $this->writeDebug($request);
@@ -467,7 +467,7 @@ class UtilitiesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getCategoriesAsyncWithHttpInfo(
-        string $departmentId,
+        string $departmentId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Utilities\GetCategories';
         $request = $this->getCategoriesRequest($departmentId);
@@ -521,7 +521,7 @@ class UtilitiesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getCategoriesRequest(
-        string $departmentId,
+        string $departmentId
     ): Request {
         $contentType = self::contentTypes['getCategories'];
 
@@ -910,7 +910,7 @@ class UtilitiesApi extends BaseApi
      */
     protected function getTaxonomyResponseWithHttpInfo(
         ?string $feedType = null,
-        ?string $version = null,
+        ?string $version = null
     ): \Walmart\Models\MP\US\Utilities\TaxonomyResponseDTO {
         $request = $this->getTaxonomyResponseRequest($feedType, $version);
         $this->writeDebug($request);
@@ -1037,7 +1037,7 @@ class UtilitiesApi extends BaseApi
      */
     protected function getTaxonomyResponseAsyncWithHttpInfo(
         ?string $feedType = null,
-        ?string $version = null,
+        ?string $version = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Utilities\TaxonomyResponseDTO';
         $request = $this->getTaxonomyResponseRequest($feedType, $version);
@@ -1093,7 +1093,7 @@ class UtilitiesApi extends BaseApi
      */
     protected function getTaxonomyResponseRequest(
         ?string $feedType = null,
-        ?string $version = null,
+        ?string $version = null
     ): Request {
         $contentType = self::contentTypes['getTaxonomyResponse'];
 

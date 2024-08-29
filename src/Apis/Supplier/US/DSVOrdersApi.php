@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class DSVOrdersApi extends BaseApi
 {
@@ -84,7 +84,7 @@ class DSVOrdersApi extends BaseApi
      */
     protected function acknowledgeOrdersWithHttpInfo(
         string $purchaseOrderId,
-        string $shipNode,
+        string $shipNode
     ): \Walmart\Models\Supplier\US\DSVOrders\GetOrderResponseRecord {
         $request = $this->acknowledgeOrdersRequest($purchaseOrderId, $shipNode);
         $this->writeDebug($request);
@@ -211,7 +211,7 @@ class DSVOrdersApi extends BaseApi
      */
     protected function acknowledgeOrdersAsyncWithHttpInfo(
         string $purchaseOrderId,
-        string $shipNode,
+        string $shipNode
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVOrders\GetOrderResponseRecord';
         $request = $this->acknowledgeOrdersRequest($purchaseOrderId, $shipNode);
@@ -267,7 +267,7 @@ class DSVOrdersApi extends BaseApi
      */
     protected function acknowledgeOrdersRequest(
         string $purchaseOrderId,
-        string $shipNode,
+        string $shipNode
     ): Request {
         $contentType = self::contentTypes['acknowledgeOrders'];
 
@@ -427,7 +427,7 @@ class DSVOrdersApi extends BaseApi
     protected function cancelOrderLinesWithHttpInfo(
         string $purchaseOrderId,
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation,
+        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation
     ): \Walmart\Models\Supplier\US\DSVOrders\GetOrderResponseRecord {
         $request = $this->cancelOrderLinesRequest($purchaseOrderId, $shipNode, $orderCancellation);
         $this->writeDebug($request);
@@ -558,7 +558,7 @@ class DSVOrdersApi extends BaseApi
     protected function cancelOrderLinesAsyncWithHttpInfo(
         string $purchaseOrderId,
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation,
+        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVOrders\GetOrderResponseRecord';
         $request = $this->cancelOrderLinesRequest($purchaseOrderId, $shipNode, $orderCancellation);
@@ -616,7 +616,7 @@ class DSVOrdersApi extends BaseApi
     protected function cancelOrderLinesRequest(
         string $purchaseOrderId,
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation,
+        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation
     ): Request {
         $contentType = self::contentTypes['cancelOrderLines'];
 
@@ -821,7 +821,7 @@ class DSVOrdersApi extends BaseApi
         ?string $createdEndDate = null,
         ?string $fromExpectedShipDate = null,
         ?string $toExpectedShipDate = null,
-        ?string $productInfo = 'false',
+        ?string $productInfo = 'false'
     ): \Walmart\Models\Supplier\US\DSVOrders\OrdersListType {
         $request = $this->getAllOrdersRequest($shipNode, $limit, $sku, $customerOrderId, $purchaseOrderId, $status, $createdStartDate, $createdEndDate, $fromExpectedShipDate, $toExpectedShipDate, $productInfo);
         $this->writeDebug($request);
@@ -984,7 +984,7 @@ class DSVOrdersApi extends BaseApi
         ?string $createdEndDate = null,
         ?string $fromExpectedShipDate = null,
         ?string $toExpectedShipDate = null,
-        ?string $productInfo = 'false',
+        ?string $productInfo = 'false'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVOrders\OrdersListType';
         $request = $this->getAllOrdersRequest($shipNode, $limit, $sku, $customerOrderId, $purchaseOrderId, $status, $createdStartDate, $createdEndDate, $fromExpectedShipDate, $toExpectedShipDate, $productInfo);
@@ -1058,7 +1058,7 @@ class DSVOrdersApi extends BaseApi
         ?string $createdEndDate = null,
         ?string $fromExpectedShipDate = null,
         ?string $toExpectedShipDate = null,
-        ?string $productInfo = 'false',
+        ?string $productInfo = 'false'
     ): Request {
         $contentType = self::contentTypes['getAllOrders'];
 
@@ -1311,7 +1311,7 @@ class DSVOrdersApi extends BaseApi
         ?string $fromExpectedShipDate = null,
         ?string $toExpectedShipDate = null,
         ?string $limit = '100',
-        ?string $productInfo = 'false',
+        ?string $productInfo = 'false'
     ): \Walmart\Models\Supplier\US\DSVOrders\OrdersListType {
         $request = $this->getAllReleasedOrdersRequest($shipNode, $sku, $customerOrderId, $purchaseOrderId, $createdStartDate, $createdEndDate, $fromExpectedShipDate, $toExpectedShipDate, $limit, $productInfo);
         $this->writeDebug($request);
@@ -1470,7 +1470,7 @@ class DSVOrdersApi extends BaseApi
         ?string $fromExpectedShipDate = null,
         ?string $toExpectedShipDate = null,
         ?string $limit = '100',
-        ?string $productInfo = 'false',
+        ?string $productInfo = 'false'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVOrders\OrdersListType';
         $request = $this->getAllReleasedOrdersRequest($shipNode, $sku, $customerOrderId, $purchaseOrderId, $createdStartDate, $createdEndDate, $fromExpectedShipDate, $toExpectedShipDate, $limit, $productInfo);
@@ -1542,7 +1542,7 @@ class DSVOrdersApi extends BaseApi
         ?string $fromExpectedShipDate = null,
         ?string $toExpectedShipDate = null,
         ?string $limit = '100',
-        ?string $productInfo = 'false',
+        ?string $productInfo = 'false'
     ): Request {
         $contentType = self::contentTypes['getAllReleasedOrders'];
 
@@ -1759,7 +1759,7 @@ class DSVOrdersApi extends BaseApi
     protected function getAnOrderWithHttpInfo(
         string $purchaseOrderId,
         string $shipNode,
-        ?string $productInfo = 'true',
+        ?string $productInfo = 'true'
     ): \Walmart\Models\Supplier\US\DSVOrders\GetOrderResponseRecord {
         $request = $this->getAnOrderRequest($purchaseOrderId, $shipNode, $productInfo);
         $this->writeDebug($request);
@@ -1890,7 +1890,7 @@ class DSVOrdersApi extends BaseApi
     protected function getAnOrderAsyncWithHttpInfo(
         string $purchaseOrderId,
         string $shipNode,
-        ?string $productInfo = 'true',
+        ?string $productInfo = 'true'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVOrders\GetOrderResponseRecord';
         $request = $this->getAnOrderRequest($purchaseOrderId, $shipNode, $productInfo);
@@ -1948,7 +1948,7 @@ class DSVOrdersApi extends BaseApi
     protected function getAnOrderRequest(
         string $purchaseOrderId,
         string $shipNode,
-        ?string $productInfo = 'true',
+        ?string $productInfo = 'true'
     ): Request {
         $contentType = self::contentTypes['getAnOrder'];
 
@@ -2116,7 +2116,7 @@ class DSVOrdersApi extends BaseApi
     protected function shipOrderLinesWithHttpInfo(
         string $purchaseOrderId,
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation,
+        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation
     ): \Walmart\Models\Supplier\US\DSVOrders\GetOrderResponseRecord {
         $request = $this->shipOrderLinesRequest($purchaseOrderId, $shipNode, $orderCancellation);
         $this->writeDebug($request);
@@ -2247,7 +2247,7 @@ class DSVOrdersApi extends BaseApi
     protected function shipOrderLinesAsyncWithHttpInfo(
         string $purchaseOrderId,
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation,
+        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVOrders\GetOrderResponseRecord';
         $request = $this->shipOrderLinesRequest($purchaseOrderId, $shipNode, $orderCancellation);
@@ -2305,7 +2305,7 @@ class DSVOrdersApi extends BaseApi
     protected function shipOrderLinesRequest(
         string $purchaseOrderId,
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation,
+        \Walmart\Models\Supplier\US\DSVOrders\OrderCancellation $orderCancellation
     ): Request {
         $contentType = self::contentTypes['shipOrderLines'];
 

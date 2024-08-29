@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class ReturnsApi extends BaseApi
 {
@@ -105,7 +105,7 @@ class ReturnsApi extends BaseApi
         ?string $customerOrderId = null,
         ?string $returnOrderId = null,
         ?string $statusCodeFilter = null,
-        ?string $isWFSEnabled = null,
+        ?string $isWFSEnabled = null
     ): \Walmart\Models\MP\MX\Returns\GetReturnOrdersResponseWithCursor {
         $request = $this->getAllReturnsUsingCursorRequest($returnCreationStartDate, $returnCreationEndDate, $limit, $cursorMark, $customerOrderId, $returnOrderId, $statusCodeFilter, $isWFSEnabled);
         $this->writeDebug($request);
@@ -294,7 +294,7 @@ class ReturnsApi extends BaseApi
         ?string $customerOrderId = null,
         ?string $returnOrderId = null,
         ?string $statusCodeFilter = null,
-        ?string $isWFSEnabled = null,
+        ?string $isWFSEnabled = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\Returns\GetReturnOrdersResponseWithCursor';
         $request = $this->getAllReturnsUsingCursorRequest($returnCreationStartDate, $returnCreationEndDate, $limit, $cursorMark, $customerOrderId, $returnOrderId, $statusCodeFilter, $isWFSEnabled);
@@ -362,7 +362,7 @@ class ReturnsApi extends BaseApi
         ?string $customerOrderId = null,
         ?string $returnOrderId = null,
         ?string $statusCodeFilter = null,
-        ?string $isWFSEnabled = null,
+        ?string $isWFSEnabled = null
     ): Request {
         $contentType = self::contentTypes['getAllReturnsUsingCursor'];
 
@@ -567,7 +567,7 @@ class ReturnsApi extends BaseApi
         ?string $customerOrderId = null,
         ?string $returnOrderId = null,
         ?string $statusCodeFilter = null,
-        ?string $isWFSEnabled = null,
+        ?string $isWFSEnabled = null
     ): \Walmart\Models\MP\MX\Returns\GetReturnOrdersResponse {
         $request = $this->getReturnsRequest($returnCreationStartDate, $returnCreationEndDate, $limit, $offset, $customerOrderId, $returnOrderId, $statusCodeFilter, $isWFSEnabled);
         $this->writeDebug($request);
@@ -756,7 +756,7 @@ class ReturnsApi extends BaseApi
         ?string $customerOrderId = null,
         ?string $returnOrderId = null,
         ?string $statusCodeFilter = null,
-        ?string $isWFSEnabled = null,
+        ?string $isWFSEnabled = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\Returns\GetReturnOrdersResponse';
         $request = $this->getReturnsRequest($returnCreationStartDate, $returnCreationEndDate, $limit, $offset, $customerOrderId, $returnOrderId, $statusCodeFilter, $isWFSEnabled);
@@ -824,7 +824,7 @@ class ReturnsApi extends BaseApi
         ?string $customerOrderId = null,
         ?string $returnOrderId = null,
         ?string $statusCodeFilter = null,
-        ?string $isWFSEnabled = null,
+        ?string $isWFSEnabled = null
     ): Request {
         $contentType = self::contentTypes['getReturns'];
 
@@ -1005,7 +1005,7 @@ class ReturnsApi extends BaseApi
      */
     protected function refundOrderLinesWithHttpInfo(
         string $returnOrderId,
-        \Walmart\Models\MP\MX\Returns\OrderRefundRequest $orderRefundRequest,
+        \Walmart\Models\MP\MX\Returns\OrderRefundRequest $orderRefundRequest
     ): string {
         $request = $this->refundOrderLinesRequest($returnOrderId, $orderRefundRequest);
         $this->writeDebug($request);
@@ -1170,7 +1170,7 @@ class ReturnsApi extends BaseApi
      */
     protected function refundOrderLinesAsyncWithHttpInfo(
         string $returnOrderId,
-        \Walmart\Models\MP\MX\Returns\OrderRefundRequest $orderRefundRequest,
+        \Walmart\Models\MP\MX\Returns\OrderRefundRequest $orderRefundRequest
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->refundOrderLinesRequest($returnOrderId, $orderRefundRequest);
@@ -1226,7 +1226,7 @@ class ReturnsApi extends BaseApi
      */
     protected function refundOrderLinesRequest(
         string $returnOrderId,
-        \Walmart\Models\MP\MX\Returns\OrderRefundRequest $orderRefundRequest,
+        \Walmart\Models\MP\MX\Returns\OrderRefundRequest $orderRefundRequest
     ): Request {
         $contentType = self::contentTypes['refundOrderLines'];
 

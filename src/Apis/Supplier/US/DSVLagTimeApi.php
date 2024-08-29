@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class DSVLagTimeApi extends BaseApi
 {
@@ -84,7 +84,7 @@ class DSVLagTimeApi extends BaseApi
     protected function getLagTimeWithHttpInfo(
         string $shipNode,
         ?string $sku = null,
-        ?string $gtin = null,
+        ?string $gtin = null
     ): \Walmart\Models\Supplier\US\DSVLagTime\LagTimeResponse {
         $request = $this->getLagTimeRequest($shipNode, $sku, $gtin);
         $this->writeDebug($request);
@@ -215,7 +215,7 @@ class DSVLagTimeApi extends BaseApi
     protected function getLagTimeAsyncWithHttpInfo(
         string $shipNode,
         ?string $sku = null,
-        ?string $gtin = null,
+        ?string $gtin = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVLagTime\LagTimeResponse';
         $request = $this->getLagTimeRequest($shipNode, $sku, $gtin);
@@ -273,7 +273,7 @@ class DSVLagTimeApi extends BaseApi
     protected function getLagTimeRequest(
         string $shipNode,
         ?string $sku = null,
-        ?string $gtin = null,
+        ?string $gtin = null
     ): Request {
         $contentType = self::contentTypes['getLagTime'];
 
@@ -434,7 +434,7 @@ class DSVLagTimeApi extends BaseApi
     protected function updateLagTimeBulkWithHttpInfo(
         string $feedType,
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVLagTime\LagTimeFeedV2 $lagTimeFeedV2,
+        \Walmart\Models\Supplier\US\DSVLagTime\LagTimeFeedV2 $lagTimeFeedV2
     ): \Walmart\Models\Supplier\US\DSVLagTime\FeedId {
         $request = $this->updateLagTimeBulkRequest($feedType, $shipNode, $lagTimeFeedV2);
         $this->writeDebug($request);
@@ -565,7 +565,7 @@ class DSVLagTimeApi extends BaseApi
     protected function updateLagTimeBulkAsyncWithHttpInfo(
         string $feedType,
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVLagTime\LagTimeFeedV2 $lagTimeFeedV2,
+        \Walmart\Models\Supplier\US\DSVLagTime\LagTimeFeedV2 $lagTimeFeedV2
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVLagTime\FeedId';
         $request = $this->updateLagTimeBulkRequest($feedType, $shipNode, $lagTimeFeedV2);
@@ -623,7 +623,7 @@ class DSVLagTimeApi extends BaseApi
     protected function updateLagTimeBulkRequest(
         string $feedType,
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVLagTime\LagTimeFeedV2 $lagTimeFeedV2,
+        \Walmart\Models\Supplier\US\DSVLagTime\LagTimeFeedV2 $lagTimeFeedV2
     ): Request {
         $contentType = self::contentTypes['updateLagTimeBulk'];
 

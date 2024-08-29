@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class InternationalShippingApi extends BaseApi
 {
@@ -80,7 +80,7 @@ class InternationalShippingApi extends BaseApi
      * @return \Walmart\Models\MP\MX\InternationalShipping\CommonResponseLabelGenerationResponseMx
      */
     protected function createLabelWithHttpInfo(
-        \Walmart\Models\MP\MX\InternationalShipping\LabelGenerationRequestMx $labelGenerationRequestMx,
+        \Walmart\Models\MP\MX\InternationalShipping\LabelGenerationRequestMx $labelGenerationRequestMx
     ): \Walmart\Models\MP\MX\InternationalShipping\CommonResponseLabelGenerationResponseMx {
         $request = $this->createLabelRequest($labelGenerationRequestMx);
         $this->writeDebug($request);
@@ -203,7 +203,7 @@ class InternationalShippingApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createLabelAsyncWithHttpInfo(
-        \Walmart\Models\MP\MX\InternationalShipping\LabelGenerationRequestMx $labelGenerationRequestMx,
+        \Walmart\Models\MP\MX\InternationalShipping\LabelGenerationRequestMx $labelGenerationRequestMx
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\InternationalShipping\CommonResponseLabelGenerationResponseMx';
         $request = $this->createLabelRequest($labelGenerationRequestMx);
@@ -257,7 +257,7 @@ class InternationalShippingApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createLabelRequest(
-        \Walmart\Models\MP\MX\InternationalShipping\LabelGenerationRequestMx $labelGenerationRequestMx,
+        \Walmart\Models\MP\MX\InternationalShipping\LabelGenerationRequestMx $labelGenerationRequestMx
     ): Request {
         $contentType = self::contentTypes['createLabel'];
 
@@ -383,7 +383,7 @@ class InternationalShippingApi extends BaseApi
      */
     protected function discardLabelWithHttpInfo(
         string $carrierShortName,
-        string $trackingNo,
+        string $trackingNo
     ): \Walmart\Models\MP\MX\InternationalShipping\CommonResponseLabelGenerationResponseMx {
         $request = $this->discardLabelRequest($carrierShortName, $trackingNo);
         $this->writeDebug($request);
@@ -510,7 +510,7 @@ class InternationalShippingApi extends BaseApi
      */
     protected function discardLabelAsyncWithHttpInfo(
         string $carrierShortName,
-        string $trackingNo,
+        string $trackingNo
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\InternationalShipping\CommonResponseLabelGenerationResponseMx';
         $request = $this->discardLabelRequest($carrierShortName, $trackingNo);
@@ -566,7 +566,7 @@ class InternationalShippingApi extends BaseApi
      */
     protected function discardLabelRequest(
         string $carrierShortName,
-        string $trackingNo,
+        string $trackingNo
     ): Request {
         $contentType = self::contentTypes['discardLabel'];
 
@@ -703,7 +703,7 @@ class InternationalShippingApi extends BaseApi
      * @return \Walmart\Models\MP\MX\InternationalShipping\CommonResponseListCarrierPackageResponse
      */
     protected function getCarrierPackageTypesWithHttpInfo(
-        string $carrierShortName,
+        string $carrierShortName
     ): \Walmart\Models\MP\MX\InternationalShipping\CommonResponseListCarrierPackageResponse {
         $request = $this->getCarrierPackageTypesRequest($carrierShortName);
         $this->writeDebug($request);
@@ -826,7 +826,7 @@ class InternationalShippingApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getCarrierPackageTypesAsyncWithHttpInfo(
-        string $carrierShortName,
+        string $carrierShortName
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\InternationalShipping\CommonResponseListCarrierPackageResponse';
         $request = $this->getCarrierPackageTypesRequest($carrierShortName);
@@ -880,7 +880,7 @@ class InternationalShippingApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getCarrierPackageTypesRequest(
-        string $carrierShortName,
+        string $carrierShortName
     ): Request {
         $contentType = self::contentTypes['getCarrierPackageTypes'];
 
@@ -1275,7 +1275,7 @@ class InternationalShippingApi extends BaseApi
      * @return \Walmart\Models\MP\MX\InternationalShipping\CommonResponseListLabelGenerationResponseMx
      */
     protected function getLabelWithHttpInfo(
-        string $purchaseOrderId,
+        string $purchaseOrderId
     ): \Walmart\Models\MP\MX\InternationalShipping\CommonResponseListLabelGenerationResponseMx {
         $request = $this->getLabelRequest($purchaseOrderId);
         $this->writeDebug($request);
@@ -1398,7 +1398,7 @@ class InternationalShippingApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getLabelAsyncWithHttpInfo(
-        string $purchaseOrderId,
+        string $purchaseOrderId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\InternationalShipping\CommonResponseListLabelGenerationResponseMx';
         $request = $this->getLabelRequest($purchaseOrderId);
@@ -1452,7 +1452,7 @@ class InternationalShippingApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getLabelRequest(
-        string $purchaseOrderId,
+        string $purchaseOrderId
     ): Request {
         $contentType = self::contentTypes['getLabel'];
 
@@ -1580,7 +1580,7 @@ class InternationalShippingApi extends BaseApi
      */
     protected function getLabelByTrackingAndCarrierWithHttpInfo(
         string $carrierShortName,
-        string $trackingNo,
+        string $trackingNo
     ): \SplFileObject {
         $request = $this->getLabelByTrackingAndCarrierRequest($carrierShortName, $trackingNo);
         $this->writeDebug($request);
@@ -1707,7 +1707,7 @@ class InternationalShippingApi extends BaseApi
      */
     protected function getLabelByTrackingAndCarrierAsyncWithHttpInfo(
         string $carrierShortName,
-        string $trackingNo,
+        string $trackingNo
     ): PromiseInterface {
         $returnType = '\SplFileObject';
         $request = $this->getLabelByTrackingAndCarrierRequest($carrierShortName, $trackingNo);
@@ -1763,7 +1763,7 @@ class InternationalShippingApi extends BaseApi
      */
     protected function getLabelByTrackingAndCarrierRequest(
         string $carrierShortName,
-        string $trackingNo,
+        string $trackingNo
     ): Request {
         $contentType = self::contentTypes['getLabelByTrackingAndCarrier'];
 

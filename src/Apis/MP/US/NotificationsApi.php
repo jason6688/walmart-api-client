@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class NotificationsApi extends BaseApi
 {
@@ -80,7 +80,7 @@ class NotificationsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Notifications\SubscriptionResponseDTO
      */
     protected function createSubscriptionWithHttpInfo(
-        \Walmart\Models\MP\US\Notifications\CreateSubscriptionRequest $createSubscriptionRequest,
+        \Walmart\Models\MP\US\Notifications\CreateSubscriptionRequest $createSubscriptionRequest
     ): \Walmart\Models\MP\US\Notifications\SubscriptionResponseDTO {
         $request = $this->createSubscriptionRequest($createSubscriptionRequest);
         $this->writeDebug($request);
@@ -203,7 +203,7 @@ class NotificationsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createSubscriptionAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Notifications\CreateSubscriptionRequest $createSubscriptionRequest,
+        \Walmart\Models\MP\US\Notifications\CreateSubscriptionRequest $createSubscriptionRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Notifications\SubscriptionResponseDTO';
         $request = $this->createSubscriptionRequest($createSubscriptionRequest);
@@ -257,7 +257,7 @@ class NotificationsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createSubscriptionRequest(
-        \Walmart\Models\MP\US\Notifications\CreateSubscriptionRequest $createSubscriptionRequest,
+        \Walmart\Models\MP\US\Notifications\CreateSubscriptionRequest $createSubscriptionRequest
     ): Request {
         $contentType = self::contentTypes['createSubscription'];
 
@@ -374,7 +374,7 @@ class NotificationsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Notifications\SubscriptionDeleteResponseDTO
      */
     protected function deleteSubscriptionWithHttpInfo(
-        string $subscriptionId,
+        string $subscriptionId
     ): \Walmart\Models\MP\US\Notifications\SubscriptionDeleteResponseDTO {
         $request = $this->deleteSubscriptionRequest($subscriptionId);
         $this->writeDebug($request);
@@ -497,7 +497,7 @@ class NotificationsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function deleteSubscriptionAsyncWithHttpInfo(
-        string $subscriptionId,
+        string $subscriptionId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Notifications\SubscriptionDeleteResponseDTO';
         $request = $this->deleteSubscriptionRequest($subscriptionId);
@@ -551,7 +551,7 @@ class NotificationsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function deleteSubscriptionRequest(
-        string $subscriptionId,
+        string $subscriptionId
     ): Request {
         $contentType = self::contentTypes['deleteSubscription'];
 
@@ -682,7 +682,7 @@ class NotificationsApi extends BaseApi
         ?string $subscriptionId = null,
         ?string $eventType = null,
         ?string $resourceName = null,
-        ?string $status = null,
+        ?string $status = null
     ): \Walmart\Models\MP\US\Notifications\CreateSubscriptionRequest {
         $request = $this->getAllSubscriptionsRequest($subscriptionId, $eventType, $resourceName, $status);
         $this->writeDebug($request);
@@ -817,7 +817,7 @@ class NotificationsApi extends BaseApi
         ?string $subscriptionId = null,
         ?string $eventType = null,
         ?string $resourceName = null,
-        ?string $status = null,
+        ?string $status = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Notifications\CreateSubscriptionRequest';
         $request = $this->getAllSubscriptionsRequest($subscriptionId, $eventType, $resourceName, $status);
@@ -877,7 +877,7 @@ class NotificationsApi extends BaseApi
         ?string $subscriptionId = null,
         ?string $eventType = null,
         ?string $resourceName = null,
-        ?string $status = null,
+        ?string $status = null
     ): Request {
         $contentType = self::contentTypes['getAllSubscriptions'];
 
@@ -1283,7 +1283,7 @@ class NotificationsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Notifications\TestNotificationResponseDTO
      */
     protected function testNotificationWithHttpInfo(
-        \Walmart\Models\MP\US\Notifications\TestNotificationRequest $testNotificationRequest,
+        \Walmart\Models\MP\US\Notifications\TestNotificationRequest $testNotificationRequest
     ): \Walmart\Models\MP\US\Notifications\TestNotificationResponseDTO {
         $request = $this->testNotificationRequest($testNotificationRequest);
         $this->writeDebug($request);
@@ -1406,7 +1406,7 @@ class NotificationsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function testNotificationAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Notifications\TestNotificationRequest $testNotificationRequest,
+        \Walmart\Models\MP\US\Notifications\TestNotificationRequest $testNotificationRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Notifications\TestNotificationResponseDTO';
         $request = $this->testNotificationRequest($testNotificationRequest);
@@ -1460,7 +1460,7 @@ class NotificationsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function testNotificationRequest(
-        \Walmart\Models\MP\US\Notifications\TestNotificationRequest $testNotificationRequest,
+        \Walmart\Models\MP\US\Notifications\TestNotificationRequest $testNotificationRequest
     ): Request {
         $contentType = self::contentTypes['testNotification'];
 
@@ -1581,7 +1581,7 @@ class NotificationsApi extends BaseApi
      */
     protected function updateSubscriptionWithHttpInfo(
         string $subscriptionId,
-        \Walmart\Models\MP\US\Notifications\UpdateSubscriptionRequest $updateSubscriptionRequest,
+        \Walmart\Models\MP\US\Notifications\UpdateSubscriptionRequest $updateSubscriptionRequest
     ): \Walmart\Models\MP\US\Notifications\SubscriptionResponseDTO {
         $request = $this->updateSubscriptionRequest($subscriptionId, $updateSubscriptionRequest);
         $this->writeDebug($request);
@@ -1708,7 +1708,7 @@ class NotificationsApi extends BaseApi
      */
     protected function updateSubscriptionAsyncWithHttpInfo(
         string $subscriptionId,
-        \Walmart\Models\MP\US\Notifications\UpdateSubscriptionRequest $updateSubscriptionRequest,
+        \Walmart\Models\MP\US\Notifications\UpdateSubscriptionRequest $updateSubscriptionRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Notifications\SubscriptionResponseDTO';
         $request = $this->updateSubscriptionRequest($subscriptionId, $updateSubscriptionRequest);
@@ -1764,7 +1764,7 @@ class NotificationsApi extends BaseApi
      */
     protected function updateSubscriptionRequest(
         string $subscriptionId,
-        \Walmart\Models\MP\US\Notifications\UpdateSubscriptionRequest $updateSubscriptionRequest,
+        \Walmart\Models\MP\US\Notifications\UpdateSubscriptionRequest $updateSubscriptionRequest
     ): Request {
         $contentType = self::contentTypes['updateSubscription'];
 

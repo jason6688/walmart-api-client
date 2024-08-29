@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class DSVInventoryApi extends BaseApi
 {
@@ -86,7 +86,7 @@ class DSVInventoryApi extends BaseApi
     protected function getInventoryForAnItemWithHttpInfo(
         string $gtin,
         string $shipNode,
-        ?string $sku = null,
+        ?string $sku = null
     ): \Walmart\Models\Supplier\US\DSVInventory\InventoryResponse {
         $request = $this->getInventoryForAnItemRequest($gtin, $shipNode, $sku);
         $this->writeDebug($request);
@@ -217,7 +217,7 @@ class DSVInventoryApi extends BaseApi
     protected function getInventoryForAnItemAsyncWithHttpInfo(
         string $gtin,
         string $shipNode,
-        ?string $sku = null,
+        ?string $sku = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVInventory\InventoryResponse';
         $request = $this->getInventoryForAnItemRequest($gtin, $shipNode, $sku);
@@ -275,7 +275,7 @@ class DSVInventoryApi extends BaseApi
     protected function getInventoryForAnItemRequest(
         string $gtin,
         string $shipNode,
-        ?string $sku = null,
+        ?string $sku = null
     ): Request {
         $contentType = self::contentTypes['getInventoryForAnItem'];
 
@@ -442,7 +442,7 @@ class DSVInventoryApi extends BaseApi
     protected function getMultiNodeInventoryForSkuAndAllShipnodesWithHttpInfo(
         string $id,
         string $productIdType,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): \Walmart\Models\Supplier\US\DSVInventory\InventoriesDTO {
         $request = $this->getMultiNodeInventoryForSkuAndAllShipnodesRequest($id, $productIdType, $shipNode);
         $this->writeDebug($request);
@@ -573,7 +573,7 @@ class DSVInventoryApi extends BaseApi
     protected function getMultiNodeInventoryForSkuAndAllShipnodesAsyncWithHttpInfo(
         string $id,
         string $productIdType,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVInventory\InventoriesDTO';
         $request = $this->getMultiNodeInventoryForSkuAndAllShipnodesRequest($id, $productIdType, $shipNode);
@@ -631,7 +631,7 @@ class DSVInventoryApi extends BaseApi
     protected function getMultiNodeInventoryForSkuAndAllShipnodesRequest(
         string $id,
         string $productIdType,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): Request {
         $contentType = self::contentTypes['getMultiNodeInventoryForSkuAndAllShipnodes'];
 
@@ -799,7 +799,7 @@ class DSVInventoryApi extends BaseApi
     protected function updateBulkInventoryWithHttpInfo(
         string $feedType,
         \Walmart\Models\Supplier\US\DSVInventory\InventoryFeedV2 $inventoryFeedV2,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): \Walmart\Models\Supplier\US\DSVInventory\FeedIdInventory {
         $request = $this->updateBulkInventoryRequest($feedType, $inventoryFeedV2, $shipNode);
         $this->writeDebug($request);
@@ -930,7 +930,7 @@ class DSVInventoryApi extends BaseApi
     protected function updateBulkInventoryAsyncWithHttpInfo(
         string $feedType,
         \Walmart\Models\Supplier\US\DSVInventory\InventoryFeedV2 $inventoryFeedV2,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVInventory\FeedIdInventory';
         $request = $this->updateBulkInventoryRequest($feedType, $inventoryFeedV2, $shipNode);
@@ -988,7 +988,7 @@ class DSVInventoryApi extends BaseApi
     protected function updateBulkInventoryRequest(
         string $feedType,
         \Walmart\Models\Supplier\US\DSVInventory\InventoryFeedV2 $inventoryFeedV2,
-        ?string $shipNode = null,
+        ?string $shipNode = null
     ): Request {
         $contentType = self::contentTypes['updateBulkInventory'];
 
@@ -1150,7 +1150,7 @@ class DSVInventoryApi extends BaseApi
      */
     protected function updateInventoryForAnItemWithHttpInfo(
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVInventory\Inventory $inventory,
+        \Walmart\Models\Supplier\US\DSVInventory\Inventory $inventory
     ): \Walmart\Models\Supplier\US\DSVInventory\InventoryResponse {
         $request = $this->updateInventoryForAnItemRequest($shipNode, $inventory);
         $this->writeDebug($request);
@@ -1277,7 +1277,7 @@ class DSVInventoryApi extends BaseApi
      */
     protected function updateInventoryForAnItemAsyncWithHttpInfo(
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVInventory\Inventory $inventory,
+        \Walmart\Models\Supplier\US\DSVInventory\Inventory $inventory
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVInventory\InventoryResponse';
         $request = $this->updateInventoryForAnItemRequest($shipNode, $inventory);
@@ -1333,7 +1333,7 @@ class DSVInventoryApi extends BaseApi
      */
     protected function updateInventoryForAnItemRequest(
         string $shipNode,
-        \Walmart\Models\Supplier\US\DSVInventory\Inventory $inventory,
+        \Walmart\Models\Supplier\US\DSVInventory\Inventory $inventory
     ): Request {
         $contentType = self::contentTypes['updateInventoryForAnItem'];
 

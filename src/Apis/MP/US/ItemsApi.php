@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class ItemsApi extends BaseApi
 {
@@ -108,7 +108,7 @@ class ItemsApi extends BaseApi
         ?string $limit = '20',
         ?string $lifecycleStatus = null,
         ?string $publishedStatus = null,
-        ?string $variantGroupId = null,
+        ?string $variantGroupId = null
     ): \Walmart\Models\MP\US\Items\ItemResponses {
         $request = $this->getAllItemsRequest($nextCursor, $sku, $offset, $limit, $lifecycleStatus, $publishedStatus, $variantGroupId);
         $this->writeDebug($request);
@@ -255,7 +255,7 @@ class ItemsApi extends BaseApi
         ?string $limit = '20',
         ?string $lifecycleStatus = null,
         ?string $publishedStatus = null,
-        ?string $variantGroupId = null,
+        ?string $variantGroupId = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Items\ItemResponses';
         $request = $this->getAllItemsRequest($nextCursor, $sku, $offset, $limit, $lifecycleStatus, $publishedStatus, $variantGroupId);
@@ -321,7 +321,7 @@ class ItemsApi extends BaseApi
         ?string $limit = '20',
         ?string $lifecycleStatus = null,
         ?string $publishedStatus = null,
-        ?string $variantGroupId = null,
+        ?string $variantGroupId = null
     ): Request {
         $contentType = self::contentTypes['getAllItems'];
 
@@ -489,7 +489,7 @@ class ItemsApi extends BaseApi
      */
     protected function getAnItemWithHttpInfo(
         string $id,
-        string $productIdType,
+        string $productIdType
     ): \Walmart\Models\MP\US\Items\ItemResponses {
         $request = $this->getAnItemRequest($id, $productIdType);
         $this->writeDebug($request);
@@ -616,7 +616,7 @@ class ItemsApi extends BaseApi
      */
     protected function getAnItemAsyncWithHttpInfo(
         string $id,
-        string $productIdType,
+        string $productIdType
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Items\ItemResponses';
         $request = $this->getAnItemRequest($id, $productIdType);
@@ -672,7 +672,7 @@ class ItemsApi extends BaseApi
      */
     protected function getAnItemRequest(
         string $id,
-        string $productIdType,
+        string $productIdType
     ): Request {
         $contentType = self::contentTypes['getAnItem'];
 
@@ -821,7 +821,7 @@ class ItemsApi extends BaseApi
         \Walmart\Models\MP\US\Items\ItemCatalogSearchPayload $itemCatalogSearchPayload,
         ?int $page = 0,
         ?int $limit = 100,
-        ?string $nextCursor = null,
+        ?string $nextCursor = null
     ): \Walmart\Models\MP\US\Items\ItemCatalogResponses {
         $request = $this->getCatalogSearchRequest($itemCatalogSearchPayload, $page, $limit, $nextCursor);
         $this->writeDebug($request);
@@ -956,7 +956,7 @@ class ItemsApi extends BaseApi
         \Walmart\Models\MP\US\Items\ItemCatalogSearchPayload $itemCatalogSearchPayload,
         ?int $page = 0,
         ?int $limit = 100,
-        ?string $nextCursor = null,
+        ?string $nextCursor = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Items\ItemCatalogResponses';
         $request = $this->getCatalogSearchRequest($itemCatalogSearchPayload, $page, $limit, $nextCursor);
@@ -1016,7 +1016,7 @@ class ItemsApi extends BaseApi
         \Walmart\Models\MP\US\Items\ItemCatalogSearchPayload $itemCatalogSearchPayload,
         ?int $page = 0,
         ?int $limit = 100,
-        ?string $nextCursor = null,
+        ?string $nextCursor = null
     ): Request {
         $contentType = self::contentTypes['getCatalogSearch'];
 
@@ -1161,7 +1161,7 @@ class ItemsApi extends BaseApi
      * @return string
      */
     protected function getCountByStatusWithHttpInfo(
-        ?string $status = null,
+        ?string $status = null
     ): string {
         $request = $this->getCountByStatusRequest($status);
         $this->writeDebug($request);
@@ -1284,7 +1284,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getCountByStatusAsyncWithHttpInfo(
-        ?string $status = null,
+        ?string $status = null
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->getCountByStatusRequest($status);
@@ -1338,7 +1338,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getCountByStatusRequest(
-        ?string $status = null,
+        ?string $status = null
     ): Request {
         $contentType = self::contentTypes['getCountByStatus'];
 
@@ -1454,7 +1454,7 @@ class ItemsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Items\ItemsAssociationsResponseDTO
      */
     protected function getItemAssociationsWithHttpInfo(
-        \Walmart\Models\MP\US\Items\ItemsAssociationsResponseDTO $itemsAssociationsResponseDTO,
+        \Walmart\Models\MP\US\Items\ItemsAssociationsResponseDTO $itemsAssociationsResponseDTO
     ): \Walmart\Models\MP\US\Items\ItemsAssociationsResponseDTO {
         $request = $this->getItemAssociationsRequest($itemsAssociationsResponseDTO);
         $this->writeDebug($request);
@@ -1577,7 +1577,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getItemAssociationsAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Items\ItemsAssociationsResponseDTO $itemsAssociationsResponseDTO,
+        \Walmart\Models\MP\US\Items\ItemsAssociationsResponseDTO $itemsAssociationsResponseDTO
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Items\ItemsAssociationsResponseDTO';
         $request = $this->getItemAssociationsRequest($itemsAssociationsResponseDTO);
@@ -1631,7 +1631,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getItemAssociationsRequest(
-        \Walmart\Models\MP\US\Items\ItemsAssociationsResponseDTO $itemsAssociationsResponseDTO,
+        \Walmart\Models\MP\US\Items\ItemsAssociationsResponseDTO $itemsAssociationsResponseDTO
     ): Request {
         $contentType = self::contentTypes['getItemAssociations'];
 
@@ -1756,7 +1756,7 @@ class ItemsApi extends BaseApi
     protected function getSearchResultWithHttpInfo(
         ?string $query = '',
         ?string $upc = '',
-        ?string $gtin = '',
+        ?string $gtin = ''
     ): \Walmart\Models\MP\US\Items\ItemSearch {
         $request = $this->getSearchResultRequest($query, $upc, $gtin);
         $this->writeDebug($request);
@@ -1887,7 +1887,7 @@ class ItemsApi extends BaseApi
     protected function getSearchResultAsyncWithHttpInfo(
         ?string $query = '',
         ?string $upc = '',
-        ?string $gtin = '',
+        ?string $gtin = ''
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Items\ItemSearch';
         $request = $this->getSearchResultRequest($query, $upc, $gtin);
@@ -1945,7 +1945,7 @@ class ItemsApi extends BaseApi
     protected function getSearchResultRequest(
         ?string $query = '',
         ?string $upc = '',
-        ?string $gtin = '',
+        ?string $gtin = ''
     ): Request {
         $contentType = self::contentTypes['getSearchResult'];
 
@@ -2343,7 +2343,7 @@ class ItemsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Items\VariantCountResponses
      */
     protected function getVariantCountWithHttpInfo(
-        ?string $variantGroupId = null,
+        ?string $variantGroupId = null
     ): \Walmart\Models\MP\US\Items\VariantCountResponses {
         $request = $this->getVariantCountRequest($variantGroupId);
         $this->writeDebug($request);
@@ -2466,7 +2466,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getVariantCountAsyncWithHttpInfo(
-        ?string $variantGroupId = null,
+        ?string $variantGroupId = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Items\VariantCountResponses';
         $request = $this->getVariantCountRequest($variantGroupId);
@@ -2520,7 +2520,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getVariantCountRequest(
-        ?string $variantGroupId = null,
+        ?string $variantGroupId = null
     ): Request {
         $contentType = self::contentTypes['getVariantCount'];
 
@@ -2640,7 +2640,7 @@ class ItemsApi extends BaseApi
      */
     protected function itemBulkUploadsWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\MP\US\Items\FeedId {
         $request = $this->itemBulkUploadsRequest($feedType, $file);
         $this->writeDebug($request);
@@ -2767,7 +2767,7 @@ class ItemsApi extends BaseApi
      */
     protected function itemBulkUploadsAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Items\FeedId';
         $request = $this->itemBulkUploadsRequest($feedType, $file);
@@ -2823,7 +2823,7 @@ class ItemsApi extends BaseApi
      */
     protected function itemBulkUploadsRequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['itemBulkUploads'];
 
@@ -2964,7 +2964,7 @@ class ItemsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Items\ItemRetireResponse
      */
     protected function retireAnItemWithHttpInfo(
-        string $sKU,
+        string $sKU
     ): \Walmart\Models\MP\US\Items\ItemRetireResponse {
         $request = $this->retireAnItemRequest($sKU);
         $this->writeDebug($request);
@@ -3087,7 +3087,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function retireAnItemAsyncWithHttpInfo(
-        string $sKU,
+        string $sKU
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Items\ItemRetireResponse';
         $request = $this->retireAnItemRequest($sKU);
@@ -3141,7 +3141,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function retireAnItemRequest(
-        string $sKU,
+        string $sKU
     ): Request {
         $contentType = self::contentTypes['retireAnItem'];
 

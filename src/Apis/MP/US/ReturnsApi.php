@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class ReturnsApi extends BaseApi
 {
@@ -81,7 +81,7 @@ class ReturnsApi extends BaseApi
      */
     protected function bulkItemOverrideFeedWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\MP\US\Returns\FeedId {
         $request = $this->bulkItemOverrideFeedRequest($feedType, $file);
         $this->writeDebug($request);
@@ -208,7 +208,7 @@ class ReturnsApi extends BaseApi
      */
     protected function bulkItemOverrideFeedAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Returns\FeedId';
         $request = $this->bulkItemOverrideFeedRequest($feedType, $file);
@@ -264,7 +264,7 @@ class ReturnsApi extends BaseApi
      */
     protected function bulkItemOverrideFeedRequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['bulkItemOverrideFeed'];
 
@@ -441,7 +441,7 @@ class ReturnsApi extends BaseApi
         ?\DateTime $returnCreationEndDate = null,
         ?\DateTime $returnLastModifiedStartDate = null,
         ?\DateTime $returnLastModifiedEndDate = null,
-        ?string $limit = '10',
+        ?string $limit = '10'
     ): \Walmart\Models\MP\US\Returns\GetReturnOrdersResponse {
         $request = $this->getReturnsRequest($returnOrderId, $customerOrderId, $status, $replacementInfo, $returnType, $returnCreationStartDate, $returnCreationEndDate, $returnLastModifiedStartDate, $returnLastModifiedEndDate, $limit);
         $this->writeDebug($request);
@@ -600,7 +600,7 @@ class ReturnsApi extends BaseApi
         ?\DateTime $returnCreationEndDate = null,
         ?\DateTime $returnLastModifiedStartDate = null,
         ?\DateTime $returnLastModifiedEndDate = null,
-        ?string $limit = '10',
+        ?string $limit = '10'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Returns\GetReturnOrdersResponse';
         $request = $this->getReturnsRequest($returnOrderId, $customerOrderId, $status, $replacementInfo, $returnType, $returnCreationStartDate, $returnCreationEndDate, $returnLastModifiedStartDate, $returnLastModifiedEndDate, $limit);
@@ -672,7 +672,7 @@ class ReturnsApi extends BaseApi
         ?\DateTime $returnCreationEndDate = null,
         ?\DateTime $returnLastModifiedStartDate = null,
         ?\DateTime $returnLastModifiedEndDate = null,
-        ?string $limit = '10',
+        ?string $limit = '10'
     ): Request {
         $contentType = self::contentTypes['getReturns'];
 
@@ -864,7 +864,7 @@ class ReturnsApi extends BaseApi
      */
     protected function issueRefundWithHttpInfo(
         string $returnOrderId,
-        \Walmart\Models\MP\US\Returns\RefundRequest $refundRequest,
+        \Walmart\Models\MP\US\Returns\RefundRequest $refundRequest
     ): \Walmart\Models\MP\US\Returns\RefundResponse {
         $request = $this->issueRefundRequest($returnOrderId, $refundRequest);
         $this->writeDebug($request);
@@ -991,7 +991,7 @@ class ReturnsApi extends BaseApi
      */
     protected function issueRefundAsyncWithHttpInfo(
         string $returnOrderId,
-        \Walmart\Models\MP\US\Returns\RefundRequest $refundRequest,
+        \Walmart\Models\MP\US\Returns\RefundRequest $refundRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Returns\RefundResponse';
         $request = $this->issueRefundRequest($returnOrderId, $refundRequest);
@@ -1047,7 +1047,7 @@ class ReturnsApi extends BaseApi
      */
     protected function issueRefundRequest(
         string $returnOrderId,
-        \Walmart\Models\MP\US\Returns\RefundRequest $refundRequest,
+        \Walmart\Models\MP\US\Returns\RefundRequest $refundRequest
     ): Request {
         $contentType = self::contentTypes['issueRefund'];
 

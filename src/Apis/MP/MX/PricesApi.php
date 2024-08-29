@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class PricesApi extends BaseApi
 {
@@ -80,7 +80,7 @@ class PricesApi extends BaseApi
      */
     protected function updateBulkPricesWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\MP\MX\Prices\FeedId {
         $request = $this->updateBulkPricesRequest($feedType, $file);
         $this->writeDebug($request);
@@ -207,7 +207,7 @@ class PricesApi extends BaseApi
      */
     protected function updateBulkPricesAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\Prices\FeedId';
         $request = $this->updateBulkPricesRequest($feedType, $file);
@@ -263,7 +263,7 @@ class PricesApi extends BaseApi
      */
     protected function updateBulkPricesRequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['updateBulkPrices'];
 
@@ -409,7 +409,7 @@ class PricesApi extends BaseApi
      * @return \Walmart\Models\MP\MX\Prices\PartnerPriceResponse
      */
     protected function updatePriceWithHttpInfo(
-        string $body,
+        string $body
     ): \Walmart\Models\MP\MX\Prices\PartnerPriceResponse {
         $request = $this->updatePriceRequest($body);
         $this->writeDebug($request);
@@ -532,7 +532,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function updatePriceAsyncWithHttpInfo(
-        string $body,
+        string $body
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\MX\Prices\PartnerPriceResponse';
         $request = $this->updatePriceRequest($body);
@@ -586,7 +586,7 @@ class PricesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function updatePriceRequest(
-        string $body,
+        string $body
     ): Request {
         $contentType = self::contentTypes['updatePrice'];
 

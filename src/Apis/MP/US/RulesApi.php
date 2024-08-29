@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class RulesApi extends BaseApi
 {
@@ -91,7 +91,7 @@ class RulesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Rules\InactivateRuleResponse
      */
     protected function activateRuleWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest,
+        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest
     ): \Walmart\Models\MP\US\Rules\InactivateRuleResponse {
         $request = $this->activateRuleRequest($inactivateRuleRequest);
         $this->writeDebug($request);
@@ -214,7 +214,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function activateRuleAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest,
+        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\InactivateRuleResponse';
         $request = $this->activateRuleRequest($inactivateRuleRequest);
@@ -268,7 +268,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function activateRuleRequest(
-        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest,
+        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest
     ): Request {
         $contentType = self::contentTypes['activateRule'];
 
@@ -389,7 +389,7 @@ class RulesApi extends BaseApi
      */
     protected function changeAssortmentTypeWithHttpInfo(
         bool $enable,
-        object $body,
+        object $body
     ): \Walmart\Models\MP\US\Rules\ChangeAssortmentResponse {
         $request = $this->changeAssortmentTypeRequest($enable, $body);
         $this->writeDebug($request);
@@ -516,7 +516,7 @@ class RulesApi extends BaseApi
      */
     protected function changeAssortmentTypeAsyncWithHttpInfo(
         bool $enable,
-        object $body,
+        object $body
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\ChangeAssortmentResponse';
         $request = $this->changeAssortmentTypeRequest($enable, $body);
@@ -572,7 +572,7 @@ class RulesApi extends BaseApi
      */
     protected function changeAssortmentTypeRequest(
         bool $enable,
-        object $body,
+        object $body
     ): Request {
         $contentType = self::contentTypes['changeAssortmentType'];
 
@@ -707,7 +707,7 @@ class RulesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Rules\CreateRuleResponse
      */
     protected function createItemRuleWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest,
+        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest
     ): \Walmart\Models\MP\US\Rules\CreateRuleResponse {
         $request = $this->createItemRuleRequest($createOverrideExceptionRequest);
         $this->writeDebug($request);
@@ -830,7 +830,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createItemRuleAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest,
+        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\CreateRuleResponse';
         $request = $this->createItemRuleRequest($createOverrideExceptionRequest);
@@ -884,7 +884,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createItemRuleRequest(
-        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest,
+        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest
     ): Request {
         $contentType = self::contentTypes['createItemRule'];
 
@@ -1001,7 +1001,7 @@ class RulesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Rules\CreateOverrideExceptionResponse
      */
     protected function createOverrideExceptionsWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest,
+        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest
     ): \Walmart\Models\MP\US\Rules\CreateOverrideExceptionResponse {
         $request = $this->createOverrideExceptionsRequest($createOverrideExceptionRequest);
         $this->writeDebug($request);
@@ -1124,7 +1124,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createOverrideExceptionsAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest,
+        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\CreateOverrideExceptionResponse';
         $request = $this->createOverrideExceptionsRequest($createOverrideExceptionRequest);
@@ -1178,7 +1178,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createOverrideExceptionsRequest(
-        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest,
+        \Walmart\Models\MP\US\Rules\CreateOverrideExceptionRequest $createOverrideExceptionRequest
     ): Request {
         $contentType = self::contentTypes['createOverrideExceptions'];
 
@@ -1295,7 +1295,7 @@ class RulesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Rules\DeleteExceptionResponse
      */
     protected function deleteExceptionsWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\DeleteExceptionRequest $deleteExceptionRequest,
+        \Walmart\Models\MP\US\Rules\DeleteExceptionRequest $deleteExceptionRequest
     ): \Walmart\Models\MP\US\Rules\DeleteExceptionResponse {
         $request = $this->deleteExceptionsRequest($deleteExceptionRequest);
         $this->writeDebug($request);
@@ -1418,7 +1418,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function deleteExceptionsAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\DeleteExceptionRequest $deleteExceptionRequest,
+        \Walmart\Models\MP\US\Rules\DeleteExceptionRequest $deleteExceptionRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\DeleteExceptionResponse';
         $request = $this->deleteExceptionsRequest($deleteExceptionRequest);
@@ -1472,7 +1472,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function deleteExceptionsRequest(
-        \Walmart\Models\MP\US\Rules\DeleteExceptionRequest $deleteExceptionRequest,
+        \Walmart\Models\MP\US\Rules\DeleteExceptionRequest $deleteExceptionRequest
     ): Request {
         $contentType = self::contentTypes['deleteExceptions'];
 
@@ -1593,7 +1593,7 @@ class RulesApi extends BaseApi
      */
     protected function deleteRuleWithHttpInfo(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): \Walmart\Models\MP\US\Rules\DeleteRuleResponse {
         $request = $this->deleteRuleRequest($ruleId, $ruleStatus);
         $this->writeDebug($request);
@@ -1720,7 +1720,7 @@ class RulesApi extends BaseApi
      */
     protected function deleteRuleAsyncWithHttpInfo(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\DeleteRuleResponse';
         $request = $this->deleteRuleRequest($ruleId, $ruleStatus);
@@ -1776,7 +1776,7 @@ class RulesApi extends BaseApi
      */
     protected function deleteRuleRequest(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): Request {
         $contentType = self::contentTypes['deleteRule'];
 
@@ -2178,7 +2178,7 @@ class RulesApi extends BaseApi
      */
     protected function downloadSimulationResultWithHttpInfo(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): mixed {
         $request = $this->downloadSimulationResultRequest($ruleId, $ruleStatus);
         $this->writeDebug($request);
@@ -2305,7 +2305,7 @@ class RulesApi extends BaseApi
      */
     protected function downloadSimulationResultAsyncWithHttpInfo(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): PromiseInterface {
         $returnType = 'mixed';
         $request = $this->downloadSimulationResultRequest($ruleId, $ruleStatus);
@@ -2361,7 +2361,7 @@ class RulesApi extends BaseApi
      */
     protected function downloadSimulationResultRequest(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): Request {
         $contentType = self::contentTypes['downloadSimulationResult'];
 
@@ -2497,7 +2497,7 @@ class RulesApi extends BaseApi
      */
     protected function getARuleWithHttpInfo(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): \Walmart\Models\MP\US\Rules\GetAllRulesResponse {
         $request = $this->getARuleRequest($ruleId, $ruleStatus);
         $this->writeDebug($request);
@@ -2624,7 +2624,7 @@ class RulesApi extends BaseApi
      */
     protected function getARuleAsyncWithHttpInfo(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\GetAllRulesResponse';
         $request = $this->getARuleRequest($ruleId, $ruleStatus);
@@ -2680,7 +2680,7 @@ class RulesApi extends BaseApi
      */
     protected function getARuleRequest(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): Request {
         $contentType = self::contentTypes['getARule'];
 
@@ -3880,7 +3880,7 @@ class RulesApi extends BaseApi
      */
     protected function getSimulationResultWithHttpInfo(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): \Walmart\Models\MP\US\Rules\GetSimulationCountResponse {
         $request = $this->getSimulationResultRequest($ruleId, $ruleStatus);
         $this->writeDebug($request);
@@ -4007,7 +4007,7 @@ class RulesApi extends BaseApi
      */
     protected function getSimulationResultAsyncWithHttpInfo(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\GetSimulationCountResponse';
         $request = $this->getSimulationResultRequest($ruleId, $ruleStatus);
@@ -4063,7 +4063,7 @@ class RulesApi extends BaseApi
      */
     protected function getSimulationResultRequest(
         string $ruleId,
-        string $ruleStatus,
+        string $ruleStatus
     ): Request {
         $contentType = self::contentTypes['getSimulationResult'];
 
@@ -4195,7 +4195,7 @@ class RulesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Rules\InactivateRuleResponse
      */
     protected function inactivateRuleWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest,
+        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest
     ): \Walmart\Models\MP\US\Rules\InactivateRuleResponse {
         $request = $this->inactivateRuleRequest($inactivateRuleRequest);
         $this->writeDebug($request);
@@ -4318,7 +4318,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function inactivateRuleAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest,
+        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\InactivateRuleResponse';
         $request = $this->inactivateRuleRequest($inactivateRuleRequest);
@@ -4372,7 +4372,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function inactivateRuleRequest(
-        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest,
+        \Walmart\Models\MP\US\Rules\InactivateRuleRequest $inactivateRuleRequest
     ): Request {
         $contentType = self::contentTypes['inactivateRule'];
 
@@ -4489,7 +4489,7 @@ class RulesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Rules\CreateRuleResponse
      */
     protected function updateRuleWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest,
+        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest
     ): \Walmart\Models\MP\US\Rules\CreateRuleResponse {
         $request = $this->updateRuleRequest($updateShippingAreaToRulesRequest);
         $this->writeDebug($request);
@@ -4612,7 +4612,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function updateRuleAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest,
+        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\CreateRuleResponse';
         $request = $this->updateRuleRequest($updateShippingAreaToRulesRequest);
@@ -4666,7 +4666,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function updateRuleRequest(
-        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest,
+        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest
     ): Request {
         $contentType = self::contentTypes['updateRule'];
 
@@ -4783,7 +4783,7 @@ class RulesApi extends BaseApi
      * @return \Walmart\Models\MP\US\Rules\CreateRuleResponse
      */
     protected function updateShippingAreaToRuleWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest,
+        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest
     ): \Walmart\Models\MP\US\Rules\CreateRuleResponse {
         $request = $this->updateShippingAreaToRuleRequest($updateShippingAreaToRulesRequest);
         $this->writeDebug($request);
@@ -4906,7 +4906,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function updateShippingAreaToRuleAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest,
+        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Rules\CreateRuleResponse';
         $request = $this->updateShippingAreaToRuleRequest($updateShippingAreaToRulesRequest);
@@ -4960,7 +4960,7 @@ class RulesApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function updateShippingAreaToRuleRequest(
-        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest,
+        \Walmart\Models\MP\US\Rules\UpdateShippingAreaToRulesRequest $updateShippingAreaToRulesRequest
     ): Request {
         $contentType = self::contentTypes['updateShippingAreaToRule'];
 

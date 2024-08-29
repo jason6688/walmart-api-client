@@ -4,7 +4,7 @@
   "disallowAdditionalPropertiesIfNotPresent": false,
   "variableNamingConvention": "camelCase",
 
-  "gitUserId": "highsidelabs",
+  "gitUserId": "itcrowd",
   "gitRepoId": "walmart-api-php",
 
   "packagePath": "generated",

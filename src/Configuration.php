@@ -5,8 +5,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @email    284469828@qq.com
  */
 
 /**
@@ -30,9 +30,9 @@ use Walmart\Enums\Country;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class Configuration
 {
@@ -111,7 +111,7 @@ class Configuration
      *
      * @var string
      */
-    protected string $userAgent = 'highsidelabs/walmart-api-php/0.7.0';
+    protected string $userAgent = 'itcrowd/walmart-api-php/0.7.0';
 
     /**
      * Debug switch (default set to false)
@@ -160,7 +160,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setApiKey(string $apiKeyIdentifier, string $key): static
+    public function setApiKey(string $apiKeyIdentifier, string $key)
     {
         $method = 'set' . ucfirst($apiKeyIdentifier);
         if (!method_exists(static::class, $method)) {
@@ -197,7 +197,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setAccessToken(?AccessToken $accessToken): static
+    public function setAccessToken(?AccessToken $accessToken)
     {
         if (!($accessToken instanceof AccessToken)) {
             throw new InvalidArgumentException('Invalid access token: must be an instance of ' . AccessToken::class);
@@ -235,7 +235,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setClientId(string $clientId): static
+    public function setClientId(string $clientId)
     {
         $this->clientId = $clientId;
         return $this;
@@ -258,7 +258,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setClientSecret(string $clientSecret): static
+    public function setClientSecret(string $clientSecret)
     {
         $this->clientSecret = $clientSecret;
         return $this;
@@ -281,7 +281,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setCountry(string $country): static
+    public function setCountry(string $country)
     {
         if (!is_string($country)) {
             throw new InvalidArgumentException('Invalid country passed: must be a string');
@@ -310,7 +310,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setPrivateKey(string $privateKey): static
+    public function setPrivateKey(string $privateKey)
     {
         $this->privateKey = $privateKey;
         return $this;
@@ -345,7 +345,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setConsumerId(string $consumerId): static
+    public function setConsumerId(string $consumerId)
     {
         $this->consumerId = $consumerId;
         return $this;
@@ -368,7 +368,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setChannelType(string $channelType): static
+    public function setChannelType(string $channelType)
     {
         $this->channelType = $channelType;
         return $this;
@@ -391,7 +391,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setPartnerId(string $partnerId): static
+    public function setPartnerId(string $partnerId)
     {
         $this->partnerId = $partnerId;
         return $this;
@@ -414,7 +414,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setHost(string $host): static
+    public function setHost(string $host)
     {
         $this->host = $host;
         return $this;
@@ -465,7 +465,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setDebug(bool $debug = true): static
+    public function setDebug(bool $debug = true)
     {
         $this->debug = $debug;
         return $this;
@@ -488,7 +488,7 @@ class Configuration
      *
      * @return $this
      */
-    public function setDebugFile(string $debugFile): static
+    public function setDebugFile(string $debugFile)
     {
         $this->debugFile = $debugFile;
         return $this;

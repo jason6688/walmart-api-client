@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class ItemsApi extends BaseApi
 {
@@ -82,7 +82,7 @@ class ItemsApi extends BaseApi
      */
     protected function getAllItemsWithHttpInfo(
         ?string $nextCursor = '*',
-        ?string $sku = null,
+        ?string $sku = null
     ): \Walmart\Models\Supplier\US\Items\ItemResponses {
         $request = $this->getAllItemsRequest($nextCursor, $sku);
         $this->writeDebug($request);
@@ -209,7 +209,7 @@ class ItemsApi extends BaseApi
      */
     protected function getAllItemsAsyncWithHttpInfo(
         ?string $nextCursor = '*',
-        ?string $sku = null,
+        ?string $sku = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\Items\ItemResponses';
         $request = $this->getAllItemsRequest($nextCursor, $sku);
@@ -265,7 +265,7 @@ class ItemsApi extends BaseApi
      */
     protected function getAllItemsRequest(
         ?string $nextCursor = '*',
-        ?string $sku = null,
+        ?string $sku = null
     ): Request {
         $contentType = self::contentTypes['getAllItems'];
 
@@ -404,7 +404,7 @@ class ItemsApi extends BaseApi
      * @return \Walmart\Models\Supplier\US\Items\ItemResponse
      */
     protected function getAnItemWithHttpInfo(
-        string $sku,
+        string $sku
     ): \Walmart\Models\Supplier\US\Items\ItemResponse {
         $request = $this->getAnItemRequest($sku);
         $this->writeDebug($request);
@@ -527,7 +527,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getAnItemAsyncWithHttpInfo(
-        string $sku,
+        string $sku
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\Items\ItemResponse';
         $request = $this->getAnItemRequest($sku);
@@ -581,7 +581,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getAnItemRequest(
-        string $sku,
+        string $sku
     ): Request {
         $contentType = self::contentTypes['getAnItem'];
 
@@ -719,7 +719,7 @@ class ItemsApi extends BaseApi
      */
     protected function itemBulkUploadsWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\Supplier\US\Items\FeedId {
         $request = $this->itemBulkUploadsRequest($feedType, $file);
         $this->writeDebug($request);
@@ -846,7 +846,7 @@ class ItemsApi extends BaseApi
      */
     protected function itemBulkUploadsAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\Items\FeedId';
         $request = $this->itemBulkUploadsRequest($feedType, $file);
@@ -902,7 +902,7 @@ class ItemsApi extends BaseApi
      */
     protected function itemBulkUploadsRequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['itemBulkUploads'];
 
@@ -1062,7 +1062,7 @@ class ItemsApi extends BaseApi
      */
     protected function updateRichMediaOfItemWithHttpInfo(
         string $feedType,
-        string $body,
+        string $body
     ): \Walmart\Models\Supplier\US\Items\FeedId {
         $request = $this->updateRichMediaOfItemRequest($feedType, $body);
         $this->writeDebug($request);
@@ -1189,7 +1189,7 @@ class ItemsApi extends BaseApi
      */
     protected function updateRichMediaOfItemAsyncWithHttpInfo(
         string $feedType,
-        string $body,
+        string $body
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\Items\FeedId';
         $request = $this->updateRichMediaOfItemRequest($feedType, $body);
@@ -1245,7 +1245,7 @@ class ItemsApi extends BaseApi
      */
     protected function updateRichMediaOfItemRequest(
         string $feedType,
-        string $body,
+        string $body
     ): Request {
         $contentType = self::contentTypes['updateRichMediaOfItem'];
 

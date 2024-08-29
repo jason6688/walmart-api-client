@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class DSVCostApi extends BaseApi
 {
@@ -79,7 +79,7 @@ class DSVCostApi extends BaseApi
      */
     protected function updateBulkCostWithHttpInfo(
         string $feedType,
-        \Walmart\Models\Supplier\US\DSVCost\DsvCostUpdateRequest $dsvCostUpdateRequest,
+        \Walmart\Models\Supplier\US\DSVCost\DsvCostUpdateRequest $dsvCostUpdateRequest
     ): \Walmart\Models\Supplier\US\DSVCost\DsvCostUpdateResponse {
         $request = $this->updateBulkCostRequest($feedType, $dsvCostUpdateRequest);
         $this->writeDebug($request);
@@ -206,7 +206,7 @@ class DSVCostApi extends BaseApi
      */
     protected function updateBulkCostAsyncWithHttpInfo(
         string $feedType,
-        \Walmart\Models\Supplier\US\DSVCost\DsvCostUpdateRequest $dsvCostUpdateRequest,
+        \Walmart\Models\Supplier\US\DSVCost\DsvCostUpdateRequest $dsvCostUpdateRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\DSVCost\DsvCostUpdateResponse';
         $request = $this->updateBulkCostRequest($feedType, $dsvCostUpdateRequest);
@@ -262,7 +262,7 @@ class DSVCostApi extends BaseApi
      */
     protected function updateBulkCostRequest(
         string $feedType,
-        \Walmart\Models\Supplier\US\DSVCost\DsvCostUpdateRequest $dsvCostUpdateRequest,
+        \Walmart\Models\Supplier\US\DSVCost\DsvCostUpdateRequest $dsvCostUpdateRequest
     ): Request {
         $contentType = self::contentTypes['updateBulkCost'];
 

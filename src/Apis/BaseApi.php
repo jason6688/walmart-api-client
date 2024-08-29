@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -32,9 +32,9 @@ use Walmart\Walmart;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class BaseApi
 {
@@ -66,7 +66,7 @@ class BaseApi
     public function __construct(
         Configuration $config,
         ClientInterface $client = null,
-        HeaderSelector $selector = null,
+        HeaderSelector $selector = null
     ) {
         $this->config = $config;
         $this->client = $client ?: new Client();
@@ -89,7 +89,7 @@ class BaseApi
     protected function getDefaultHeaders(): array
     {
         return [
-            'WM_SVC.NAME' => 'highsidelabs/walmart-api/' . Walmart::VERSION,
+            'WM_SVC.NAME' => 'itcrowd/walmart-api/' . Walmart::VERSION,
             'WM_QOS.CORRELATION_ID' => Uuid::uuid4()->toString(),
             // These aren't required by every endpoint, but many use them and passing the when they're
             // not needed doesn't adversely affect the request

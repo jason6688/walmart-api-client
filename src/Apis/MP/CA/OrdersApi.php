@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class OrdersApi extends BaseApi
 {
@@ -82,7 +82,7 @@ class OrdersApi extends BaseApi
      * @return \Walmart\Models\MP\CA\Orders\Order
      */
     protected function acknowledgeOrdersCAWithHttpInfo(
-        string $purchaseOrderId,
+        string $purchaseOrderId
     ): \Walmart\Models\MP\CA\Orders\Order {
         $request = $this->acknowledgeOrdersCARequest($purchaseOrderId);
         $this->writeDebug($request);
@@ -205,7 +205,7 @@ class OrdersApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function acknowledgeOrdersCAAsyncWithHttpInfo(
-        string $purchaseOrderId,
+        string $purchaseOrderId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Orders\Order';
         $request = $this->acknowledgeOrdersCARequest($purchaseOrderId);
@@ -259,7 +259,7 @@ class OrdersApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function acknowledgeOrdersCARequest(
-        string $purchaseOrderId,
+        string $purchaseOrderId
     ): Request {
         $contentType = self::contentTypes['acknowledgeOrdersCA'];
 
@@ -391,7 +391,7 @@ class OrdersApi extends BaseApi
      */
     protected function cancelOrderLinesCAWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\CA\Orders\OrderCancellation $orderCancellation,
+        \Walmart\Models\MP\CA\Orders\OrderCancellation $orderCancellation
     ): \Walmart\Models\MP\CA\Orders\OrderCancellation {
         $request = $this->cancelOrderLinesCARequest($purchaseOrderId, $orderCancellation);
         $this->writeDebug($request);
@@ -518,7 +518,7 @@ class OrdersApi extends BaseApi
      */
     protected function cancelOrderLinesCAAsyncWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\CA\Orders\OrderCancellation $orderCancellation,
+        \Walmart\Models\MP\CA\Orders\OrderCancellation $orderCancellation
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Orders\OrderCancellation';
         $request = $this->cancelOrderLinesCARequest($purchaseOrderId, $orderCancellation);
@@ -574,7 +574,7 @@ class OrdersApi extends BaseApi
      */
     protected function cancelOrderLinesCARequest(
         string $purchaseOrderId,
-        \Walmart\Models\MP\CA\Orders\OrderCancellation $orderCancellation,
+        \Walmart\Models\MP\CA\Orders\OrderCancellation $orderCancellation
     ): Request {
         $contentType = self::contentTypes['cancelOrderLinesCA'];
 
@@ -751,7 +751,7 @@ class OrdersApi extends BaseApi
         ?string $fromExpectedShipDate = null,
         ?string $toExpectedShipDate = null,
         ?string $limit = null,
-        ?string $productInfo = null,
+        ?string $productInfo = null
     ): \Walmart\Models\MP\CA\Orders\WFSOrdersListType {
         $request = $this->getAllOrdersRequest($createdStartDate, $sku, $customerOrderId, $purchaseOrderId, $status, $createdEndDate, $fromExpectedShipDate, $toExpectedShipDate, $limit, $productInfo);
         $this->writeDebug($request);
@@ -910,7 +910,7 @@ class OrdersApi extends BaseApi
         ?string $fromExpectedShipDate = null,
         ?string $toExpectedShipDate = null,
         ?string $limit = null,
-        ?string $productInfo = null,
+        ?string $productInfo = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Orders\WFSOrdersListType';
         $request = $this->getAllOrdersRequest($createdStartDate, $sku, $customerOrderId, $purchaseOrderId, $status, $createdEndDate, $fromExpectedShipDate, $toExpectedShipDate, $limit, $productInfo);
@@ -982,7 +982,7 @@ class OrdersApi extends BaseApi
         ?string $fromExpectedShipDate = null,
         ?string $toExpectedShipDate = null,
         ?string $limit = null,
-        ?string $productInfo = null,
+        ?string $productInfo = null
     ): Request {
         $contentType = self::contentTypes['getAllOrders'];
 
@@ -1197,7 +1197,7 @@ class OrdersApi extends BaseApi
         ?string $createdStartDate = null,
         ?string $createdEndDate = null,
         ?string $limit = '10',
-        ?string $productInfo = null,
+        ?string $productInfo = null
     ): \Walmart\Models\MP\CA\Orders\WFSOrdersListType {
         $request = $this->getAllReleasedOrdersRequest($createdStartDate, $createdEndDate, $limit, $productInfo);
         $this->writeDebug($request);
@@ -1332,7 +1332,7 @@ class OrdersApi extends BaseApi
         ?string $createdStartDate = null,
         ?string $createdEndDate = null,
         ?string $limit = '10',
-        ?string $productInfo = null,
+        ?string $productInfo = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Orders\WFSOrdersListType';
         $request = $this->getAllReleasedOrdersRequest($createdStartDate, $createdEndDate, $limit, $productInfo);
@@ -1392,7 +1392,7 @@ class OrdersApi extends BaseApi
         ?string $createdStartDate = null,
         ?string $createdEndDate = null,
         ?string $limit = '10',
-        ?string $productInfo = null,
+        ?string $productInfo = null
     ): Request {
         $contentType = self::contentTypes['getAllReleasedOrders'];
 
@@ -1561,7 +1561,7 @@ class OrdersApi extends BaseApi
         ?string $status = null,
         ?string $createdEndDate = null,
         ?string $limit = null,
-        ?string $offset = null,
+        ?string $offset = null
     ): \Walmart\Models\MP\CA\Orders\WFSOrdersListType {
         $request = $this->getAllWFSOrdersRequest($createdStartDate, $customerOrderId, $status, $createdEndDate, $limit, $offset);
         $this->writeDebug($request);
@@ -1704,7 +1704,7 @@ class OrdersApi extends BaseApi
         ?string $status = null,
         ?string $createdEndDate = null,
         ?string $limit = null,
-        ?string $offset = null,
+        ?string $offset = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Orders\WFSOrdersListType';
         $request = $this->getAllWFSOrdersRequest($createdStartDate, $customerOrderId, $status, $createdEndDate, $limit, $offset);
@@ -1768,7 +1768,7 @@ class OrdersApi extends BaseApi
         ?string $status = null,
         ?string $createdEndDate = null,
         ?string $limit = null,
-        ?string $offset = null,
+        ?string $offset = null
     ): Request {
         $contentType = self::contentTypes['getAllWFSOrders'];
 
@@ -1943,7 +1943,7 @@ class OrdersApi extends BaseApi
      */
     protected function getAnOrderWithHttpInfo(
         string $purchaseOrderId,
-        ?string $productInfo = null,
+        ?string $productInfo = null
     ): \Walmart\Models\MP\CA\Orders\Order {
         $request = $this->getAnOrderRequest($purchaseOrderId, $productInfo);
         $this->writeDebug($request);
@@ -2070,7 +2070,7 @@ class OrdersApi extends BaseApi
      */
     protected function getAnOrderAsyncWithHttpInfo(
         string $purchaseOrderId,
-        ?string $productInfo = null,
+        ?string $productInfo = null
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Orders\Order';
         $request = $this->getAnOrderRequest($purchaseOrderId, $productInfo);
@@ -2126,7 +2126,7 @@ class OrdersApi extends BaseApi
      */
     protected function getAnOrderRequest(
         string $purchaseOrderId,
-        ?string $productInfo = null,
+        ?string $productInfo = null
     ): Request {
         $contentType = self::contentTypes['getAnOrder'];
 
@@ -2270,7 +2270,7 @@ class OrdersApi extends BaseApi
      */
     protected function refundOrderLinesCAWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\CA\Orders\OrderRefund $orderRefund,
+        \Walmart\Models\MP\CA\Orders\OrderRefund $orderRefund
     ): \Walmart\Models\MP\CA\Orders\Order {
         $request = $this->refundOrderLinesCARequest($purchaseOrderId, $orderRefund);
         $this->writeDebug($request);
@@ -2397,7 +2397,7 @@ class OrdersApi extends BaseApi
      */
     protected function refundOrderLinesCAAsyncWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\CA\Orders\OrderRefund $orderRefund,
+        \Walmart\Models\MP\CA\Orders\OrderRefund $orderRefund
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Orders\Order';
         $request = $this->refundOrderLinesCARequest($purchaseOrderId, $orderRefund);
@@ -2453,7 +2453,7 @@ class OrdersApi extends BaseApi
      */
     protected function refundOrderLinesCARequest(
         string $purchaseOrderId,
-        \Walmart\Models\MP\CA\Orders\OrderRefund $orderRefund,
+        \Walmart\Models\MP\CA\Orders\OrderRefund $orderRefund
     ): Request {
         $contentType = self::contentTypes['refundOrderLinesCA'];
 
@@ -2598,7 +2598,7 @@ class OrdersApi extends BaseApi
      */
     protected function shippingUpdatesCAWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\CA\Orders\OrderShipment $orderShipment,
+        \Walmart\Models\MP\CA\Orders\OrderShipment $orderShipment
     ): \Walmart\Models\MP\CA\Orders\Order {
         $request = $this->shippingUpdatesCARequest($purchaseOrderId, $orderShipment);
         $this->writeDebug($request);
@@ -2725,7 +2725,7 @@ class OrdersApi extends BaseApi
      */
     protected function shippingUpdatesCAAsyncWithHttpInfo(
         string $purchaseOrderId,
-        \Walmart\Models\MP\CA\Orders\OrderShipment $orderShipment,
+        \Walmart\Models\MP\CA\Orders\OrderShipment $orderShipment
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Orders\Order';
         $request = $this->shippingUpdatesCARequest($purchaseOrderId, $orderShipment);
@@ -2781,7 +2781,7 @@ class OrdersApi extends BaseApi
      */
     protected function shippingUpdatesCARequest(
         string $purchaseOrderId,
-        \Walmart\Models\MP\CA\Orders\OrderShipment $orderShipment,
+        \Walmart\Models\MP\CA\Orders\OrderShipment $orderShipment
     ): Request {
         $contentType = self::contentTypes['shippingUpdatesCA'];
 

@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class PromotionsApi extends BaseApi
 {
@@ -77,7 +77,7 @@ class PromotionsApi extends BaseApi
      * @return string
      */
     protected function getPromotionalPricesWithHttpInfo(
-        string $sku,
+        string $sku
     ): string {
         $request = $this->getPromotionalPricesRequest($sku);
         $this->writeDebug($request);
@@ -200,7 +200,7 @@ class PromotionsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getPromotionalPricesAsyncWithHttpInfo(
-        string $sku,
+        string $sku
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->getPromotionalPricesRequest($sku);
@@ -254,7 +254,7 @@ class PromotionsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getPromotionalPricesRequest(
-        string $sku,
+        string $sku
     ): Request {
         $contentType = self::contentTypes['getPromotionalPrices'];
 
@@ -386,7 +386,7 @@ class PromotionsApi extends BaseApi
      */
     protected function updateBulkPromotionalPriceWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\MP\CA\Promotions\FeedId {
         $request = $this->updateBulkPromotionalPriceRequest($feedType, $file);
         $this->writeDebug($request);
@@ -513,7 +513,7 @@ class PromotionsApi extends BaseApi
      */
     protected function updateBulkPromotionalPriceAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Promotions\FeedId';
         $request = $this->updateBulkPromotionalPriceRequest($feedType, $file);
@@ -569,7 +569,7 @@ class PromotionsApi extends BaseApi
      */
     protected function updateBulkPromotionalPriceRequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['updateBulkPromotionalPrice'];
 
@@ -723,7 +723,7 @@ class PromotionsApi extends BaseApi
      */
     protected function updatePromotionalPricesCAWithHttpInfo(
         bool $promo,
-        string $body,
+        string $body
     ): string {
         $request = $this->updatePromotionalPricesCARequest($promo, $body);
         $this->writeDebug($request);
@@ -850,7 +850,7 @@ class PromotionsApi extends BaseApi
      */
     protected function updatePromotionalPricesCAAsyncWithHttpInfo(
         bool $promo,
-        string $body,
+        string $body
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->updatePromotionalPricesCARequest($promo, $body);
@@ -906,7 +906,7 @@ class PromotionsApi extends BaseApi
      */
     protected function updatePromotionalPricesCARequest(
         bool $promo,
-        string $body,
+        string $body
     ): Request {
         $contentType = self::contentTypes['updatePromotionalPricesCA'];
 

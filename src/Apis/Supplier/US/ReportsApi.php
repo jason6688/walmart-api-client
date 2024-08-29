@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class ReportsApi extends BaseApi
 {
@@ -79,7 +79,7 @@ class ReportsApi extends BaseApi
      */
     protected function getItemReportWithHttpInfo(
         string $type,
-        string $version,
+        string $version
     ): \Walmart\Models\Supplier\US\Reports\ReportDTO {
         $request = $this->getItemReportRequest($type, $version);
         $this->writeDebug($request);
@@ -206,7 +206,7 @@ class ReportsApi extends BaseApi
      */
     protected function getItemReportAsyncWithHttpInfo(
         string $type,
-        string $version,
+        string $version
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\Reports\ReportDTO';
         $request = $this->getItemReportRequest($type, $version);
@@ -262,7 +262,7 @@ class ReportsApi extends BaseApi
      */
     protected function getItemReportRequest(
         string $type,
-        string $version,
+        string $version
     ): Request {
         $contentType = self::contentTypes['getItemReport'];
 

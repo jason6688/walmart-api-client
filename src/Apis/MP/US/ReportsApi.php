@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class ReportsApi extends BaseApi
 {
@@ -1144,7 +1144,7 @@ class ReportsApi extends BaseApi
      * @return string
      */
     protected function getReconReportWithHttpInfo(
-        string $reportDate,
+        string $reportDate
     ): string {
         $request = $this->getReconReportRequest($reportDate);
         $this->writeDebug($request);
@@ -1267,7 +1267,7 @@ class ReportsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getReconReportAsyncWithHttpInfo(
-        string $reportDate,
+        string $reportDate
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->getReconReportRequest($reportDate);
@@ -1321,7 +1321,7 @@ class ReportsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getReconReportRequest(
-        string $reportDate,
+        string $reportDate
     ): Request {
         $contentType = self::contentTypes['getReconReport'];
 
@@ -1447,7 +1447,7 @@ class ReportsApi extends BaseApi
      */
     protected function getReconReportV1WithHttpInfo(
         string $reportDate,
-        string $reportVersion,
+        string $reportVersion
     ): string {
         $request = $this->getReconReportV1Request($reportDate, $reportVersion);
         $this->writeDebug($request);
@@ -1574,7 +1574,7 @@ class ReportsApi extends BaseApi
      */
     protected function getReconReportV1AsyncWithHttpInfo(
         string $reportDate,
-        string $reportVersion,
+        string $reportVersion
     ): PromiseInterface {
         $returnType = 'string';
         $request = $this->getReconReportV1Request($reportDate, $reportVersion);
@@ -1630,7 +1630,7 @@ class ReportsApi extends BaseApi
      */
     protected function getReconReportV1Request(
         string $reportDate,
-        string $reportVersion,
+        string $reportVersion
     ): Request {
         $contentType = self::contentTypes['getReconReportV1'];
 

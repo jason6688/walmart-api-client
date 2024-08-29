@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class FeedsApi extends BaseApi
 {
@@ -84,7 +84,7 @@ class FeedsApi extends BaseApi
     protected function getAllFeedStatusesWithHttpInfo(
         ?string $feedId = null,
         ?string $offset = '0',
-        ?string $limit = '50',
+        ?string $limit = '50'
     ): \Walmart\Models\Supplier\US\Feeds\FeedRecordResponse {
         $request = $this->getAllFeedStatusesRequest($feedId, $offset, $limit);
         $this->writeDebug($request);
@@ -215,7 +215,7 @@ class FeedsApi extends BaseApi
     protected function getAllFeedStatusesAsyncWithHttpInfo(
         ?string $feedId = null,
         ?string $offset = '0',
-        ?string $limit = '50',
+        ?string $limit = '50'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\Feeds\FeedRecordResponse';
         $request = $this->getAllFeedStatusesRequest($feedId, $offset, $limit);
@@ -273,7 +273,7 @@ class FeedsApi extends BaseApi
     protected function getAllFeedStatusesRequest(
         ?string $feedId = null,
         ?string $offset = '0',
-        ?string $limit = '50',
+        ?string $limit = '50'
     ): Request {
         $contentType = self::contentTypes['getAllFeedStatuses'];
 
@@ -432,7 +432,7 @@ class FeedsApi extends BaseApi
         string $feedId,
         ?string $includeDetails = 'false',
         ?string $offset = '0',
-        ?string $limit = '50',
+        ?string $limit = '50'
     ): \Walmart\Models\Supplier\US\Feeds\PartnerFeedResponse {
         $request = $this->getFeedItemStatusRequest($feedId, $includeDetails, $offset, $limit);
         $this->writeDebug($request);
@@ -567,7 +567,7 @@ class FeedsApi extends BaseApi
         string $feedId,
         ?string $includeDetails = 'false',
         ?string $offset = '0',
-        ?string $limit = '50',
+        ?string $limit = '50'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\Supplier\US\Feeds\PartnerFeedResponse';
         $request = $this->getFeedItemStatusRequest($feedId, $includeDetails, $offset, $limit);
@@ -627,7 +627,7 @@ class FeedsApi extends BaseApi
         string $feedId,
         ?string $includeDetails = 'false',
         ?string $offset = '0',
-        ?string $limit = '50',
+        ?string $limit = '50'
     ): Request {
         $contentType = self::contentTypes['getFeedItemStatus'];
 

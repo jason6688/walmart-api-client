@@ -20,7 +20,7 @@ function downloadSchemas(?array $categories, ?array $countries, ?array $apiCodes
             'Accept' => '*/*',
             'Content-Type' => 'application/json',
             // Walmart seems to have blocked Guzzle's default user agent
-            'User-Agent' => 'highsidelabs/walmart-api-client',
+            'User-Agent' => 'itcrowd/walmart-api-client',
         ],
     ]);
 

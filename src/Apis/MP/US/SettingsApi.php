@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class SettingsApi extends BaseApi
 {
@@ -89,7 +89,7 @@ class SettingsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Settings\ThirdPartyShipNode1[]
      */
     protected function associate3PFulfillmentCenterWithHttpInfo(
-        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest,
+        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest
     ): array {
         $request = $this->associate3PFulfillmentCenterRequest($updateFulfillmentCenterRequest);
         $this->writeDebug($request);
@@ -212,7 +212,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function associate3PFulfillmentCenterAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest,
+        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Settings\ThirdPartyShipNode1[]';
         $request = $this->associate3PFulfillmentCenterRequest($updateFulfillmentCenterRequest);
@@ -266,7 +266,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function associate3PFulfillmentCenterRequest(
-        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest,
+        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest
     ): Request {
         $contentType = self::contentTypes['associate3PFulfillmentCenter'];
 
@@ -383,7 +383,7 @@ class SettingsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Settings\ShipNodeResponseUpdate[]
      */
     protected function createFulfillmentCenterWithHttpInfo(
-        \Walmart\Models\MP\US\Settings\CreateFulfillmentCenterRequest $createFulfillmentCenterRequest,
+        \Walmart\Models\MP\US\Settings\CreateFulfillmentCenterRequest $createFulfillmentCenterRequest
     ): array {
         $request = $this->createFulfillmentCenterRequest($createFulfillmentCenterRequest);
         $this->writeDebug($request);
@@ -506,7 +506,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createFulfillmentCenterAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Settings\CreateFulfillmentCenterRequest $createFulfillmentCenterRequest,
+        \Walmart\Models\MP\US\Settings\CreateFulfillmentCenterRequest $createFulfillmentCenterRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Settings\ShipNodeResponseUpdate[]';
         $request = $this->createFulfillmentCenterRequest($createFulfillmentCenterRequest);
@@ -560,7 +560,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createFulfillmentCenterRequest(
-        \Walmart\Models\MP\US\Settings\CreateFulfillmentCenterRequest $createFulfillmentCenterRequest,
+        \Walmart\Models\MP\US\Settings\CreateFulfillmentCenterRequest $createFulfillmentCenterRequest
     ): Request {
         $contentType = self::contentTypes['createFulfillmentCenter'];
 
@@ -677,7 +677,7 @@ class SettingsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Settings\ShippingTemplate
      */
     protected function createShippingTemplatesWithHttpInfo(
-        \Walmart\Models\MP\US\Settings\CreateShippingTemplateRequest $createShippingTemplateRequest,
+        \Walmart\Models\MP\US\Settings\CreateShippingTemplateRequest $createShippingTemplateRequest
     ): \Walmart\Models\MP\US\Settings\ShippingTemplate {
         $request = $this->createShippingTemplatesRequest($createShippingTemplateRequest);
         $this->writeDebug($request);
@@ -800,7 +800,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function createShippingTemplatesAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Settings\CreateShippingTemplateRequest $createShippingTemplateRequest,
+        \Walmart\Models\MP\US\Settings\CreateShippingTemplateRequest $createShippingTemplateRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Settings\ShippingTemplate';
         $request = $this->createShippingTemplatesRequest($createShippingTemplateRequest);
@@ -854,7 +854,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function createShippingTemplatesRequest(
-        \Walmart\Models\MP\US\Settings\CreateShippingTemplateRequest $createShippingTemplateRequest,
+        \Walmart\Models\MP\US\Settings\CreateShippingTemplateRequest $createShippingTemplateRequest
     ): Request {
         $contentType = self::contentTypes['createShippingTemplates'];
 
@@ -971,7 +971,7 @@ class SettingsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Settings\ShippingTemplateId
      */
     protected function deleteShippingTemplateDetailsWithHttpInfo(
-        string $templateId,
+        string $templateId
     ): \Walmart\Models\MP\US\Settings\ShippingTemplateId {
         $request = $this->deleteShippingTemplateDetailsRequest($templateId);
         $this->writeDebug($request);
@@ -1094,7 +1094,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function deleteShippingTemplateDetailsAsyncWithHttpInfo(
-        string $templateId,
+        string $templateId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Settings\ShippingTemplateId';
         $request = $this->deleteShippingTemplateDetailsRequest($templateId);
@@ -1148,7 +1148,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function deleteShippingTemplateDetailsRequest(
-        string $templateId,
+        string $templateId
     ): Request {
         $contentType = self::contentTypes['deleteShippingTemplateDetails'];
 
@@ -1533,7 +1533,7 @@ class SettingsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Settings\ShipNodeResponseUpdate[]
      */
     protected function getAllFulfillmentCentersWithHttpInfo(
-        ?bool $includeCalendarDayConfiguration = false,
+        ?bool $includeCalendarDayConfiguration = false
     ): array {
         $request = $this->getAllFulfillmentCentersRequest($includeCalendarDayConfiguration);
         $this->writeDebug($request);
@@ -1656,7 +1656,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getAllFulfillmentCentersAsyncWithHttpInfo(
-        ?bool $includeCalendarDayConfiguration = false,
+        ?bool $includeCalendarDayConfiguration = false
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Settings\ShipNodeResponseUpdate[]';
         $request = $this->getAllFulfillmentCentersRequest($includeCalendarDayConfiguration);
@@ -1710,7 +1710,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getAllFulfillmentCentersRequest(
-        ?bool $includeCalendarDayConfiguration = false,
+        ?bool $includeCalendarDayConfiguration = false
     ): Request {
         $contentType = self::contentTypes['getAllFulfillmentCenters'];
 
@@ -3422,7 +3422,7 @@ class SettingsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Settings\ShippingTemplate
      */
     protected function getShippingTemplateDetailsWithHttpInfo(
-        string $templateId,
+        string $templateId
     ): \Walmart\Models\MP\US\Settings\ShippingTemplate {
         $request = $this->getShippingTemplateDetailsRequest($templateId);
         $this->writeDebug($request);
@@ -3545,7 +3545,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getShippingTemplateDetailsAsyncWithHttpInfo(
-        string $templateId,
+        string $templateId
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Settings\ShippingTemplate';
         $request = $this->getShippingTemplateDetailsRequest($templateId);
@@ -3599,7 +3599,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getShippingTemplateDetailsRequest(
-        string $templateId,
+        string $templateId
     ): Request {
         $contentType = self::contentTypes['getShippingTemplateDetails'];
 
@@ -3718,7 +3718,7 @@ class SettingsApi extends BaseApi
      * @return \Walmart\Models\MP\US\Settings\ShipNodeResponseUpdate
      */
     protected function updateFulfillmentCenterWithHttpInfo(
-        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest,
+        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest
     ): \Walmart\Models\MP\US\Settings\ShipNodeResponseUpdate {
         $request = $this->updateFulfillmentCenterRequest($updateFulfillmentCenterRequest);
         $this->writeDebug($request);
@@ -3841,7 +3841,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function updateFulfillmentCenterAsyncWithHttpInfo(
-        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest,
+        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Settings\ShipNodeResponseUpdate';
         $request = $this->updateFulfillmentCenterRequest($updateFulfillmentCenterRequest);
@@ -3895,7 +3895,7 @@ class SettingsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function updateFulfillmentCenterRequest(
-        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest,
+        \Walmart\Models\MP\US\Settings\UpdateFulfillmentCenterRequest $updateFulfillmentCenterRequest
     ): Request {
         $contentType = self::contentTypes['updateFulfillmentCenter'];
 
@@ -4016,7 +4016,7 @@ class SettingsApi extends BaseApi
      */
     protected function updateShippingTemplatesWithHttpInfo(
         string $templateId,
-        \Walmart\Models\MP\US\Settings\UpdateShippingTemplateRequest $updateShippingTemplateRequest,
+        \Walmart\Models\MP\US\Settings\UpdateShippingTemplateRequest $updateShippingTemplateRequest
     ): \Walmart\Models\MP\US\Settings\ShippingTemplate {
         $request = $this->updateShippingTemplatesRequest($templateId, $updateShippingTemplateRequest);
         $this->writeDebug($request);
@@ -4143,7 +4143,7 @@ class SettingsApi extends BaseApi
      */
     protected function updateShippingTemplatesAsyncWithHttpInfo(
         string $templateId,
-        \Walmart\Models\MP\US\Settings\UpdateShippingTemplateRequest $updateShippingTemplateRequest,
+        \Walmart\Models\MP\US\Settings\UpdateShippingTemplateRequest $updateShippingTemplateRequest
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\US\Settings\ShippingTemplate';
         $request = $this->updateShippingTemplatesRequest($templateId, $updateShippingTemplateRequest);
@@ -4199,7 +4199,7 @@ class SettingsApi extends BaseApi
      */
     protected function updateShippingTemplatesRequest(
         string $templateId,
-        \Walmart\Models\MP\US\Settings\UpdateShippingTemplateRequest $updateShippingTemplateRequest,
+        \Walmart\Models\MP\US\Settings\UpdateShippingTemplateRequest $updateShippingTemplateRequest
     ): Request {
         $contentType = self::contentTypes['updateShippingTemplates'];
 

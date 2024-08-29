@@ -6,8 +6,8 @@
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
  */
 
 /**
@@ -33,9 +33,9 @@ use Walmart\ObjectSerializer;
  *
  * @category Class
  * @package  Walmart
- * @author   Jesse Evers
- * @link     https://highsidelabs.co
- * @email    jesse@highsidelabs.co
+ * @author   Jason
+ * @link     https://www.itcrowd.cn
+ * @email    284469828@qq.com
  */
 class ItemsApi extends BaseApi
 {
@@ -82,7 +82,7 @@ class ItemsApi extends BaseApi
      */
     protected function bulkItemSetupCAWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): \Walmart\Models\MP\CA\Items\FeedId {
         $request = $this->bulkItemSetupCARequest($feedType, $file);
         $this->writeDebug($request);
@@ -209,7 +209,7 @@ class ItemsApi extends BaseApi
      */
     protected function bulkItemSetupCAAsyncWithHttpInfo(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Items\FeedId';
         $request = $this->bulkItemSetupCARequest($feedType, $file);
@@ -265,7 +265,7 @@ class ItemsApi extends BaseApi
      */
     protected function bulkItemSetupCARequest(
         string $feedType,
-        \SplFileObject $file,
+        \SplFileObject $file
     ): Request {
         $contentType = self::contentTypes['bulkItemSetupCA'];
 
@@ -427,7 +427,7 @@ class ItemsApi extends BaseApi
         ?string $nextCursor = '*',
         ?string $sku = null,
         ?string $offset = '0',
-        ?string $limit = '20',
+        ?string $limit = '20'
     ): \Walmart\Models\MP\CA\Items\ItemResponses {
         $request = $this->getAllItemsRequest($nextCursor, $sku, $offset, $limit);
         $this->writeDebug($request);
@@ -562,7 +562,7 @@ class ItemsApi extends BaseApi
         ?string $nextCursor = '*',
         ?string $sku = null,
         ?string $offset = '0',
-        ?string $limit = '20',
+        ?string $limit = '20'
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Items\ItemResponses';
         $request = $this->getAllItemsRequest($nextCursor, $sku, $offset, $limit);
@@ -622,7 +622,7 @@ class ItemsApi extends BaseApi
         ?string $nextCursor = '*',
         ?string $sku = null,
         ?string $offset = '0',
-        ?string $limit = '20',
+        ?string $limit = '20'
     ): Request {
         $contentType = self::contentTypes['getAllItems'];
 
@@ -771,7 +771,7 @@ class ItemsApi extends BaseApi
      * @return \Walmart\Models\MP\CA\Items\ItemResponse
      */
     protected function getAnItemWithHttpInfo(
-        string $sku,
+        string $sku
     ): \Walmart\Models\MP\CA\Items\ItemResponse {
         $request = $this->getAnItemRequest($sku);
         $this->writeDebug($request);
@@ -894,7 +894,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function getAnItemAsyncWithHttpInfo(
-        string $sku,
+        string $sku
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Items\ItemResponse';
         $request = $this->getAnItemRequest($sku);
@@ -948,7 +948,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function getAnItemRequest(
-        string $sku,
+        string $sku
     ): Request {
         $contentType = self::contentTypes['getAnItem'];
 
@@ -1076,7 +1076,7 @@ class ItemsApi extends BaseApi
      * @return \Walmart\Models\MP\CA\Items\ItemRetireResponseV2
      */
     protected function retireAnItemWithHttpInfo(
-        string $sKU,
+        string $sKU
     ): \Walmart\Models\MP\CA\Items\ItemRetireResponseV2 {
         $request = $this->retireAnItemRequest($sKU);
         $this->writeDebug($request);
@@ -1199,7 +1199,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     protected function retireAnItemAsyncWithHttpInfo(
-        string $sKU,
+        string $sKU
     ): PromiseInterface {
         $returnType = '\Walmart\Models\MP\CA\Items\ItemRetireResponseV2';
         $request = $this->retireAnItemRequest($sKU);
@@ -1253,7 +1253,7 @@ class ItemsApi extends BaseApi
      * @return \GuzzleHttp\Psr7\Request
      */
     protected function retireAnItemRequest(
-        string $sKU,
+        string $sKU
     ): Request {
         $contentType = self::contentTypes['retireAnItem'];
 
