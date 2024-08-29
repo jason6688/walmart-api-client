@@ -27,7 +27,7 @@
         "ext-mbstring": "*",
         "guzzlehttp/guzzle": "^5|^6|^7",
         "guzzlehttp/psr7": "^1.7 || ^2.0",
-        "ramsey/uuid": "^4.2 || ^4.7",
+        "ramsey/uuid": "^3.9 || ^4.2 || ^4.7",
         "symfony/uid": "^5.4 || ^6.1",
         "phpseclib/phpseclib": "^3.0"
     },
