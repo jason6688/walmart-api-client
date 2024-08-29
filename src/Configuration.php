@@ -111,7 +111,7 @@ class Configuration
      *
      * @var string
      */
-    protected string $userAgent = 'itcrowd/walmart-api-php/0.7.0';
+    protected string $userAgent = 'itcrowd/walmart-api-php/0.0.1';
 
     /**
      * Debug switch (default set to false)
