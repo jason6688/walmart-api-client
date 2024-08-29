@@ -2,14 +2,6 @@
 ## Walmart API for PHP
 A PHP library for connecting to Walmart's [Marketplace](https://developer.walmart.com/home/us-mp/), [1P Supplier](https://developer.walmart.com/home/us-supplier/), and [Content Provider](https://developer.walmart.com/home/us-cp/) APIs, for the US, Canada, and Mexico.
 
----
-
-**This package is developed and maintained by [Highside Labs](https://highsidelabs.co). If you need support integrating with Walmart's (or any other e-commerce platform's) APIs, we're happy to help! Shoot us an email at [hi@highsidelabs.co](mailto:hi@highsidelabs.co).**
-
-If you've found any of our packages useful, please consider [becoming a Sponsor](https://github.com/sponsors/highsidelabs), or making a donation via the button below. We appreciate any and all support you can provide!
-
----
-
 ## Features
 
 * Supports all Walmart API operations for Marketplace Sellers, 1P Suppliers, and Content Providers as of 8/17/2023 ([see here](#supported-api-segments) for links to documentation for all calls)
@@ -18,7 +10,7 @@ If you've found any of our packages useful, please consider [becoming a Sponsor]
 
 ## Installation
 
-`composer require highsidelabs/walmart-api`
+`composer require jason6688/walmart-api-client`
 
 ## Why make this library?
 
